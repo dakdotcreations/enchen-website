@@ -143,7 +143,7 @@
 		</div>
 	</div>
 	<div class="foot-bottom">
-		<div class="foot-copy">© 2026 <span>Enchen Creative Hub</span>. All rights reserved.</div>
+		<div class="foot-copy">© 2026 <span>DakDot Creations Ltd</span>. All rights reserved.</div>
 		<div class="foot-location">Ntinda, Kampala, Uganda</div>
 	</div>
 </footer>

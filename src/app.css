@@ -68,6 +68,7 @@ nav.scrolled {
   font-family: 'Cormorant Garamond', serif;
   font-size: 15px; font-weight: 400; color: white;
 }
+.nav-logo-img { height: 36px; width: auto; object-fit: contain; display: block; }
 .nav-logo-text {
   font-family: 'Cormorant Garamond', serif;
   font-size: 18px; font-weight: 400; letter-spacing: 3px; text-transform: uppercase;
@@ -414,19 +415,26 @@ section { padding: 120px 64px; }
 .clients-row { display: flex; align-items: center; gap: 24px; margin-bottom: 52px; }
 .clients-label { font-size: 9px; letter-spacing: 4px; text-transform: uppercase; color: var(--muted); white-space: nowrap; }
 .clients-rule { flex: 1; height: 1px; background: var(--border); }
-.clients-grid { display: grid; grid-template-columns: repeat(5,1fr); }
+.clients-grid { display: grid; grid-template-columns: repeat(7,1fr); }
 .cl-item {
-  padding: 40px 32px; display: flex; align-items: center; justify-content: center;
+  padding: 36px 20px; display: flex; align-items: center; justify-content: center;
   border: 1px solid var(--border);
   margin: -0.5px; transition: all 0.3s; cursor: none;
 }
-.cl-item:hover { background: var(--off-white); }
+.cl-item:hover { background: var(--white); }
 .cl-name {
   font-family: 'Cormorant Garamond', serif;
   font-size: 20px; font-weight: 300; color: rgba(0,0,0,0.18);
   letter-spacing: 1px; text-align: center; transition: color 0.3s;
 }
 .cl-item:hover .cl-name { color: var(--text); }
+.cl-item img {
+  max-height: 72px; width: auto; max-width: 160px;
+  object-fit: contain;
+  filter: grayscale(100%) opacity(0.4);
+  transition: filter 0.3s, transform 0.3s;
+}
+.cl-item:hover img { filter: grayscale(0%) opacity(1); transform: scale(1.08); }
 
 /* ── Testimonials (homepage) ── */
 #testimonials { background: #111111; }
@@ -494,6 +502,7 @@ footer {
   display: flex; align-items: center; justify-content: center;
 }
 .foot-logo-icon span { font-family: 'Cormorant Garamond', serif; font-size: 14px; font-weight: 400; color: white; }
+.foot-logo-img { height: 36px; width: auto; object-fit: contain; display: block; }
 .foot-logo-text { font-family: 'Cormorant Garamond', serif; font-size: 18px; font-weight: 400; color: white; letter-spacing: 3px; text-transform: uppercase; }
 .foot-logo-text span { color: var(--gold); }
 .foot-tag { font-size: 9px; letter-spacing: 2.5px; color: rgba(255,255,255,0.18); text-transform: uppercase; margin-bottom: 28px; }
@@ -843,7 +852,7 @@ footer {
   .test-grid { grid-template-columns:1fr; }
   .process-steps { grid-template-columns:1fr 1fr; gap:44px; }
   .process-steps::after { display:none; }
-  .clients-grid { grid-template-columns:repeat(3,1fr); }
+  .clients-grid { grid-template-columns:repeat(4,1fr); }
   #clients { padding:60px 32px; }
   .foot-top { grid-template-columns:1fr 1fr; gap:36px; }
   footer { padding:60px 32px 36px; }

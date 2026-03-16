@@ -172,11 +172,13 @@
 		<div class="clients-rule"></div>
 	</div>
 	<div class="clients-grid reveal">
-		<div class="cl-item"><div class="cl-name">Victoria</div></div>
-		<div class="cl-item"><div class="cl-name">Airtel</div></div>
-		<div class="cl-item"><div class="cl-name">PwC</div></div>
-		<div class="cl-item"><div class="cl-name">Telecom Co.</div></div>
-		<div class="cl-item"><div class="cl-name">Partners +</div></div>
+		<div class="cl-item"><img src="/images/clients/stanbic-bank.webp" alt="Stanbic Bank" /></div>
+		<div class="cl-item"><img src="/images/clients/mtn.webp" alt="MTN" /></div>
+		<div class="cl-item"><img src="/images/clients/airtel.webp" alt="Airtel" /></div>
+		<div class="cl-item"><img src="/images/clients/caa.webp" alt="CAA" /></div>
+		<div class="cl-item"><img src="/images/clients/united-nations.webp" alt="United Nations" /></div>
+		<div class="cl-item"><img src="/images/clients/nita.webp" alt="NITA" /></div>
+		<div class="cl-item"><img src="/images/clients/fao.webp" alt="FAO" /></div>
 	</div>
 </div>
 

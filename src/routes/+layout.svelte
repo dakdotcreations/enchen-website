@@ -79,7 +79,7 @@
 <!-- Nav -->
 <nav id="navbar" class:scrolled>
 	<a href="/" class="nav-logo">
-		<div class="nav-logo-icon"><span>E</span></div>
+		<img src="/images/icon-logo.webp" class="nav-logo-img" alt="Enchen Creative Hub" />
 		<span class="nav-logo-text">ENCHEN<span>.</span></span>
 	</a>
 	<ul class="nav-links">
@@ -102,10 +102,10 @@
 	<div class="foot-top">
 		<div>
 			<a href="/" class="foot-logo-wrap">
-				<div class="foot-logo-icon"><span>E</span></div>
-				<span class="foot-logo-text">ENCHEN<span>.</span></span>
-			</a>
-			<div class="foot-tag">Bold Ideas. Bold Creations.</div>
+			<img src="/images/icon-logo.webp" class="foot-logo-img" alt="Enchen Creative Hub" />
+			<span class="foot-logo-text">ENCHEN<span>.</span></span>
+		</a>
+		<div class="foot-tag">Precision Design. Commercial Excellence.</div>
 			<div class="foot-social">
 				<a class="soc-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">IG</a>
 				<a class="soc-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">LI</a>
@@ -143,7 +143,7 @@
 		</div>
 	</div>
 	<div class="foot-bottom">
-		<div class="foot-copy">© 2025 <span>Enchen Creative Hub</span>. All rights reserved.</div>
+		<div class="foot-copy">© 2026 <span>Enchen Creative Hub</span>. All rights reserved.</div>
 		<div class="foot-location">Ntinda, Kampala, Uganda</div>
 	</div>
 </footer>

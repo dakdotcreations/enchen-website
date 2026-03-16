@@ -81,12 +81,23 @@
 <section style="background: var(--off-white); padding: 100px 64px;">
 	<div class="s-label centered reveal">Our Clients</div>
 	<h2 class="s-title reveal" style="text-align:center;">Trusted by Leading<br><span class="h-blue">Organisations</span></h2>
-	<div class="clients-grid reveal" style="margin-top:56px;">
-		<div class="cl-item"><div class="cl-name">TeleCom East Africa</div></div>
-		<div class="cl-item"><div class="cl-name">Victoria Group</div></div>
-		<div class="cl-item"><div class="cl-name">Nakigozi Properties</div></div>
-		<div class="cl-item"><div class="cl-name">The Kololo Hotel</div></div>
-		<div class="cl-item"><div class="cl-name">Pan-African Finance</div></div>
+	<div class="clients-grid reveal" style="margin-top:56px; grid-template-columns: repeat(4,1fr);">
+		<div class="cl-item"><img src="/images/clients/stanbic-bank.webp" alt="Stanbic Bank" /></div>
+		<div class="cl-item"><img src="/images/clients/mtn.webp" alt="MTN" /></div>
+		<div class="cl-item"><img src="/images/clients/airtel.webp" alt="Airtel" /></div>
+		<div class="cl-item"><img src="/images/clients/united-nations.webp" alt="United Nations" /></div>
+		<div class="cl-item"><img src="/images/clients/fao.webp" alt="FAO" /></div>
+		<div class="cl-item"><img src="/images/clients/nita.webp" alt="NITA" /></div>
+		<div class="cl-item"><img src="/images/clients/caa.webp" alt="CAA" /></div>
+		<div class="cl-item"><img src="/images/clients/pwc.webp" alt="PwC" /></div>
+		<div class="cl-item"><img src="/images/clients/victoria-university.webp" alt="Victoria University" /></div>
+		<div class="cl-item"><img src="/images/clients/finance-trust-bank.webp" alt="Finance Trust Bank" /></div>
+		<div class="cl-item"><img src="/images/clients/pride-bank.webp" alt="Pride Bank" /></div>
+		<div class="cl-item"><img src="/images/clients/ucc.webp" alt="UCC" /></div>
+		<div class="cl-item"><img src="/images/clients/wilken-telecom.webp" alt="Wilken Telecom" /></div>
+		<div class="cl-item"><img src="/images/clients/padre-pio.webp" alt="Padre Pio" /></div>
+		<div class="cl-item"><img src="/images/clients/pmh.webp" alt="PMH" /></div>
+		<div class="cl-item"><img src="/images/clients/client-1.webp" alt="Client" /></div>
 	</div>
 </section>
 

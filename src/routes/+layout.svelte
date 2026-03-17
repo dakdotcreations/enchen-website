@@ -108,7 +108,7 @@
 		<div class="foot-tag">Precision Design. Commercial Excellence.</div>
 			<div class="foot-social">
 				<a class="soc-link" href="https://www.instagram.com" target="_blank" rel="noopener noreferrer" title="Instagram">IG</a>
-				<a class="soc-link" href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer" title="LinkedIn">LI</a>
+				<a class="soc-link" href="https://ug.linkedin.com/in/enchen-creative-hub-b7032739a" target="_blank" rel="noopener noreferrer" title="LinkedIn">LI</a>
 				<a class="soc-link" href="https://www.facebook.com" target="_blank" rel="noopener noreferrer" title="Facebook">FB</a>
 				<a class="soc-link" href="https://www.houzz.com" target="_blank" rel="noopener noreferrer" title="Houzz">HZ</a>
 			</div>

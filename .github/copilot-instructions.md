@@ -46,15 +46,15 @@ No test runner is configured. Use `npm run check` to verify types after edits.
 - Use the existing **CSS custom properties** for all colors and typography:
   ```css
   /* Backgrounds */
-  --black: #0C0C0C;  --dark: #141414;  --dark-mid: #1C1C1C;  --dark-card: #242424;
+  --black: #221E1F;  --dark: #1A1618;  --dark-mid: #2C2729;  --dark-card: #332E30;
   /* Text */
   --text: #161616;   --text-mid: #4A4A4A;  --muted: #888888;
   /* Accents */
-  --gold: #B8975A;   --gold-light: #D4BA88;
+  --gold: #C42280;   --gold-light: #D94A9B;
   /* UI */
   --border: #D9D6CF; --light: #EDEAE3; --off-white: #F6F3EE; --white: #FAFAF8;
   ```
-- **Fonts**: `Cormorant Garamond` (headings/serif) and `DM Sans` (body/UI) — both loaded via Google Fonts in `app.html`. Do not add additional font imports.
+- **Fonts**: `Century Gothic` (headings — system font, tight letter-spacing via `letter-spacing: -0.04em`) and `DM Sans` (body/UI — loaded via Google Fonts in `app.html`). The heading font is referenced via the `--font-heading` CSS variable. Do not add additional font imports.
 - **Scroll-reveal**: Add `class="reveal"` to elements that should animate in on scroll. The layout's `IntersectionObserver` adds `.visible` automatically.
 - **Responsive**: Two breakpoints — `max-width: 1024px` (tablet) and `max-width: 640px` (mobile).
 

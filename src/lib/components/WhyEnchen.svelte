@@ -1,0 +1,53 @@
+<section style="background: var(--off-white); padding: 120px 64px;">
+	<div class="s-label reveal">Why Choose Us</div>
+	<h2 class="s-title reveal">What Sets Us <span class="h-blue">Apart</span></h2>
+	<div class="why-grid reveal" style="margin-top:56px;">
+		<div class="why-item"><div class="why-num">01</div><div class="why-title">End-to-End Service</div><div class="why-body">We handle every phase — from conceptual design and 3D visualisation through to procurement, construction supervision, and final handover. One team, complete accountability.</div></div>
+		<div class="why-item"><div class="why-num">02</div><div class="why-title">Local Expertise</div><div class="why-body">Rooted in Kampala, we understand the East African context — climate, culture, materials, and the regulatory environment — giving our projects depth that international firms cannot replicate.</div></div>
+		<div class="why-item"><div class="why-num">03</div><div class="why-title">Tailored Approach</div><div class="why-body">No templates. No off-the-shelf solutions. Every brief is addressed with fresh eyes and a design strategy built specifically around your goals, budget, and timeline.</div></div>
+		<div class="why-item"><div class="why-num">04</div><div class="why-title">Transparent Process</div><div class="why-body">We believe in clear communication and honest timelines. You will always know where your project stands, who is responsible for what, and what comes next.</div></div>
+	</div>
+</section>
+
+<style>
+	.why-grid {
+		display: grid;
+		grid-template-columns: repeat(4, 1fr);
+		gap: 0;
+	}
+	.why-item {
+		padding: 44px 36px;
+		border: 1px solid var(--border);
+		margin: -0.5px;
+		transition: background 0.3s;
+	}
+	.why-item:hover { background: var(--white); }
+	.why-num {
+		font-family: var(--font-heading);
+		font-size: 36px;
+		font-weight: 300;
+		color: var(--gold);
+		opacity: 0.45;
+		margin-bottom: 16px;
+		line-height: 1;
+	}
+	.why-title {
+		font-size: 10px;
+		letter-spacing: 2px;
+		text-transform: uppercase;
+		color: var(--text);
+		margin-bottom: 12px;
+		font-weight: 500;
+	}
+	.why-body {
+		font-size: 12px;
+		line-height: 1.85;
+		color: var(--muted);
+	}
+	@media (max-width: 1024px) {
+		.why-grid { grid-template-columns: 1fr 1fr; }
+	}
+	@media (max-width: 640px) {
+		.why-grid { grid-template-columns: 1fr 1fr; }
+	}
+</style>

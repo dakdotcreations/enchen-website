@@ -18,7 +18,7 @@
 		background: #1a1618;
 		border-top: 1px solid rgba(255, 255, 255, 0.04);
 		border-bottom: 1px solid rgba(255, 255, 255, 0.04);
-		padding: 15px 0;
+		padding: 1rem 0;
 		overflow: hidden;
 	}
 	.marquee-track {
@@ -27,7 +27,7 @@
 		white-space: nowrap;
 	}
 	.m-item {
-		font-size: 9px;
+		font-size: .75rem;
 		letter-spacing: 4px;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 0.22);

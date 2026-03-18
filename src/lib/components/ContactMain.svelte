@@ -10,7 +10,6 @@
 
 	const faqs = [
 		{ q: 'What happens after I submit the form?', a: 'Within one business day, a member of the Enchen team will review your enquiry and respond personally. If your project is a good fit, we will propose a time for an initial consultation — either in person or by video call — at no charge.' },
-		{ q: 'Is the initial consultation free?', a: 'Yes. Our initial consultation — whether in person or by video call — is completely free of charge and without obligation. We use that conversation to understand your project, assess fit, and outline how we can help.' },
 		{ q: 'How quickly do you respond to enquiries?', a: 'We aim to respond to every enquiry within one business day. For urgent project requirements, please call us directly or note your timeline in the enquiry form.' },
 		{ q: 'Do you take on small projects?', a: 'Yes. We work on projects of all sizes, from single-room redesigns to full commercial fit-outs. The same design process and commitment to quality applies to every engagement, regardless of scale or budget.' }
 	];
@@ -117,7 +116,7 @@
 </div>
 
 <!-- Map Placeholder -->
-<div class="contact-map">
+<!-- <div class="contact-map">
 	<div class="map-placeholder">
 		<div class="map-ph-inner">
 			<div class="map-ph-mark">◎</div>
@@ -126,7 +125,7 @@
 			<a href="https://maps.google.com/?q=Ntinda+Shopping+Centre+Kampala+Uganda" target="_blank" rel="noopener noreferrer" class="map-ph-link">Open in Maps</a>
 		</div>
 	</div>
-</div>
+</div> -->
 
 <!-- FAQ -->
 <div class="contact-faq-section">

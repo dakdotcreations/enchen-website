@@ -2,48 +2,86 @@
 	<div class="services-intro">
 		<div>
 			<div class="s-label reveal">What We Do</div>
-			<h2 class="s-title light reveal">Design Services<br><span class="h-blue">Tailored</span> to You</h2>
+			<h2 class="s-title light reveal">
+				Design Services<br /><span class="h-blue">Tailored</span> to You
+			</h2>
 		</div>
-		<p class="s-body reveal" style="max-width:340px;">From initial concept to final handover — end-to-end design solutions for every space and budget.</p>
+		<p class="s-body reveal" style="max-width:340px;">
+			From initial concept to final handover — end-to-end design solutions for every space and
+			budget.
+		</p>
 	</div>
 	<div class="services-grid reveal">
 		<div class="svc-img-card">
-			<div class="svc-img-placeholder svc-placeholder-1"><div class="svc-placeholder-accent"></div></div>
+			<img src="/images/projects/cls6.jpg" alt="Corporate office interior" class="svc-img-placeholder" />
 			<div class="svc-img-footer">
-				<div><div class="svc-img-num">01</div><div class="svc-img-name">Corporate &amp; Office Design</div></div>
+				<div>
+					<div class="svc-img-num">01</div>
+					<div class="svc-img-name">Corporate &amp; Office Design</div>
+				</div>
 				<div class="svc-img-arrow">↗</div>
 			</div>
 			<div class="svc-img-overlay">
 				<div class="svc-hover-num">01</div>
 				<div class="svc-hover-name">Corporate &amp; Office Design</div>
-				<p class="svc-hover-desc">Workplaces that inspire performance, reinforce brand identity, and prioritise employee wellbeing.</p>
-				<ul class="svc-hover-items"><li>Open plan &amp; private offices</li><li>Conference &amp; meeting rooms</li><li>Lounge &amp; wellness zones</li><li>Brand-aligned interiors</li></ul>
+				<p class="svc-hover-desc">
+					Workplaces that inspire performance, reinforce brand identity, and prioritise
+					employee wellbeing.
+				</p>
+				<ul class="svc-hover-items">
+					<li>Open plan &amp; private offices</li>
+					<li>Conference &amp; meeting rooms</li>
+					<li>Lounge &amp; wellness zones</li>
+					<li>Brand-aligned interiors</li>
+				</ul>
 			</div>
 		</div>
 		<div class="svc-img-card">
-			<div class="svc-img-placeholder svc-placeholder-2"><div class="svc-placeholder-accent"></div></div>
+			<img src="/images/projects/llv.jpg" alt="Luxury residential interior" class="svc-img-placeholder" />
 			<div class="svc-img-footer">
-				<div><div class="svc-img-num">02</div><div class="svc-img-name">Residential Design</div></div>
+				<div>
+					<div class="svc-img-num">02</div>
+					<div class="svc-img-name">Residential Design</div>
+				</div>
 				<div class="svc-img-arrow">↗</div>
 			</div>
 			<div class="svc-img-overlay">
 				<div class="svc-hover-num">02</div>
 				<div class="svc-hover-name">Residential Design</div>
-				<p class="svc-hover-desc">From luxury villas to contemporary homes — spaces crafted around how you truly live.</p>
-				<ul class="svc-hover-items"><li>Luxury villas &amp; mansions</li><li>Modern &amp; contemporary homes</li><li>Smart home integration</li><li>Space planning &amp; furnishing</li></ul>
+				<p class="svc-hover-desc">
+					From luxury villas to contemporary homes — spaces crafted around how you truly
+					live.
+				</p>
+				<ul class="svc-hover-items">
+					<li>Luxury villas &amp; mansions</li>
+					<li>Modern &amp; contemporary homes</li>
+					<li>Smart home integration</li>
+					<li>Space planning &amp; furnishing</li>
+				</ul>
 			</div>
 		</div>
 		<div class="svc-img-card">
-			<div class="svc-img-placeholder svc-placeholder-3"><div class="svc-placeholder-accent"></div></div>
+			<img src="/images/projects/bhl.jpg" alt="Boutique hotel commercial space" class="svc-img-placeholder" />
 			<div class="svc-img-footer">
-				<div><div class="svc-img-num">03</div><div class="svc-img-name">Commercial Spaces</div></div>
+				<div>
+					<div class="svc-img-num">03</div>
+					<div class="svc-img-name">Commercial Spaces</div>
+				</div>
 				<div class="svc-img-arrow">↗</div>
 			</div>
 			<div class="svc-img-overlay">
 				<div class="svc-hover-num">03</div>
 				<div class="svc-hover-name">Commercial Spaces</div>
-				<p class="svc-hover-desc">Retail, hospitality, and commercial developments designed to drive results and express brand identity.</p>
-				<ul class="svc-hover-items"><li>Interior fit-out</li><li>3D visualization &amp; virtual tours</li><li>Sustainable &amp; green building</li><li>Construction supervision</li></ul>
+				<p class="svc-hover-desc">
+					Retail, hospitality, and commercial developments designed to drive results and
+					express brand identity.
+				</p>
+				<ul class="svc-hover-items">
+					<li>Interior fit-out</li>
+					<li>3D visualization &amp; virtual tours</li>
+					<li>Sustainable &amp; green building</li>
+					<li>Construction supervision</li>
+				</ul>
 			</div>
 		</div>
 	</div>
@@ -52,20 +90,20 @@
 <style>
 	#services {
 		background: var(--dark);
-		padding: 120px 64px;
+		padding: var(--space-30) var(--space-16);
 	}
 	.services-intro {
 		display: flex;
 		justify-content: space-between;
-		align-items: flex-end;
-		margin-bottom: 64px;
+		align-items: center;
+		margin-bottom: var(--space-16);
 		flex-wrap: wrap;
-		gap: 24px;
+		gap: var(--space-6);
 	}
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
+		gap: var(--space-2);
 	}
 	.svc-img-card {
 		position: relative;
@@ -77,35 +115,20 @@
 	.svc-img-placeholder {
 		position: absolute;
 		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 		transition: transform 0.6s ease;
 	}
 	.svc-img-card:hover .svc-img-placeholder {
 		transform: scale(1.05);
-	}
-	.svc-placeholder-1 {
-		background: linear-gradient(150deg, #2c2729 0%, #1a1618 40%, #221e1f 100%);
-	}
-	.svc-placeholder-2 {
-		background: linear-gradient(150deg, #1c2230 0%, #111825 40%, #0e1520 100%);
-	}
-	.svc-placeholder-3 {
-		background: linear-gradient(150deg, #2a1c21 0%, #1a1218 40%, #201620 100%);
-	}
-	.svc-placeholder-accent {
-		position: absolute;
-		width: 200px;
-		height: 200px;
-		border-radius: 50%;
-		background: radial-gradient(circle, rgba(196, 34, 128, 0.12) 0%, transparent 70%);
-		top: 20%;
-		left: 20%;
 	}
 	.svc-img-footer {
 		position: absolute;
 		bottom: 0;
 		left: 0;
 		right: 0;
-		padding: 32px 28px 28px;
+		padding: var(--space-8) var(--space-7) var(--space-7);
 		background: linear-gradient(to top, rgba(34, 30, 31, 0.95) 0%, transparent 100%);
 		display: flex;
 		align-items: flex-end;
@@ -118,14 +141,14 @@
 	}
 	.svc-img-name {
 		font-family: var(--font-heading);
-		font-size: 18px;
-		color: white;
+		font-size: var(--text-lg);
+		color: var(--white);
 		font-weight: 700;
 		letter-spacing: -0.03em;
 		line-height: 1.2;
 	}
 	.svc-img-num {
-		font-size: 9px;
+		font-size: var(--text-sm);
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -152,7 +175,9 @@
 		padding: 36px 28px;
 		opacity: 0;
 		transform: translateY(16px);
-		transition: opacity 0.4s ease, transform 0.4s ease;
+		transition:
+			opacity 0.4s ease,
+			transform 0.4s ease;
 		display: flex;
 		flex-direction: column;
 		justify-content: flex-end;
@@ -164,25 +189,26 @@
 		transform: translateY(0);
 	}
 	.svc-hover-num {
-		font-size: 9px;
+		font-size: var(--text-sm);
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: var(--gold);
-		margin-bottom: 10px;
+		margin-bottom: var(--space-2);
 		opacity: 0.8;
 	}
 	.svc-hover-name {
 		font-family: var(--font-heading);
-		font-size: 20px;
-		color: white;
+		font-size: var(--text-xl);
+		color: var(--white);
 		font-weight: 700;
 		letter-spacing: -0.03em;
 		margin-bottom: 14px;
 	}
 	.svc-hover-desc {
-		font-size: 12px;
+		font-size: var(--text-body);
 		line-height: 1.8;
-		color: rgba(255, 255, 255, 0.45);
+		color: var(--white);
+        opacity: 0.8;
 		margin-bottom: 20px;
 	}
 	.svc-hover-items {
@@ -192,11 +218,12 @@
 		gap: 8px;
 	}
 	.svc-hover-items li {
-		font-size: 11px;
-		color: rgba(255, 255, 255, 0.32);
+		font-size: var(--text-md);
+		color: var(--white);
+        opacity: 0.6;
 		display: flex;
 		align-items: center;
-		gap: 10px;
+		gap: var(--space-2);
 		letter-spacing: 0.2px;
 	}
 	.svc-hover-items li::before {
@@ -208,7 +235,11 @@
 		opacity: 0.6;
 	}
 	@media (max-width: 1024px) {
-		#services { padding: 80px 32px; }
-		.services-grid { grid-template-columns: 1fr; }
+		#services {
+			padding: 80px 32px;
+		}
+		.services-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

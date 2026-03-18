@@ -95,7 +95,7 @@
 		transform: translateY(0);
 	}
 	.hero-slide-location {
-		font-size: 9px;
+		font-size: .75rem;
 		letter-spacing: 4px;
 		text-transform: uppercase;
 		color: rgba(255, 255, 255, 0.45);
@@ -111,7 +111,7 @@
 		text-transform: uppercase;
 	}
 	.hero-slide-cat {
-		font-size: 9px;
+		font-size: .75rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: var(--gold);
@@ -123,7 +123,7 @@
 		bottom: 68px;
 		right: 64px;
 		z-index: 3;
-		font-size: 9px;
+		font-size: .75rem;
 		letter-spacing: 2.5px;
 		text-transform: uppercase;
 		color: var(--white);

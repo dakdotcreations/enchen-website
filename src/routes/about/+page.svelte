@@ -7,13 +7,6 @@ import WhyEnchen from '$lib/components/WhyEnchen.svelte';
 import TeamSection from '$lib/components/TeamSection.svelte';
 import OurTimeline from '$lib/components/OurTimeline.svelte';
 import CtaStrip from '$lib/components/CtaStrip.svelte';
-
-const stats = [
-{ num: '150', suffix: '+', label: 'Projects Delivered' },
-{ num: '3', suffix: '+', label: 'Years of Excellence' },
-{ num: '3', label: 'Core Markets' },
-{ num: '100', suffix: '%', label: 'Client Satisfaction' }
-];
 </script>
 
 <svelte:head>
@@ -27,11 +20,9 @@ title="The Studio Behind<br><em>the Ideas</em>"
 sub="Founded in the heart of Kampala, Enchen Creative Hub is an architectural and interior design firm built on the belief that great spaces do more than look beautiful — they elevate how people live, work, and connect."
 hasOrb={true}
 />
-<StatsBar {stats} />
 <AboutStory />
 <MissionVision />
 <WhyEnchen />
-<TeamSection />
 <OurTimeline />
 <CtaStrip
 eyebrow="Ready to Begin?"

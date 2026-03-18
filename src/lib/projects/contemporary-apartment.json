@@ -1,0 +1,40 @@
+{
+	"slug": "contemporary-apartment",
+	"title": "Contemporary Apartment",
+	"location": "Bugolobi, Kampala",
+	"tag": "residential",
+	"thumbnail": "",
+	"content": [
+		{
+			"type": "text",
+			"heading": "Overview",
+			"body": "<p>A 130 sqm apartment for a young professional couple — the brief balanced two working-from-home setups, a desire to entertain regularly, and a clear aesthetic preference for a pared-back, modern interior with personality.</p>"
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "Living and dining area",
+			"caption": "The living and dining zone in the evening — a warm palette that transitions from day to night."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "text",
+					"heading": "Working from Home",
+					"body": "<p>Two study zones are built into the apartment without using a dedicated room. One is a full-length desk integrated into the living wall unit; the other is a compact niche carved from a bedroom alcove. Both disappear when not in use.</p>"
+				},
+				{
+					"type": "text",
+					"heading": "Entertaining",
+					"body": "<p>The dining table extends from four to ten seats. Open kitchen shelving replaces upper cabinets, turning the kitchen into a social backdrop. A bar cabinet in smoked oak acts as a room divider between kitchen and living space.</p>"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"heading": "Palette",
+			"body": "<p>Warm white walls, pale timber flooring, terracotta accents, and matte black hardware. A restrained base that makes the art collection — acquired by the clients over years of travel — the visual focus.</p>"
+		}
+	]
+}

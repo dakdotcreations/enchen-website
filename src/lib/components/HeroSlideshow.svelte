@@ -1,13 +1,13 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import type { Project } from '$lib/types/project';
 
-	const slides = [
-		{ name: 'Executive Headquarters', location: 'Kampala, Uganda', cat: 'Corporate', cls: 'pi1' },
-		{ name: 'Luxury Lakeside Villa', location: 'Entebbe, Uganda', cat: 'Residential', cls: 'pi2' },
-		{ name: 'Premium Lounge', location: 'Nairobi, Kenya', cat: 'Commercial', cls: 'pi3' },
-		{ name: 'Penthouse Suite', location: 'Kampala, Uganda', cat: 'Residential', cls: 'pi4' },
-		{ name: 'Boardroom Redesign', location: 'Kampala, Uganda', cat: 'Corporate', cls: 'pi5' }
-	];
+	let { slides }: { slides: Project[] } = $props();
+
+	// Fallback gradient classes for slides without a thumbnail
+	const piClasses = ['pi1', 'pi2', 'pi3', 'pi4', 'pi5', 'pi6', 'pi7', 'pi8', 'pi9'];
+
+	function cap(s: string) { return s.charAt(0).toUpperCase() + s.slice(1); }
 
 	let currentSlide = $state(0);
 	function nextSlide() { currentSlide = (currentSlide + 1) % slides.length; }
@@ -22,14 +22,17 @@
 <section id="hero">
 	{#each slides as slide, i}
 		<div class="hero-slide" class:active={currentSlide === i}>
-			<div class="hero-slide-bg {slide.cls}"></div>
+			<div
+				class="hero-slide-bg {slide.thumbnail ? '' : piClasses[i % piClasses.length]}"
+				style={slide.thumbnail ? `background-image: url('${slide.thumbnail}'); background-size: cover; background-position: center;` : ''}
+			></div>
 			<div class="hero-slide-overlay"></div>
 			<div class="hero-slide-info">
 				<div class="hero-slide-location">{slide.location}</div>
-				<div class="hero-slide-name">{slide.name}</div>
-				<div class="hero-slide-cat">{slide.cat}</div>
+				<div class="hero-slide-name">{slide.title}</div>
+				<div class="hero-slide-cat">{cap(slide.tag)}</div>
 			</div>
-			<a href="/portfolio" class="hero-slide-cta">View Project →</a>
+			<a href="/portfolio/{slide.slug}" class="hero-slide-cta">View Project →</a>
 		</div>
 	{/each}
 	<div class="hero-dots">

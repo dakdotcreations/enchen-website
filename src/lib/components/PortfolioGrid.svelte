@@ -1,7 +1,13 @@
 <script lang="ts">
-	let { items }: { items: { num: string; cat: string; name: string; loc: string; label: string }[] } = $props();
+	import type { Project } from '$lib/types/project';
+
+	let { items }: { items: Project[] } = $props();
 	const filters = ['All', 'Corporate', 'Residential', 'Commercial'];
 	let activeFilter = $state('All');
+
+	function cap(s: string) {
+		return s.charAt(0).toUpperCase() + s.slice(1);
+	}
 </script>
 
 <div class="port-full-section">
@@ -12,22 +18,26 @@
 		{/each}
 	</div>
 	<div class="port-full-grid reveal">
-		{#each items as p}
-			{#if activeFilter === 'All' || activeFilter === p.cat}
-				<div class="port-full-item">
+		{#each items as p, i}
+			{#if activeFilter === 'All' || activeFilter.toLowerCase() === p.tag}
+				<a href="/portfolio/{p.slug}" class="port-full-item">
 					<div class="port-full-img">
-						<div class="port-full-badge">{p.cat}</div>
-						<div class="port-item-placeholder">
-							<div class="pip-code">{p.num}</div>
-							<div class="pip-label">{@html p.label}</div>
-						</div>
+						<div class="port-full-badge">{cap(p.tag)}</div>
+						{#if p.thumbnail}
+							<img src={p.thumbnail} alt={p.title} class="port-thumb-img" />
+						{:else}
+							<div class="port-item-placeholder">
+								<div class="pip-code">{String(i + 1).padStart(2, '0')}</div>
+								<div class="pip-label">{p.title}</div>
+							</div>
+						{/if}
 						<div class="port-full-overlay">
-							<div class="port-full-cat">{p.cat}</div>
-							<div class="port-full-name">{@html p.name}</div>
-							<div class="port-full-loc">{p.loc}</div>
+							<div class="port-full-cat">{cap(p.tag)}</div>
+							<div class="port-full-name">{p.title}</div>
+							<div class="port-full-loc">{p.location}</div>
 						</div>
 					</div>
-				</div>
+				</a>
 			{/if}
 		{/each}
 	</div>
@@ -77,6 +87,16 @@
 		position: relative;
 		overflow: hidden;
 		cursor: none;
+		display: block;
+		text-decoration: none;
+		color: inherit;
+	}
+	.port-thumb-img {
+		position: absolute;
+		inset: 0;
+		width: 100%;
+		height: 100%;
+		object-fit: cover;
 	}
 	.port-full-img {
 		width: 100%;

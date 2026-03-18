@@ -8,13 +8,16 @@
 	import HomeClients from "$lib/components/HomeClients.svelte"
 	import HomeTestimonials from "$lib/components/HomeTestimonials.svelte"
 	import HomeContact from "$lib/components/HomeContact.svelte"
+	import { projects } from "$lib/projects/index"
+
+	const featuredSlides = projects.filter((p) => p.featured);
 </script>
 
 <svelte:head>
 	<title>Enchen Creative Hub — Architectural &amp; Interior Design | Commercial Spaces</title>
 </svelte:head>
 
-<HeroSlideshow />
+<HeroSlideshow slides={featuredSlides} />
 <Marquee />
 <HomeServices />
 <HomeAbout />

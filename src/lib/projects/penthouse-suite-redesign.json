@@ -1,0 +1,41 @@
+{
+	"slug": "penthouse-suite-redesign",
+	"title": "Penthouse Suite Redesign",
+	"location": "Naguru, Kampala",
+	"tag": "residential",
+	"featured": true,
+	"thumbnail": "",
+	"content": [
+		{
+			"type": "text",
+			"heading": "The Project",
+			"body": "<p>A complete redesign of a 280 sqm penthouse for a private client relocating to Kampala. The existing interior was dated and compartmentalised; the brief was to open it up, modernise the material palette, and create a home that balances daily life with the ability to entertain at a high level.</p>"
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "Open-plan kitchen and dining",
+			"caption": "The reconfigured open plan connects kitchen, dining, and terrace in one continuous space."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "text",
+					"heading": "Before",
+					"body": "<p>Five small rooms, low ceilings, and a kitchen isolated from the main living area. The previous owners had closed off the terrace access entirely, severing the apartment from its panoramic city views.</p>"
+				},
+				{
+					"type": "text",
+					"heading": "After",
+					"body": "<p>Two structural walls removed, the kitchen relocated and opened to dining, and full-height sliding doors reinstated to the wrap-around terrace. The penthouse now reads as a single, breathing space with the city as its backdrop.</p>"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"heading": "Finish Palette",
+			"body": "<p>Brushed concrete floors, white-oak joinery, linen-blend upholstery, and accents in aged brass. A deliberate restraint in the palette allows the views and light to carry the space.</p>"
+		}
+	]
+}

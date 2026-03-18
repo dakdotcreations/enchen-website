@@ -2,13 +2,14 @@
 	import '../app.css';
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
-	import { afterNavigate } from '$app/navigation';
+	import { afterNavigate, beforeNavigate } from '$app/navigation';
 	import Footer from '$lib/components/sections/footer.svelte'
 
 	let { children } = $props();
 
 	let mobileOpen = $state(false);
 	let scrolled = $state(false);
+	let curtain = $state<'idle' | 'cover' | 'lift'>('idle');
 
 	// cursor
 	let mx = $state(0), my = $state(0);
@@ -40,7 +41,16 @@
 		};
 	});
 
+	beforeNavigate(() => {
+		curtain = 'cover';
+	});
+
 	afterNavigate(() => {
+		window.scrollTo({ top: 0, behavior: 'instant' });
+		// wait for cover animation (450ms) to finish before lifting
+		setTimeout(() => { curtain = 'lift'; }, 500);
+		setTimeout(() => { curtain = 'idle'; }, 1050);
+
 		const obs = new IntersectionObserver(
 			(entries) => entries.forEach((e) => {
 				if (e.isIntersecting) {
@@ -64,6 +74,9 @@
 		{ href: '/contact', label: 'Contact' }
 	];
 </script>
+
+<!-- Page transition curtain -->
+<div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>
 
 <!-- Custom cursor -->
 <div class="cursor" style="left:{mx}px;top:{my}px;"></div>

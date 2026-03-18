@@ -553,6 +553,33 @@ color: var(--gold);
 opacity: 0.5;
 }
 
+/* ── Page transition curtain ── */
+.curtain {
+	position: fixed;
+	inset: 0;
+	background: var(--white);
+	z-index: 9990;
+	pointer-events: none;
+	transform: translateY(100%);
+}
+.curtain.cover {
+	pointer-events: all;
+	animation: curtain-cover 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.curtain.lift {
+	pointer-events: none;
+	animation: curtain-lift 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes curtain-cover {
+	from { transform: translateY(100%); }
+	to   { transform: translateY(0%); }
+}
+@keyframes curtain-lift {
+	from { transform: translateY(0%); }
+	to   { transform: translateY(-100%); }
+}
+
 /* ── Animations ── */
 @keyframes fadeUp {
 from { opacity: 0; transform: translateY(22px); }

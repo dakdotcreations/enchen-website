@@ -4,7 +4,7 @@
 	"location": "Entebbe Road, Kampala",
 	"tag": "commercial",
 	"featured": true,
-	"thumbnail": "",
+	"thumbnail": "/images/projects/bhl.jpg",
 	"content": [
 		{
 			"type": "text",
@@ -13,7 +13,7 @@
 		},
 		{
 			"type": "image",
-			"src": "",
+			"src": "/images/projects/bhl2.jpg",
 			"alt": "Hotel lobby entrance",
 			"caption": "The lobby from the entrance — immediate warmth, clear orientation, no wasted space."
 		},
@@ -27,7 +27,7 @@
 				},
 				{
 					"type": "image",
-					"src": "",
+					"src": "/images/projects/bhl2.jpg",
 					"alt": "Seating alcove near check-in",
 					"caption": "A seating alcove adjacent to the check-in desk — for guests who arrive early or want to wait."
 				}

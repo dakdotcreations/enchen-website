@@ -4,7 +4,7 @@
 	"location": "Naguru, Kampala",
 	"tag": "residential",
 	"featured": true,
-	"thumbnail": "",
+	"thumbnail": "/images/projects/phs.jpg",
 	"content": [
 		{
 			"type": "text",
@@ -13,7 +13,7 @@
 		},
 		{
 			"type": "image",
-			"src": "",
+			"src": "/images/projects/phs2.jpg",
 			"alt": "Open-plan kitchen and dining",
 			"caption": "The reconfigured open plan connects kitchen, dining, and terrace in one continuous space."
 		},

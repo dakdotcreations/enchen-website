@@ -4,7 +4,7 @@
 	"location": "Munyonyo, Kampala",
 	"tag": "residential",
 	"featured": true,
-	"thumbnail": "",
+	"thumbnail": "/images/projects/llv.jpg",
 	"content": [
 		{
 			"type": "text",
@@ -13,7 +13,7 @@
 		},
 		{
 			"type": "image",
-			"src": "",
+			"src": "/images/projects/llv2.jpg",
 			"alt": "Living room looking onto the lake",
 			"caption": "Full-height glazing dissolves the boundary between interior and lake view."
 		},
@@ -34,7 +34,7 @@
 		},
 		{
 			"type": "image",
-			"src": "",
+			"src": "/images/projects/llv3.jpg",
 			"alt": "Master bathroom with freestanding tub",
 			"caption": "Honed travertine and solid teak joinery in the master bathroom."
 		},

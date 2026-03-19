@@ -33,7 +33,7 @@
 		font-size: 9px;
 		letter-spacing: 4px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.7;
 		margin-bottom: 20px;
 	}

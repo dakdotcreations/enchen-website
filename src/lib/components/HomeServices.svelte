@@ -151,7 +151,7 @@
 		font-size: var(--text-sm);
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 8px;
 		opacity: 0.8;
 	}
@@ -182,7 +182,7 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		z-index: 3;
-		border-top: 2px solid var(--gold);
+		border-top: 2px solid var(--accent);
 	}
 	.svc-img-card:hover .svc-img-overlay {
 		opacity: 1;
@@ -192,7 +192,7 @@
 		font-size: var(--text-sm);
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: var(--space-2);
 		opacity: 0.8;
 	}
@@ -231,7 +231,7 @@
 		width: 10px;
 		height: 1px;
 		flex-shrink: 0;
-		background: var(--gold);
+		background: var(--accent);
 		opacity: 0.6;
 	}
 	@media (max-width: 1024px) {

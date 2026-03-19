@@ -70,7 +70,7 @@
 		position: absolute;
 		bottom: -24px;
 		right: -24px;
-		background: var(--gold);
+		background: var(--accent);
 		padding: 28px 32px;
 		text-align: center;
 	}

@@ -21,7 +21,7 @@
 		font-family: var(--font-heading);
 		font-size: 160px;
 		line-height: 0.5;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.15;
 		margin-bottom: 24px;
 	}
@@ -38,7 +38,7 @@
 	.fq-div {
 		width: 48px;
 		height: 2px;
-		background: var(--gold);
+		background: var(--accent);
 		margin: 40px auto 24px;
 	}
 	.fq-name {

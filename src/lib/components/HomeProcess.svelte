@@ -52,8 +52,8 @@
 		transition: all 0.3s;
 	}
 	.p-step:hover .p-num {
-		background: var(--gold);
-		border-color: var(--gold);
+		background: var(--accent);
+		border-color: var(--accent);
 		color: var(--white);
 	}
 	.p-title {

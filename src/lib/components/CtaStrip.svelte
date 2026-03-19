@@ -42,7 +42,7 @@
 		line-height: 1.05;
 	}
 	.cta-title :global(em) {
-		color: var(--gold);
+		color: var(--accent);
 		font-style: normal;
 	}
 	.cta-body {

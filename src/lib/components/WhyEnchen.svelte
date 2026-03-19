@@ -58,7 +58,7 @@
 		font-family: var(--font-heading);
 		font-size: 36px;
 		font-weight: 300;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.45;
 		margin-bottom: 16px;
 		line-height: 1;

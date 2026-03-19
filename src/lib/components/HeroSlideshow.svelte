@@ -114,7 +114,7 @@
 		font-size: .75rem;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-top: 10px;
 		opacity: 0.85;
 	}
@@ -140,8 +140,8 @@
 		opacity: 1;
 	}
 	.hero-slide-cta:hover {
-		background: var(--gold);
-		border-color: var(--gold);
+		background: var(--accent);
+		border-color: var(--accent);
 	}
 	.hero-dots {
 		position: absolute;
@@ -163,7 +163,7 @@
 		padding: 0;
 	}
 	.hero-dot.active {
-		background: var(--gold);
+		background: var(--accent);
 		width: 26px;
 		border-radius: 3px;
 	}
@@ -185,8 +185,8 @@
 		transition: all 0.3s;
 	}
 	.hero-arrow:hover {
-		border-color: var(--gold);
-		color: var(--gold);
+		border-color: var(--accent);
+		color: var(--accent);
 		background: rgba(196, 34, 128, 0.08);
 	}
 	.hero-prev { left: 32px; }

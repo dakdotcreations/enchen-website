@@ -50,7 +50,7 @@
 		font-size: 18px;
 		font-weight: 700;
 		letter-spacing: -0.03em;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.7;
 		padding-top: 3px;
 	}

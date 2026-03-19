@@ -25,7 +25,7 @@
 		font-size: 36px;
 		font-weight: 700;
 		letter-spacing: -0.05em;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.45;
 		line-height: 1;
 	}

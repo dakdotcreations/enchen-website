@@ -40,7 +40,7 @@
 		margin-bottom: 12px;
 	}
 	.sb-num :global(em) {
-		color: var(--gold);
+		color: var(--accent);
 		font-style: normal;
 	}
 	.sb-lbl {

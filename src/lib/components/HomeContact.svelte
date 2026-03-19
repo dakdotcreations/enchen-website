@@ -77,7 +77,7 @@
 		font-size: 8px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 6px;
 		opacity: 0.9;
 	}
@@ -120,7 +120,7 @@
 	.f-field input:focus,
 	.f-field textarea:focus,
 	.f-field select:focus {
-		border-color: var(--gold);
+		border-color: var(--accent);
 	}
 	.f-field textarea {
 		resize: vertical;
@@ -141,7 +141,7 @@
 		margin-top: 6px;
 	}
 	.f-submit:hover {
-		background: var(--gold);
+		background: var(--accent);
 		color: var(--black);
 	}
 	@media (max-width: 1024px) {

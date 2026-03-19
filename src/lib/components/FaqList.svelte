@@ -47,11 +47,11 @@
 		transition: color 0.3s;
 	}
 	.faq-q:hover {
-		color: var(--gold);
+		color: var(--accent);
 	}
 	.faq-icon {
 		font-size: 20px;
-		color: var(--gold);
+		color: var(--accent);
 		flex-shrink: 0;
 		transition: transform 0.3s;
 		line-height: 1;

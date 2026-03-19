@@ -193,7 +193,7 @@
 			opacity: 0.6;
 
 			em {
-				color: var(--gold);
+				color: var(--accent);
 				font-style: normal;
 			}
 		}

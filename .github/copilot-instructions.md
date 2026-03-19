@@ -50,7 +50,7 @@ No test runner is configured. Use `npm run check` to verify types after edits.
   /* Text */
   --text: #161616;   --text-mid: #4A4A4A;  --muted: #888888;
   /* Accents */
-  --gold: #C42280;   --gold-light: #D94A9B;
+  --accent: #C42280;   --accent-light: #D94A9B;
   /* UI */
   --border: #D9D6CF; --light: #EDEAE3; --off-white: #F6F3EE; --white: #FAFAF8;
   ```

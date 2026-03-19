@@ -49,7 +49,7 @@
 		font-size: 56px;
 		line-height: 0.7;
 		font-weight: 700;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.35;
 		margin-bottom: 20px;
 	}
@@ -64,7 +64,7 @@
 	.test-div {
 		width: 20px;
 		height: 1px;
-		background: var(--gold);
+		background: var(--accent);
 		margin-bottom: 20px;
 		opacity: 0.5;
 	}

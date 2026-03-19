@@ -150,7 +150,7 @@
 		font-size: 10px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 20px;
 	}
 	.cip-title {
@@ -183,7 +183,7 @@
 		font-size: 9px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 4px;
 		opacity: 0.7;
 	}
@@ -197,7 +197,7 @@
 		text-decoration: none;
 		transition: color 0.2s;
 	}
-	.cip-val :global(a:hover) { color: var(--gold); }
+	.cip-val :global(a:hover) { color: var(--accent); }
 	.cip-social {
 		display: flex;
 		gap: 12px;
@@ -216,8 +216,8 @@
 		transition: border-color 0.3s, color 0.3s;
 	}
 	.cip-soc-link:hover {
-		border-color: var(--gold);
-		color: var(--gold);
+		border-color: var(--accent);
+		color: var(--accent);
 	}
 	.contact-form-panel {
 		background: white;
@@ -227,7 +227,7 @@
 		font-size: 10px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 16px;
 	}
 	.cfp-title {
@@ -275,7 +275,7 @@
 		appearance: none;
 		-webkit-appearance: none;
 	}
-	.form-input:focus { border-color: var(--gold); }
+	.form-input:focus { border-color: var(--accent); }
 	.form-textarea {
 		height: auto;
 		padding: 14px 16px;
@@ -306,7 +306,7 @@
 	}
 	.map-ph-mark {
 		font-size: 40px;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 12px;
 		opacity: 0.6;
 	}
@@ -328,14 +328,14 @@
 		font-size: 10px;
 		letter-spacing: 2px;
 		text-transform: uppercase;
-		color: var(--gold);
-		border: 1px solid var(--gold);
+		color: var(--accent);
+		border: 1px solid var(--accent);
 		padding: 8px 20px;
 		text-decoration: none;
 		transition: background 0.3s, color 0.3s;
 	}
 	.map-ph-link:hover {
-		background: var(--gold);
+		background: var(--accent);
 		color: white;
 	}
 	.contact-faq-section {

@@ -95,7 +95,7 @@
 		font-size: 9px;
 		letter-spacing: 2.5px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 14px;
 		opacity: 0.8;
 	}

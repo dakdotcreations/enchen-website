@@ -70,7 +70,7 @@
 		left: 0;
 		right: 0;
 		height: 1px;
-		background: var(--gold);
+		background: var(--accent);
 	}
 	.port-grid {
 		display: grid;
@@ -124,7 +124,7 @@
 		font-size: 9px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 5px;
 		opacity: 0.75;
 	}
@@ -139,7 +139,7 @@
 		position: absolute;
 		top: 14px;
 		left: 14px;
-		background: var(--gold);
+		background: var(--accent);
 		font-size: 8px;
 		letter-spacing: 2px;
 		text-transform: uppercase;

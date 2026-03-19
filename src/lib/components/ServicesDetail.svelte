@@ -164,7 +164,7 @@
 		font-size: 9px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.65;
 	}
 	.svc-row-right {
@@ -194,7 +194,7 @@
 		content: "";
 		width: 10px;
 		height: 1px;
-		background: var(--gold);
+		background: var(--accent);
 		opacity: 0.4;
 		flex-shrink: 0;
 	}

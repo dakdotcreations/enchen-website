@@ -19,9 +19,9 @@
 	--light:      #edeae3;
 	--off-white:  #f6f3ee;
 	--white:      #fafaf8;
-	--gold:       #c42280;
-	--gold-light: #d94a9b;
-	--gold-dim:   rgba(196, 34, 128, 0.1);
+	--accent:       #c42280;
+	--accent-light: #d94a9b;
+	--accent-dim:   rgba(196, 34, 128, 0.1);
 	--teal:       #1a6b82;
 
 	/* ── White alpha scale ── */
@@ -56,8 +56,8 @@
 	--overlay-88:rgba(10, 10, 10, 0.88);
 
 	/* ── Gold alpha ── */
-	--gold-45: rgba(196, 34, 128, 0.45);
-	--gold-08: rgba(196, 34, 128, 0.08);
+	--accent-45: rgba(196, 34, 128, 0.45);
+	--accent-08: rgba(196, 34, 128, 0.08);
 
 	/* ── Typography ── */
 	--font-heading: "Century Gothic", "AppleGothic", sans-serif;
@@ -145,7 +145,7 @@ body {
 	position: fixed;
 	width: 0.375rem;
 	height: 0.375rem;
-	background: var(--gold);
+	background: var(--accent);
 	border-radius: var(--radius-full);
 	pointer-events: none;
 	z-index: 9999;
@@ -156,7 +156,7 @@ body {
 	position: fixed;
 	width: 1.75rem;
 	height: 1.75rem;
-	border: 1px solid var(--gold-45);
+	border: 1px solid var(--accent-45);
 	border-radius: var(--radius-full);
 	pointer-events: none;
 	z-index: 9998;
@@ -220,7 +220,7 @@ nav.scrolled {
 	text-transform: uppercase;
 }
 .nav-logo-text span {
-	color: var(--gold);
+	color: var(--accent);
 }
 .nav-links {
 	display: flex;
@@ -243,7 +243,7 @@ nav.scrolled {
 	left: 0;
 	width: 0;
 	height: 1px;
-	background: var(--gold);
+	background: var(--accent);
 	transition: width 0.35s ease;
 }
 .nav-links a:hover,
@@ -265,8 +265,8 @@ nav.scrolled {
 	transition: all 0.3s;
 }
 .nav-cta:hover {
-	border-color: var(--gold);
-	color: var(--gold);
+	border-color: var(--accent);
+	color: var(--accent);
 	background-color: var(--white);
 }
 .hamburger {
@@ -315,7 +315,7 @@ nav.scrolled {
 	transition: color 0.3s;
 }
 .mobile-menu a:hover {
-	color: var(--gold);
+	color: var(--accent);
 }
 .mobile-close {
 	position: absolute;
@@ -334,7 +334,7 @@ nav.scrolled {
 	font-size: var(--text-2xs);
 	letter-spacing: var(--tracking-xs);
 	text-transform: uppercase;
-	background: var(--gold);
+	background: var(--accent);
 	color: var(--white);
 	padding: 0.875rem var(--space-10);
 	text-decoration: none;
@@ -362,8 +362,8 @@ nav.scrolled {
 		color 0.3s;
 }
 .btn-outline:hover {
-	border-color: var(--gold);
-	color: var(--gold);
+	border-color: var(--accent);
+	color: var(--accent);
 }
 .btn-outline-dark {
 	font-size: var(--text-2xs);
@@ -380,8 +380,8 @@ nav.scrolled {
 	background: transparent;
 }
 .btn-outline-dark:hover {
-	border-color: var(--gold);
-	color: var(--gold);
+	border-color: var(--accent);
+	color: var(--accent);
 }
 
 /* ── Section base ── */
@@ -392,7 +392,7 @@ section {
 	font-size: var(--text-xs);
 	letter-spacing: var(--tracking-xl);
 	text-transform: uppercase;
-	color: var(--gold);
+	color: var(--accent);
 	margin-bottom: var(--space-5);
 	display: flex;
 	align-items: center;
@@ -402,7 +402,7 @@ section {
 	content: "";
 	width: 1.375rem;
 	height: 1px;
-	background: var(--gold);
+	background: var(--accent);
 	flex-shrink: 0;
 	opacity: 0.7;
 }
@@ -422,11 +422,11 @@ section {
 	letter-spacing: var(--tracking-tight);
 }
 .s-title .h-blue {
-	color: var(--gold);
+	color: var(--accent);
 	font-style: normal;
 }
 .s-title .h-mag {
-	color: var(--gold);
+	color: var(--accent);
 	font-style: normal;
 }
 .s-title.light {
@@ -489,7 +489,7 @@ section {
 	left: 0;
 	right: 0;
 	height: 1px;
-	background: var(--gold);
+	background: var(--accent);
 	transform: scaleX(0);
 	transform-origin: left;
 	transition: transform 0.4s ease;
@@ -511,7 +511,7 @@ section {
 	transition: color 0.3s;
 }
 .svc-card:hover .svc-num {
-	color: var(--gold-dim);
+	color: var(--accent-dim);
 }
 .svc-icon-wrap {
 	width: var(--space-11);
@@ -557,7 +557,7 @@ section {
 	width: 0.625rem;
 	height: 1px;
 	flex-shrink: 0;
-	background: var(--gold);
+	background: var(--accent);
 	opacity: 0.45;
 }
 
@@ -609,7 +609,7 @@ footer {
 	text-transform: uppercase;
 }
 .foot-logo-text span {
-	color: var(--gold);
+	color: var(--accent);
 }
 .foot-tag {
 	font-size: var(--text-xs);
@@ -636,8 +636,8 @@ footer {
 	transition: all 0.3s;
 }
 .soc-link:hover {
-	border-color: var(--gold);
-	color: var(--gold);
+	border-color: var(--accent);
+	color: var(--accent);
 }
 .foot-col-title {
 	font-size: var(--text-2xs);
@@ -673,7 +673,7 @@ footer {
 	color: var(--white-18);
 }
 .foot-copy span {
-	color: var(--gold);
+	color: var(--accent);
 	opacity: 0.65;
 }
 .foot-location {
@@ -685,7 +685,7 @@ footer {
 }
 .foot-location::before {
 	content: "◦";
-	color: var(--gold);
+	color: var(--accent);
 	opacity: 0.5;
 }
 
@@ -865,13 +865,13 @@ footer {
 	transition: color 0.2s;
 }
 .proj-back:hover {
-	color: var(--gold);
+	color: var(--accent);
 }
 .proj-tag-label {
 	font-size: var(--text-xs);
 	letter-spacing: var(--tracking-sm);
 	text-transform: uppercase;
-	color: var(--gold);
+	color: var(--accent);
 	margin-bottom: var(--space-3);
 }
 .proj-title {
@@ -1040,7 +1040,7 @@ footer {
 	color: var(--white);
 }
 .proj-nav-link:hover .proj-nav-dir {
-	color: var(--gold);
+	color: var(--accent);
 }
 .proj-nav-all {
 	font-size: var(--text-xs);
@@ -1053,7 +1053,7 @@ footer {
 	white-space: nowrap;
 }
 .proj-nav-all:hover {
-	color: var(--gold);
+	color: var(--accent);
 }
 
 @media (max-width: 64rem) {

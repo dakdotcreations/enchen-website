@@ -48,7 +48,7 @@
 		margin-bottom: 20px;
 	}
 	.test-star {
-		color: var(--gold);
+		color: var(--accent);
 		font-size: 14px;
 	}
 	.test-full-body {
@@ -67,7 +67,7 @@
 		width: 44px;
 		height: 44px;
 		border-radius: 50%;
-		background: var(--gold);
+		background: var(--accent);
 		display: flex;
 		align-items: center;
 		justify-content: center;

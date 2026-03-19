@@ -65,10 +65,10 @@
 		transition: color 0.3s;
 	}
 	.ph-breadcrumb :global(a):hover {
-		color: var(--gold);
+		color: var(--accent);
 	}
 	.ph-breadcrumb-sep {
-		color: var(--gold);
+		color: var(--accent);
 		opacity: 0.35;
 	}
 	.ph-content {
@@ -83,7 +83,7 @@
 		font-size: 10px;
 		letter-spacing: 4.5px;
 		text-transform: uppercase;
-		color: var(--gold);
+		color: var(--accent);
 		margin-bottom: 24px;
 	}
 	.ph-eyebrow::before {
@@ -91,7 +91,7 @@
 		display: block;
 		width: 30px;
 		height: 1px;
-		background: var(--gold);
+		background: var(--accent);
 		opacity: 0.7;
 	}
 	.ph-title {
@@ -104,7 +104,7 @@
 		letter-spacing: -0.04em;
 	}
 	.ph-title :global(em) {
-		color: var(--gold);
+		color: var(--accent);
 		font-style: normal;
 	}
 	.ph-sub {

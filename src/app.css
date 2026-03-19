@@ -8,7 +8,6 @@
 
 :root {
 	/* ── Brand colours ── */
-	--black:      #221e1f;
 	--dark:       #1a1618;
 	--dark-mid:   #2c2729;
 	--dark-card:  #332e30;
@@ -29,6 +28,13 @@
 	--white-60:  rgba(250, 250, 248, 0.60);
 	--white-80:  rgba(250, 250, 248, 0.80);
 	--white:     rgba(250, 250, 248, 1);
+
+    /* ── Black / dark alpha scale ── */
+    --black-20:  rgba(34, 30, 31, 0.20);
+    --black-40:  rgba(34, 30, 31, 0.40);
+    --black-60:  rgba(34, 30, 31, 0.60);
+    --black-80:  rgba(34, 30, 31, 0.80);
+    --black:     rgba(34, 30, 31, 1);
 
 	/* ── Black / dark alpha scale ── */
 	--black-8:   rgba(12, 12, 12, 0.97);
@@ -375,7 +381,7 @@ section {
 }
 .s-label {
 	font-size: var(--text-xs);
-	letter-spacing: var(--tracking-xl);
+	letter-spacing: var(--tracking-sm);
 	text-transform: uppercase;
 	color: var(--accent);
 	margin-bottom: var(--space-5);

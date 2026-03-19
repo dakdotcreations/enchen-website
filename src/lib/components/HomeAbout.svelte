@@ -106,7 +106,7 @@
 				.v-desc {
 					font-size: var(--text-md);
 					line-height: 1.7;
-					color: var(--muted);
+					color: var(--black-60);
 				}
 			}
 		}

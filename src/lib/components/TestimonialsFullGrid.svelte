@@ -85,7 +85,7 @@
 	}
 	.test-full-role {
 		font-size: 11px;
-		color: var(--muted);
+		color: var(--black-60);
 		margin-top: 2px;
 	}
 	@media (max-width: 1024px) {

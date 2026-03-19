@@ -143,7 +143,7 @@
 	.v-desc {
 		font-size: 12px;
 		line-height: 1.7;
-		color: var(--muted);
+		color: var(--black-60);
 	}
 	@media (max-width: 1024px) {
 		#story { padding: 80px 32px; }

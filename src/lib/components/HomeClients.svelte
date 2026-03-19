@@ -29,7 +29,7 @@
 		font-size: 9px;
 		letter-spacing: 4px;
 		text-transform: uppercase;
-		color: var(--muted);
+		color: var(--black-60);
 		white-space: nowrap;
 	}
 	.clients-rule {

@@ -99,7 +99,7 @@
 		font-size: 8px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
-		color: var(--muted);
+		color: var(--black-60);
 		margin-bottom: 8px;
 	}
 	.f-field input,

@@ -13,7 +13,6 @@
 	--dark-card:  #332e30;
 	--text:       #161616;
 	--text-mid:   #4a4a4a;
-	--muted:      #888888;
 	--border:     #d9d6cf;
 	--light:      #edeae3;
 	--off-white:  #f6f3ee;
@@ -426,7 +425,7 @@ section {
 .s-body {
 	font-size: var(--text-md);
 	line-height: 1.9;
-	color: var(--muted);
+	color: var(--black-60);
 	max-width: 32.5rem;
 }
 
@@ -982,7 +981,7 @@ footer {
 /* Caption */
 .pblock-caption {
 	font-size: var(--text-sm);
-	color: var(--muted);
+	color: var(--black-60);
 	margin-top: var(--space-2);
 	letter-spacing: 0.02em;
 	display: block;

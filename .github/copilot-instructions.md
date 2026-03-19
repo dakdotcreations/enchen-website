@@ -48,7 +48,7 @@ No test runner is configured. Use `npm run check` to verify types after edits.
   /* Backgrounds */
   --black: #221E1F;  --dark: #1A1618;  --dark-mid: #2C2729;  --dark-card: #332E30;
   /* Text */
-  --text: #161616;   --text-mid: #4A4A4A;  --muted: #888888;
+  --text: #161616;   --text-mid: #4A4A4A;  --black-60: #888888;
   /* Accents */
   --accent: #C42280;   --accent-light: #D94A9B;
   /* UI */

@@ -70,7 +70,7 @@
 		padding: 0 0 24px 0;
 		font-size: 13px;
 		line-height: 1.9;
-		color: var(--muted);
+		color: var(--black-60);
 		max-width: 680px;
 	}
 	.faq-item.open .faq-a {

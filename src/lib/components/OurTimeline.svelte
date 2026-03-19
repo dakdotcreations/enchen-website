@@ -64,7 +64,7 @@
 	.tl-desc {
 		font-size: 12px;
 		line-height: 1.8;
-		color: var(--muted);
+		color: var(--black-60);
 	}
 	.tl-visual {
 		background: var(--dark);

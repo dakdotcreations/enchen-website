@@ -102,7 +102,7 @@
 	.team-bio {
 		font-size: 12px;
 		line-height: 1.85;
-		color: var(--muted);
+		color: var(--black-60);
 	}
 	@media (max-width: 1024px) {
 		.team-section { padding: 80px 32px; }

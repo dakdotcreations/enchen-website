@@ -37,18 +37,18 @@
 <style>
 	#process {
 		background: var(--white);
-		padding: 120px 64px;
+		padding: 7.5rem 4rem;
 
 		.process-steps {
 			display: grid;
 			grid-template-columns: repeat(4, 1fr);
-			margin-top: 72px;
+			margin-top: 4.5rem;
 			position: relative;
 
 			&::after {
 				content: "";
 				position: absolute;
-				top: 29px;
+				top: 1.8125rem;
 				left: 12.5%;
 				right: 12.5%;
 				height: 1px;
@@ -56,7 +56,7 @@
 			}
 
 			.p-step {
-				padding: 0 24px;
+				padding: 0 1.5rem;
 				text-align: center;
 
 				&:hover .p-num {
@@ -89,7 +89,7 @@
 					/* letter-spacing: 2.5px; */
 					text-transform: uppercase;
 					color: var(--text);
-					margin-bottom: 12px;
+					margin-bottom: 0.75rem;
 					font-weight: 500;
 				}
 
@@ -102,11 +102,11 @@
 		}
 
 		@media (max-width: 1024px) {
-			padding: 80px 32px;
+			padding: 5rem 2rem;
 
 			.process-steps {
 				grid-template-columns: 1fr 1fr;
-				gap: 44px;
+				gap: 2.75rem;
 
 				&::after {
 					display: none;

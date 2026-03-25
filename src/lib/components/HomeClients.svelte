@@ -51,7 +51,7 @@
 		transition: all 0.3s;
 		cursor: none;
 	}
-	.cl-item:hover { background: var(--white); }
+	.cl-item:hover { background: #fff; }
 	.cl-item img {
 		max-height: 72px;
 		width: auto;

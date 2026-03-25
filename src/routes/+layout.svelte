@@ -3,7 +3,9 @@
 	import { page } from '$app/stores';
 	import { onMount } from 'svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
+
 	import Footer from '$lib/components/sections/footer.svelte'
+    import Lenis from 'lenis';
 
 	let { children } = $props();
 
@@ -16,6 +18,18 @@
 	let rx = $state(0), ry = $state(0);
 
 	function closeMob() { mobileOpen = false; }
+
+    function initLenis() {
+        // lenis
+		const lenis = new Lenis();
+
+		function raf(time: any) {
+			lenis.raf(time);
+			requestAnimationFrame(raf);
+		}
+
+		requestAnimationFrame(raf);
+    }
 
 	onMount(() => {
 		// scroll nav
@@ -33,6 +47,8 @@
 			raf = requestAnimationFrame(loop);
 		};
 		loop();
+
+        initLenis()
 
 		return () => {
 			window.removeEventListener('scroll', onScroll);

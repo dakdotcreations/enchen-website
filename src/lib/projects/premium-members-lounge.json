@@ -3,7 +3,7 @@
 	"title": "Premium Members' Lounge",
 	"location": "Kololo, Kampala",
 	"tag": "commercial",
-	"thumbnail": "",
+	"thumbnail": "/images/projects/cls8.jpg",
 	"content": [
 		{
 			"type": "text",
@@ -15,7 +15,7 @@
 			"items": [
 				{
 					"type": "image",
-					"src": "",
+					"src": "/images/projects/cls5.jpg",
 					"alt": "Main lounge seating area",
 					"caption": "The main lounge — layered seating zones for different group sizes."
 				},

@@ -1,3 +1,12 @@
+<script>
+    import { 
+        SquareDashedMousePointer,
+        MessageCircleMore,
+        Rocket,
+        Leaf,
+         } from "@lucide/svelte"; 
+</script>
+
 <section id="story" style="background: var(--off-white);">
 	<div class="s-label reveal">Who We Are</div>
 	<div class="about-grid">
@@ -13,16 +22,68 @@
 			</div>
 		</div>
 		<div>
-			<div class="about-tag">Enchen Creative Hub</div>
-			<h2 class="s-title reveal">Designing Spaces<br>That <span class="h-blue">Endure</span></h2>
-			<p class="s-body reveal">Enchen Creative Hub was born from a simple conviction: every space has the potential to inspire. From our studio in Ntinda, Kampala, we partner with clients across Uganda and the East African region to deliver architectural and interior design that is bold, functional, and deeply considered.</p>
-			<p class="s-body reveal" style="margin-top:18px;">We are a multidisciplinary team of architects, interior designers, and project managers united by a passion for craft. We believe the best design begins with listening — understanding how you live, how you work, and what you aspire to create.</p>
-			<p class="s-body reveal" style="margin-top:18px;">Our approach is grounded in precision and guided by aesthetics. We take projects from initial concept through to construction completion, acting as a single trusted partner for every stage of the journey.</p>
+			<h2 class="s-title reveal">
+				Designing Spaces<br />That <span class="h-blue">Endure</span>
+			</h2>
+			<div class="about-body">
+				<p class="s-body reveal">
+					Enchen Creative Hub is an architectural interior design firm dedicated to
+					crafting inspiring and functional spaces. With a passion for innovation and
+					sustainability, we deliver tailored solutions across private residences,
+					corporate environments, and commercial developments, turning visions into
+					reality.
+				</p>
+				<p class="s-body reveal">
+					We are a multidisciplinary team of architects, interior designers, and project
+					managers united by a passion for craft. We believe the best design begins with
+					listening — understanding how you live, how you work, and what you aspire to
+					create.
+				</p>
+				<p class="s-body reveal">
+					Our approach is grounded in precision and guided by aesthetics. We take projects
+					from initial concept through to construction completion, acting as a single
+					trusted partner for every stage of the journey.
+				</p>
+			</div>
 			<div class="about-values reveal" style="margin-top:44px;">
-				<div class="v-card"><div class="v-icon blue">◈</div><div class="v-name">Precision</div><div class="v-desc">Every measurement, every material, every decision — considered with meticulous care.</div></div>
-				<div class="v-card"><div class="v-icon mag">◈</div><div class="v-name">Collaboration</div><div class="v-desc">We work alongside our clients, not for them. Your input shapes every stage.</div></div>
-				<div class="v-card"><div class="v-icon pur">◈</div><div class="v-name">Innovation</div><div class="v-desc">We embrace advanced technology and fresh thinking to solve complex design challenges.</div></div>
-				<div class="v-card"><div class="v-icon teal">◈</div><div class="v-name">Sustainability</div><div class="v-desc">Responsible design that balances beauty with environmental accountability.</div></div>
+				<div class="v-card">
+					<div class="v-icon blue">
+                        <SquareDashedMousePointer size={16} />
+                    </div>
+					<div class="v-name">Precision</div>
+					<div class="v-desc">
+						Every measurement, every material, every decision considered with
+						meticulous care.
+					</div>
+				</div>
+				<div class="v-card">
+					<div class="v-icon mag">
+                        <MessageCircleMore size={16} />
+                    </div>
+					<div class="v-name">Collaboration</div>
+					<div class="v-desc">
+						We work alongside our clients, not for them. Your input shapes every stage.
+					</div>
+				</div>
+				<div class="v-card">
+					<div class="v-icon pur">
+                        <Rocket size={16} />
+                    </div>
+					<div class="v-name">Innovation</div>
+					<div class="v-desc">
+						We embrace advanced technology and fresh thinking to solve complex design
+						challenges.
+					</div>
+				</div>
+				<div class="v-card">
+					<div class="v-icon teal">
+                        <Leaf size={16} />
+                    </div>
+					<div class="v-name">Sustainability</div>
+					<div class="v-desc">
+						Responsible design that balances beauty with environmental accountability.
+					</div>
+				</div>
 			</div>
 		</div>
 	</div>
@@ -38,6 +99,11 @@
 		gap: 88px;
 		align-items: center;
 		margin-top: 80px;
+
+		& .about-body {
+			display: grid;
+			gap: var(--space-6);
+		}
 	}
 	.about-visual {
 		position: relative;
@@ -120,7 +186,9 @@
 		padding: 24px 20px;
 		transition: background 0.3s;
 	}
-	.v-card:hover { background: var(--white); }
+	.v-card:hover {
+		background: var(--white);
+	}
 	.v-icon {
 		width: 32px;
 		height: 32px;
@@ -133,7 +201,7 @@
 		background: var(--white);
 	}
 	.v-name {
-		font-size: 10px;
+		font-size: var(--text-sm);
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: var(--text);
@@ -141,15 +209,22 @@
 		font-weight: 500;
 	}
 	.v-desc {
-		font-size: 12px;
+		font-size: var(--text-md);
 		line-height: 1.7;
 		color: var(--black-60);
 	}
 	@media (max-width: 1024px) {
-		#story { padding: 80px 32px; }
-		.about-grid { grid-template-columns: 1fr; gap: 44px; }
+		#story {
+			padding: 80px 32px;
+		}
+		.about-grid {
+			grid-template-columns: 1fr;
+			gap: 44px;
+		}
 	}
 	@media (max-width: 640px) {
-		.about-values { grid-template-columns: 1fr; }
+		.about-values {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

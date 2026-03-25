@@ -12,11 +12,6 @@
 	<div class="page-hero-grid"></div>
 	{#if hasOrb}<div class="page-hero-orb"></div>{/if}
 	<div class="ph-content">
-		<div class="ph-breadcrumb">
-			<a href="/">Home</a>
-			<span class="ph-breadcrumb-sep">/</span>
-			{breadcrumb}
-		</div>
 		<div class="ph-eyebrow">{eyebrow}</div>
 		<h1 class="ph-title">{@html title}</h1>
 		<p class="ph-sub">{sub}</p>
@@ -26,7 +21,7 @@
 <style>
 	.page-hero {
 		background: var(--black);
-		padding: 180px 64px 96px;
+		padding: var(--space-44) var(--space-16) var(--space-24);
 		position: relative;
 		overflow: hidden;
 	}
@@ -49,28 +44,6 @@
 		background: radial-gradient(circle, rgba(196, 34, 128, 0.04) 0%, transparent 60%);
 		pointer-events: none;
 	}
-	.ph-breadcrumb {
-		display: flex;
-		align-items: center;
-		gap: 8px;
-		font-size: 9px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.22);
-		margin-bottom: 32px;
-	}
-	.ph-breadcrumb :global(a) {
-		color: rgba(255, 255, 255, 0.28);
-		text-decoration: none;
-		transition: color 0.3s;
-	}
-	.ph-breadcrumb :global(a):hover {
-		color: var(--accent);
-	}
-	.ph-breadcrumb-sep {
-		color: var(--accent);
-		opacity: 0.35;
-	}
 	.ph-content {
 		position: relative;
 		z-index: 2;
@@ -80,7 +53,7 @@
 		display: inline-flex;
 		align-items: center;
 		gap: 14px;
-		font-size: 10px;
+		font-size: var(--text-xs);
 		letter-spacing: 4.5px;
 		text-transform: uppercase;
 		color: var(--accent);
@@ -96,11 +69,11 @@
 	}
 	.ph-title {
 		font-family: var(--font-heading);
-		font-size: clamp(36px, 5vw, 68px);
+		font-size: clamp(var(--text-4xl), 5vw, var(--text-7xl));
 		font-weight: 700;
 		line-height: 1.05;
 		color: var(--white);
-		margin-bottom: 24px;
+		margin-bottom: var(--space-6);
 		letter-spacing: -0.04em;
 	}
 	.ph-title :global(em) {
@@ -108,12 +81,12 @@
 		font-style: normal;
 	}
 	.ph-sub {
-		font-size: 14px;
+		font-size: var(--text-md);
 		line-height: 1.9;
-		color: rgba(255, 255, 255, 0.38);
+		color: var(--white-60);
 		max-width: 560px;
 	}
 	@media (max-width: 1024px) {
-		.page-hero { padding: 140px 32px 72px; }
+		.page-hero { padding: var(--space-36) var(--space-8) var(--space-18); }
 	}
 </style>

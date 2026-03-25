@@ -46,7 +46,7 @@
 		font-style: normal;
 	}
 	.cta-body {
-		font-size: 14px;
+		font-size: var(--text-body);
 		line-height: 1.9;
 		color: rgba(255, 255, 255, 0.32);
 		max-width: 440px;

@@ -56,7 +56,7 @@
 	}
 	.why-num {
 		font-family: var(--font-heading);
-		font-size: 36px;
+		font-size: var(--text-2xl);
 		font-weight: 300;
 		color: var(--accent);
 		opacity: 0.45;
@@ -64,15 +64,15 @@
 		line-height: 1;
 	}
 	.why-title {
-		font-size: 10px;
+		font-size: var(--text-body);
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: var(--text);
-		margin-bottom: 12px;
+		margin-bottom: var(--space-3);
 		font-weight: 500;
 	}
 	.why-body {
-		font-size: 12px;
+		font-size: var(--text-md);
 		line-height: 1.85;
 		color: var(--black-60);
 	}

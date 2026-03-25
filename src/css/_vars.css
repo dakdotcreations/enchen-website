@@ -1,0 +1,111 @@
+:root {
+	/* ── Brand colours ── */
+	--dark:       #1a1618;
+	--dark-mid:   #2c2729;
+	--dark-card:  #332e30;
+	--text:       #161616;
+	--text-mid:   #4a4a4a;
+	--border:     #d9d6cf;
+	--light:      #edeae3;
+	--off-white:  #f6f3ee;
+	--accent:       #c42280;
+	--accent-light: #d94a9b;
+	--accent-dim:   rgba(196, 34, 128, 0.1);
+	--teal:       #1a6b82;
+    
+	/* ── White alpha scale ── */
+	--white-20:  rgba(250, 250, 248, 0.20);
+	--white-40:  rgba(250, 250, 248, 0.40);
+	--white-60:  rgba(250, 250, 248, 0.60);
+	--white-80:  rgba(250, 250, 248, 0.80);
+	--white:     rgba(250, 250, 248, 1);
+
+    /* ── Black / dark alpha scale ── */
+    --black-20:  rgba(34, 30, 31, 0.20);
+    --black-40:  rgba(34, 30, 31, 0.40);
+    --black-60:  rgba(34, 30, 31, 0.60);
+    --black-80:  rgba(34, 30, 31, 0.80);
+    --black:     rgba(34, 30, 31, 1);
+
+	/* ── Black / dark alpha scale ── */
+	--black-8:   rgba(12, 12, 12, 0.97);
+	--black-55:  rgba(0, 0, 0, 0.55);
+	--dark-15:   rgba(34, 30, 31, 0.15);
+	--dark-35:   rgba(34, 30, 31, 0.35);
+	--dark-92:   rgba(34, 30, 31, 0.92);
+	--dark-95:   rgba(34, 30, 31, 0.95);
+	--overlay-0: rgba(10, 10, 10, 0.15);
+	--overlay-88:rgba(10, 10, 10, 0.88);
+
+	/* ── Gold alpha ── */
+	--accent-45: rgba(196, 34, 128, 0.45);
+	--accent-08: rgba(196, 34, 128, 0.08);
+
+	/* ── Typography ── */
+	--font-heading: "Century Gothic", "AppleGothic", sans-serif;
+	--font-body:    "DM Sans", sans-serif;
+
+	/* ── Type scale (base: 16px) ── */
+	--text-2xs:  0.5rem;      /*  8px */
+	--text-xs:   0.5625rem;   /*  9px */
+	--text-sm:   0.6875rem;   /* 11px */
+	--text-base: 0.75rem;     /* 12px */
+	--text-md:   0.875rem;    /* 14px */
+	--text-body: 1rem;        /* 16px */
+	--text-lg:   1.125rem;    /* 18px */
+	--text-xl:   1.25rem;     /* 20px */
+	--text-2xl:  1.5rem;      /* 24px */
+	--text-3xl:  2rem;        /* 32px */
+	--text-4xl:  2.375rem;    /* 38px */
+	--text-5xl:  3rem;        /* 48px */
+
+	/* ── Letter-spacing ── */
+	--tracking-tight:  -0.04em;
+	--tracking-snug:   -0.03em;
+	--tracking-wide:   0.05em;
+	--tracking-wider:  0.08em;
+	--tracking-xs:     2.5px;
+	--tracking-sm:     3px;
+	--tracking-md:     3.5px;
+	--tracking-lg:     4px;
+	--tracking-xl:     5px;
+
+	/* ── Spacing scale (base unit: 4px = 0.25rem) ── */
+	--space-1:  0.25rem;   /*  4px */
+	--space-2:  0.5rem;    /*  8px */
+	--space-3:  0.75rem;   /* 12px */
+	--space-4:  1rem;      /* 16px */
+	--space-5:  1.25rem;   /* 20px */
+	--space-6:  1.5rem;    /* 24px */
+	--space-7:  1.75rem;   /* 28px */
+	--space-8:  2rem;      /* 32px */
+	--space-9:  2.25rem;   /* 36px */
+	--space-10: 2.5rem;    /* 40px */
+	--space-11: 2.75rem;   /* 44px */
+	--space-12: 3rem;      /* 48px */
+	--space-14: 3.5rem;    /* 56px */
+	--space-16: 4rem;      /* 64px */
+	--space-18: 4.5rem;    /* 72px */
+	--space-20: 5rem;      /* 80px */
+	--space-22: 5.5rem;    /* 88px */
+	--space-24: 6rem;      /* 96px */
+	--space-28: 7rem;      /* 112px */
+	--space-30: 7.5rem;    /* 120px */
+    --space-32: 8rem;      /* 128px */
+    --space-36: 9rem;      /* 144px */
+    --space-40: 10rem;     /* 160px */
+    --space-44: 11rem;     /* 176px */
+    --space-48: 12rem;     /* 192px */
+    --space-52: 13rem;     /* 208px */
+    --space-56: 14rem;     /* 224px */
+    --space-60: 15rem;     /* 240px */
+    --space-64: 16rem;     /* 256px */
+    --space-68: 17rem;     /* 272px */
+    --space-72: 18rem;     /* 288px */
+    --space-76: 19rem;     /* 304px */
+    --space-80: 20rem;     /* 320px */
+
+	/* ── Border radius ── */
+	--radius-full: 50%;
+	--radius-pill: 1.5rem;  /* 24px */
+}

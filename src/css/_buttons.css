@@ -20,7 +20,7 @@
         }
     }
     &.outline {
-        /* btn-outline */
+        /* btn outline */
         color: var(--white-60);
         border: 1px solid var(--white-20);
         &:hover {
@@ -30,7 +30,7 @@
     }
     
     &.outline-dark {
-        /* btn-outline-dark */
+        /* btn outline-dark */
         color: var(--black-55);
         border: 1px solid var(--border);
         padding: var(--space-4) var(--space-8);
@@ -41,5 +41,3 @@
         }
     }
 }
-
-/* ── Shared buttons ── */

@@ -64,12 +64,12 @@
 		line-height: 1;
 	}
 	.why-title {
-		font-size: var(--text-body);
-		letter-spacing: 2px;
+		font-size: var(--text-base);
+		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: var(--text);
 		margin-bottom: var(--space-3);
-		font-weight: 500;
+		font-weight: 700;
 	}
 	.why-body {
 		font-size: var(--text-md);

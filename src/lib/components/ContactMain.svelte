@@ -110,7 +110,7 @@
 				<label class="form-label" for="c-message">Tell Us About Your Project *</label>
 				<textarea id="c-message" class="form-input form-textarea" placeholder="Describe your project, the location, any key requirements, and anything else you think would help us understand what you need." rows="5" required></textarea>
 			</div>
-			<button type="submit" class="btn-primary btn-full">{submitLabel}</button>
+			<button type="submit" class="btn primary btn-full">{submitLabel}</button>
 		</form>
 	</div>
 </div>

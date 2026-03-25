@@ -16,10 +16,6 @@
 	backdrop-filter: blur(1rem);
 	padding: var(--space-2) var(--space-16);
 	/* border-bottom: 1px solid var(--black-80); */
-
-    & .nav-logo-img {
-        height: 1.75rem;
-    }
 }
 .nav-logo {
 	display: flex;

@@ -15,8 +15,8 @@
 	<h2 class="cta-title reveal">{@html title}</h2>
 	<p class="cta-body reveal">{body}</p>
 	<div class="cta-actions reveal">
-		<a href={primaryHref} class="btn-primary">{primaryLabel}</a>
-		<a href={secondaryHref} class="btn-outline">{secondaryLabel}</a>
+		<a href={primaryHref} class="btn primary">{primaryLabel}</a>
+		<a href={secondaryHref} class="btn outline">{secondaryLabel}</a>
 	</div>
 </div>
 

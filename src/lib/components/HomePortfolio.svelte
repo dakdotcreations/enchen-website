@@ -43,7 +43,7 @@
 		{/each}
 	</div>
 	<div class="port-cta reveal">
-		<a href="/contact" class="btn-outline" style="color:rgba(255,255,255,0.7)">Discuss Your Project →</a>
+		<a href="/contact" class="btn outline" style="color:rgba(255,255,255,0.7)">Discuss Your Project →</a>
 	</div>
 </section>
 

@@ -27,7 +27,7 @@ hasOrb={true}
 <CtaStrip
 eyebrow="Ready to Begin?"
 title="Let's Create Something<br><em>Remarkable Together</em>"
-body="Tell us about your project — we'll respond within one business day with a tailored proposal and initial consultation."
+body="Tell us about your project we'll respond within one business day."
 primaryHref="/contact"
 primaryLabel="Start a Project"
 secondaryHref="/portfolio"

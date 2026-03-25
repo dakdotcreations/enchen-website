@@ -1,10 +1,10 @@
-@import "./src/css/_vars.css";
-@import "./src/css/_global.css";
-@import "./src/css/_nav.css";
-@import "./src/css/_buttons.css";
-@import "./src/css/_sections.css";
-@import "./src/css/_footer.css";
-@import "./src/css/_animations.css";
+@import "./css/_vars.css";
+@import "./css/_global.css";
+@import "./css/_nav.css";
+@import "./css/_buttons.css";
+@import "./css/_sections.css";
+@import "./css/_footer.css";
+@import "./css/_animations.css";
 
 
 /* ── Portfolio item backgrounds (shared) ── */

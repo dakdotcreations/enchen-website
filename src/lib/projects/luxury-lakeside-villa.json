@@ -1,0 +1,47 @@
+{
+	"slug": "luxury-lakeside-villa",
+	"title": "Luxury Lakeside Villa",
+	"location": "Munyonyo, Kampala",
+	"tag": "residential",
+	"featured": true,
+	"thumbnail": "/images/projects/llv.jpg",
+	"content": [
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>A private residence on the shores of Lake Victoria — the client's request was simple: design a home that disappears into its landscape while providing every comfort expected of a luxury property. Indoor-outdoor integration, natural materials, and a calm, unhurried atmosphere were the core directives.</p>"
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/llv2.jpg",
+			"alt": "Living room looking onto the lake",
+			"caption": "Full-height glazing dissolves the boundary between interior and lake view."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "text",
+					"heading": "Living Spaces",
+					"body": "<p>The open-plan living and dining zone faces west to capture sunset light over the water. Furnishings were custom-designed and upholstered in natural linen and leather, with stone and timber detailing throughout.</p>"
+				},
+				{
+					"type": "text",
+					"heading": "Master Suite",
+					"body": "<p>The master suite occupies the entire upper level, with a private terrace and a bathroom finished in honed travertine. A freestanding bath is positioned to capture the morning lake horizon — a deliberate, unhurried luxury.</p>"
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/llv3.jpg",
+			"alt": "Master bathroom with freestanding tub",
+			"caption": "Honed travertine and solid teak joinery in the master bathroom."
+		},
+		{
+			"type": "text",
+			"heading": "Materials & Palette",
+			"body": "<p>Warm buff stone, oiled teak, hand-thrown ceramics, and custom bronze hardware form a palette that feels rooted in the East African landscape. Nothing was imported for novelty's sake — every material earns its place.</p>"
+		}
+	]
+}

@@ -1,0 +1,48 @@
+<section style="background: var(--dark); padding: 120px 64px;">
+	<div class="s-label reveal">Our Direction</div>
+	<h2 class="s-title light reveal">Mission &amp; <span class="h-blue">Vision</span></h2>
+	<div class="mv-grid reveal">
+		<div class="mv-card">
+			<div class="mv-title">Our Mission</div>
+			<p class="mv-body">
+                To harness creativity and advanced technology to deliver standout design solutions that exceed expectations and keep our clients ahead of the curve.
+            </p>
+		</div>
+		<div class="mv-card">
+			<div class="mv-title">Our Vision</div>
+			<p class="mv-body">
+                To become the top choice turnkey Interior design company recognized for quality, bold, innovative design solutions that elevates brands to new heights.
+            </p>
+		</div>
+	</div>
+</section>
+
+<style>
+	.mv-grid {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 1px;
+		background: rgba(255, 255, 255, 0.04);
+		margin-top: 72px;
+	}
+	.mv-card {
+		background: #2a2527;
+		padding: 56px 52px;
+	}
+	.mv-title {
+		font-family: var(--font-heading);
+		font-size: var(--text-2xl);
+		font-weight: 700;
+		letter-spacing: -0.04em;
+		color: var(--white);
+		margin-bottom: 20px;
+	}
+	.mv-body {
+		font-size: var(--text-body);
+		line-height: 1.9;
+		color: var(--white-60);
+	}
+	@media (max-width: 1024px) {
+		.mv-grid { grid-template-columns: 1fr; }
+	}
+</style>

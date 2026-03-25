@@ -1,0 +1,41 @@
+{
+	"slug": "premium-members-lounge",
+	"title": "Premium Members' Lounge",
+	"location": "Kololo, Kampala",
+	"tag": "commercial",
+	"thumbnail": "/images/projects/cls8.jpg",
+	"content": [
+		{
+			"type": "text",
+			"heading": "Overview",
+			"body": "<p>An exclusive members' lounge for a private club catering to Kampala's business and diplomatic community. The space needed to function as both a working environment and a social one — somewhere a member could take a discreet call or host an informal dinner within the same visit.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/cls5.jpg",
+					"alt": "Main lounge seating area",
+					"caption": "The main lounge — layered seating zones for different group sizes."
+				},
+				{
+					"type": "text",
+					"heading": "Atmosphere",
+					"body": "<p>Dark walls in a deep charcoal-green, leather club chairs, and low ambient lighting create a sense of enclosure and privacy. The space reads as serious without being cold — warm metals, layered textiles, and a curated art selection loosen the formality just enough.</p>"
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "Private dining alcove",
+			"caption": "One of four semi-private dining alcoves, bookable by members for small gatherings."
+		},
+		{
+			"type": "text",
+			"heading": "Spatial Planning",
+			"body": "<p>The 380 sqm floor plate was divided into five distinct zones: entry and cloaking, main lounge, working bays, bar and casual dining, and private meeting rooms. Despite the complexity, the flow through the space feels intuitive and unhurried.</p>"
+		}
+	]
+}

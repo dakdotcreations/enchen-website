@@ -1,0 +1,40 @@
+{
+	"slug": "regional-office-fit-out",
+	"title": "Regional Office Fit-Out",
+	"location": "Ntinda, Kampala",
+	"tag": "corporate",
+	"thumbnail": "",
+	"content": [
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>A multinational NGO expanding its East African operations needed a Kampala office that could accommodate 45 staff, three conference rooms, and dedicated visitor-facing areas — all within a leased floor plate that required structural sensitivity and a tight delivery timeline.</p>"
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "Open office floor",
+			"caption": "The open-plan working floor — zoned acoustically without full-height partitions."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "text",
+					"heading": "Workplace Philosophy",
+					"body": "<p>The layout rejects the traditional cell-office model in favour of activity-based working: quiet focus areas, collaborative benches, phone booths, and informal breakout nodes. Staff are not assigned fixed desks.</p>"
+				},
+				{
+					"type": "text",
+					"heading": "Brand Integration",
+					"body": "<p>The organisation's identity — built around transparency and community — is expressed through open sightlines, sustainable material choices, and locally-sourced artwork throughout. Nothing is purely decorative; everything reinforces the mission.</p>"
+				}
+			]
+		},
+		{
+			"type": "text",
+			"heading": "Delivery",
+			"body": "<p>Designed, permitted, and handed over in eleven weeks. The client was operational on day one of occupation with zero snagging items outstanding — a first in our project history.</p>"
+		}
+	]
+}

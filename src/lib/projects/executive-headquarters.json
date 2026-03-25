@@ -1,0 +1,47 @@
+{
+	"slug": "executive-headquarters",
+	"title": "Executive Headquarters",
+	"location": "Nakasero, Kampala",
+	"tag": "corporate",
+	"featured": true,
+	"thumbnail": "/images/projects/cls20.jpg",
+	"content": [
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>A leading East African financial institution needed a headquarters that would signal leadership, ambition, and permanence. The brief called for executive-grade interiors across five floors — from a commanding ground-floor reception through to private boardrooms and the CEO suite — all unified by a single material palette and a clear spatial hierarchy.</p>"
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "Main reception lobby",
+			"caption": "The double-height reception lobby sets the tone for the entire building."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "text",
+					"heading": "Design Challenge",
+					"body": "<p>The building shell was a standard commercial fit-out with low ceilings and a fragmented floor plate. Creating a sense of grandeur within these constraints required precise material choices and deliberate spatial compression and release.</p>"
+				},
+				{
+					"type": "text",
+					"heading": "Our Approach",
+					"body": "<p>We introduced a continuous veined marble motif across floor and feature walls, drew the eye upward with vertical brass fins, and used acoustic baffling as a design element. Each floor has a distinct identity while remaining part of the whole.</p>"
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "",
+			"alt": "C-suite corridor",
+			"caption": "The executive corridor on the fifth floor — restrained and deliberately quiet."
+		},
+		{
+			"type": "text",
+			"heading": "The Result",
+			"body": "<p>A headquarters that reads as intentional and assured. The client reported a measurable impact on client confidence during first site visits, and the space has since been featured in two regional architecture publications.</p>"
+		}
+	]
+}

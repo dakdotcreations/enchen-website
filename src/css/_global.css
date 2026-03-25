@@ -1,0 +1,83 @@
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+
+
+html {
+	scroll-behavior: smooth;
+}
+body {
+	font-family: var(--font-body);
+    font-size: var(--text-md);
+	background: var(--white);
+	color: var(--text);
+	overflow-x: hidden;
+	cursor: none;
+}
+
+/* ── Cursor ── */
+.cursor {
+	position: fixed;
+	width: 0.375rem;
+	height: 0.375rem;
+	background: var(--accent);
+	border-radius: var(--radius-full);
+	pointer-events: none;
+	z-index: 9999;
+	transform: translate(-50%, -50%);
+	transition: transform 0.15s ease;
+}
+.cursor-ring {
+	position: fixed;
+	width: 1.75rem;
+	height: 1.75rem;
+	border: 1px solid var(--accent-40);
+	border-radius: var(--radius-full);
+	pointer-events: none;
+	z-index: 9998;
+	transform: translate(-50%, -50%);
+	transition: all 0.18s ease;
+	opacity: 0.8;
+}
+
+
+/* ── Page transition curtain ── */
+.curtain {
+	position: fixed;
+	inset: 0;
+	background: var(--white);
+	z-index: 9990;
+	pointer-events: none;
+	transform: translateY(100%);
+}
+.curtain.cover {
+	pointer-events: all;
+	animation: curtain-cover 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+.curtain.lift {
+	pointer-events: none;
+	animation: curtain-lift 0.45s cubic-bezier(0.76, 0, 0.24, 1) forwards;
+}
+
+@keyframes curtain-cover {
+	from {
+		transform: translateY(100%);
+	}
+	to {
+		transform: translateY(0%);
+	}
+}
+@keyframes curtain-lift {
+	from {
+		transform: translateY(0%);
+	}
+	to {
+		transform: translateY(-100%);
+	}
+}
+

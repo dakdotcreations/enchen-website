@@ -1,0 +1,54 @@
+/* ── Shared buttons ── */
+.btn-primary {
+	font-size: var(--text-2xs);
+	letter-spacing: var(--tracking-xs);
+	text-transform: uppercase;
+	background: var(--accent);
+	color: var(--white);
+	padding: 0.875rem var(--space-10);
+	text-decoration: none;
+	transition:
+		opacity 0.3s,
+		transform 0.2s;
+	display: inline-block;
+	font-weight: 500;
+}
+.btn-primary:hover {
+	opacity: 0.88;
+	transform: translateY(-1px);
+}
+.btn-outline {
+	font-size: var(--text-2xs);
+	letter-spacing: var(--tracking-xs);
+	text-transform: uppercase;
+	color: var(--white-60);
+	border: 1px solid var(--white-20);
+	padding: 0.875rem var(--space-9);
+	text-decoration: none;
+	display: inline-block;
+	transition:
+		border-color 0.3s,
+		color 0.3s;
+}
+.btn-outline:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}
+.btn-outline-dark {
+	font-size: var(--text-2xs);
+	letter-spacing: var(--tracking-xs);
+	text-transform: uppercase;
+	color: var(--black-55);
+	border: 1px solid var(--border);
+	padding: 0.875rem var(--space-9);
+	text-decoration: none;
+	display: inline-block;
+	transition:
+		border-color 0.3s,
+		color 0.3s;
+	background: transparent;
+}
+.btn-outline-dark:hover {
+	border-color: var(--accent);
+	color: var(--accent);
+}

@@ -32,9 +32,10 @@
 							</div>
 						{/if}
 						<div class="port-full-overlay">
-							<div class="port-full-cat">{cap(p.tag)}</div>
-							<div class="port-full-name">{p.title}</div>
-							<div class="port-full-loc">{p.location}</div>
+							<div>
+                                <div class="port-full-name">{p.title}</div>
+                                <div class="port-full-loc">{p.location}</div>
+                            </div>
 						</div>
 					</div>
 				</a>
@@ -134,53 +135,45 @@
 		background: linear-gradient(to top, rgba(12, 12, 12, 0.9) 0%, transparent 55%);
 		opacity: 0;
 		transition: opacity 0.4s ease;
-		display: flex;
-		align-items: flex-end;
-		padding: 28px;
+		display: grid;
+		align-items: end;
+		padding: var(--space-6);
 	}
 	.port-full-item:hover .port-full-overlay { opacity: 1; }
 	.port-full-overlay > div {
 		display: flex;
 		flex-direction: column;
 	}
-	.port-full-cat {
-		font-size: 9px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		color: var(--accent);
-		margin-bottom: 4px;
-		opacity: 0.7;
-	}
 	.port-full-name {
 		font-family: var(--font-heading);
-		font-size: 19px;
+		font-size: var(--text-xl);
 		font-weight: 700;
 		letter-spacing: -0.03em;
 		color: white;
 	}
 	.port-full-loc {
-		font-size: 11px;
-		color: rgba(255, 255, 255, 0.35);
+		font-size: var(--text-sm);
+		color: var(--white-40);
 		margin-top: 4px;
 	}
 	.port-full-badge {
 		position: absolute;
-		top: 14px;
-		left: 14px;
+		top: var(--space-4);
+		left: var(--space-4);
 		background: var(--accent);
-		font-size: 8px;
+		font-size: var(--text-sm);
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: var(--black);
-		padding: 4px 12px;
+		padding: var(--space-1) var(--space-3);
 		opacity: 0;
 		transition: opacity 0.3s;
-		font-weight: 500;
+		font-weight: 700;
 		z-index: 2;
 	}
 	.port-full-item:hover .port-full-badge { opacity: 1; }
 	@media (max-width: 1024px) {
-		.port-full-section { padding: 64px 32px 80px; }
+		.port-full-section { padding: var(--space-16) var(--space-8) var(--space-20); }
 		.port-full-grid { grid-template-columns: 1fr 1fr; }
 	}
 	@media (max-width: 640px) {

@@ -1,18 +1,29 @@
 <script lang="ts">
-	import FaqList from '$lib/components/FaqList.svelte';
+	import FaqList from "$lib/components/FaqList.svelte"
 
-	let submitLabel = $state('Send Enquiry');
+	let submitLabel = $state("Send Enquiry")
 	function handleSubmit(e: SubmitEvent) {
-		e.preventDefault();
-		submitLabel = '✓ Enquiry Sent';
-		setTimeout(() => { submitLabel = 'Send Enquiry'; }, 3500);
+		e.preventDefault()
+		submitLabel = "✓ Enquiry Sent"
+		setTimeout(() => {
+			submitLabel = "Send Enquiry"
+		}, 3500)
 	}
 
 	const faqs = [
-		{ q: 'What happens after I submit the form?', a: 'Within one business day, a member of the Enchen team will review your enquiry and respond personally. If your project is a good fit, we will propose a time for an initial consultation — either in person or by video call — at no charge.' },
-		{ q: 'How quickly do you respond to enquiries?', a: 'We aim to respond to every enquiry within one business day. For urgent project requirements, please call us directly or note your timeline in the enquiry form.' },
-		{ q: 'Do you take on small projects?', a: 'Yes. We work on projects of all sizes, from single-room redesigns to full commercial fit-outs. The same design process and commitment to quality applies to every engagement, regardless of scale or budget.' }
-	];
+		{
+			q: "What happens after I submit the form?",
+			a: "Within one business day, a member of the Enchen team will review your enquiry and respond personally. If your project is a good fit, we will propose a time for an initial consultation — either in person or by video call — at no charge.",
+		},
+		{
+			q: "How quickly do you respond to enquiries?",
+			a: "We aim to respond to every enquiry within one business day. For urgent project requirements, please call us directly or note your timeline in the enquiry form.",
+		},
+		{
+			q: "Do you take on small projects?",
+			a: "Yes. We work on projects of all sizes, from single-room redesigns to full commercial fit-outs. The same design process and commitment to quality applies to every engagement, regardless of scale or budget.",
+		},
+	]
 </script>
 
 <!-- Contact Main -->
@@ -21,54 +32,111 @@
 	<div class="contact-info-panel">
 		<div class="cip-label">Our Details</div>
 		<div class="cip-title">We Would Love to Hear From You</div>
-		<p class="cip-body">Whether you have a fully formed brief or just an idea, we are happy to talk. Reach us by phone, email, or fill in the form — we respond to every enquiry personally.</p>
+		<p class="cip-body">
+			Whether you have a fully formed brief or just an idea, we are happy to talk. Reach us by
+			phone, email, or fill in the form we respond to every enquiry personally.
+		</p>
 		<div class="cip-details">
 			<div class="cip-item">
 				<div>
 					<div class="cip-key">Address</div>
-					<div class="cip-val">Ntinda Shopping Centre,<br>Ntinda, Kampala, Uganda</div>
+					<div class="cip-val">Nakasero, Uganda</div>
 				</div>
 			</div>
 			<div class="cip-item">
 				<div>
 					<div class="cip-key">Email</div>
-					<div class="cip-val"><a href="mailto:hello@enchencreativehub.com">hello@enchencreativehub.com</a></div>
+					<div class="cip-val">
+						<a href="mailto:hello@enchencreativehub.com">hello@enchencreativehub.com</a>
+					</div>
 				</div>
 			</div>
 			<div class="cip-item">
 				<div>
 					<div class="cip-key">Phone</div>
-					<div class="cip-val"><a href="tel:+256700000000">+256 700 000 000</a></div>
+					<div class="cip-val"><a href="tel:+256752606904">+256 752 606 904</a></div>
 				</div>
 			</div>
 			<div class="cip-item">
 				<div>
 					<div class="cip-key">Office Hours</div>
-					<div class="cip-val">Monday – Friday: 8:00am – 6:00pm<br>Saturday: 9:00am – 2:00pm</div>
+					<div class="cip-val">
+						Monday - Friday: 8:00am - 6:00pm<br />Saturday: 9:00am - 2:00pm
+					</div>
 				</div>
 			</div>
 		</div>
-		<div class="cip-social">
-			<a href="https://www.instagram.com" class="cip-soc-link" title="Instagram" target="_blank" rel="noopener noreferrer">IG</a>
-			<a href="https://www.linkedin.com" class="cip-soc-link" title="LinkedIn" target="_blank" rel="noopener noreferrer">LI</a>
-			<a href="https://www.facebook.com" class="cip-soc-link" title="Facebook" target="_blank" rel="noopener noreferrer">FB</a>
-			<a href="https://www.houzz.com" class="cip-soc-link" title="Houzz" target="_blank" rel="noopener noreferrer">HZ</a>
-		</div>
+		<!-- <div class="cip-social">
+			<a
+				href="https://www.instagram.com"
+				class="cip-soc-link"
+				title="Instagram"
+				target="_blank"
+				rel="noopener noreferrer">IG</a>
+			<a
+				href="https://www.linkedin.com"
+				class="cip-soc-link"
+				title="LinkedIn"
+				target="_blank"
+				rel="noopener noreferrer">LI</a>
+			<a
+				href="https://www.facebook.com"
+				class="cip-soc-link"
+				title="Facebook"
+				target="_blank"
+				rel="noopener noreferrer">FB</a>
+			<a
+				href="https://www.houzz.com"
+				class="cip-soc-link"
+				title="Houzz"
+				target="_blank"
+				rel="noopener noreferrer">HZ</a>
+		</div> -->
 	</div>
 
 	<!-- Form Panel -->
 	<div class="contact-form-panel">
 		<div class="cip-label-gold">Project Enquiry</div>
 		<div class="cfp-title">Tell Us About Your Project</div>
-		<p class="cfp-sub">We will review your enquiry and respond with a tailored proposal and consultation invitation within one business day.</p>
+		<p class="cfp-sub">
+			We will review your enquiry and respond with a tailored proposal and consultation
+			invitation within one business day.
+		</p>
 		<form id="contactForm" onsubmit={handleSubmit}>
 			<div class="form-row">
-				<div class="form-group"><label class="form-label" for="c-fname">First Name *</label><input id="c-fname" type="text" class="form-input" placeholder="Your first name" required /></div>
-				<div class="form-group"><label class="form-label" for="c-lname">Last Name *</label><input id="c-lname" type="text" class="form-input" placeholder="Your last name" required /></div>
+				<div class="form-group">
+					<label class="form-label" for="c-fname">First Name *</label><input
+						id="c-fname"
+						type="text"
+						class="form-input"
+						placeholder="Your first name"
+						required />
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="c-lname">Last Name *</label><input
+						id="c-lname"
+						type="text"
+						class="form-input"
+						placeholder="Your last name"
+						required />
+				</div>
 			</div>
 			<div class="form-row">
-				<div class="form-group"><label class="form-label" for="c-email">Email Address *</label><input id="c-email" type="email" class="form-input" placeholder="you@example.com" required /></div>
-				<div class="form-group"><label class="form-label" for="c-phone">Phone Number</label><input id="c-phone" type="tel" class="form-input" placeholder="+256 700 000 000" /></div>
+				<div class="form-group">
+					<label class="form-label" for="c-email">Email Address *</label><input
+						id="c-email"
+						type="email"
+						class="form-input"
+						placeholder="you@example.com"
+						required />
+				</div>
+				<div class="form-group">
+					<label class="form-label" for="c-phone">Phone Number</label><input
+						id="c-phone"
+						type="tel"
+						class="form-input"
+						placeholder="+256 700 000 000" />
+				</div>
 			</div>
 			<div class="form-group">
 				<label class="form-label" for="c-project">Project Type *</label>
@@ -108,7 +176,12 @@
 			</div>
 			<div class="form-group">
 				<label class="form-label" for="c-message">Tell Us About Your Project *</label>
-				<textarea id="c-message" class="form-input form-textarea" placeholder="Describe your project, the location, any key requirements, and anything else you think would help us understand what you need." rows="5" required></textarea>
+				<textarea
+					id="c-message"
+					class="form-input form-textarea"
+					placeholder="Describe your project, the location, any key requirements, and anything else you think would help us understand what you need."
+					rows="5"
+					required></textarea>
 			</div>
 			<button type="submit" class="btn primary btn-full">{submitLabel}</button>
 		</form>
@@ -130,7 +203,9 @@
 <!-- FAQ -->
 <div class="contact-faq-section">
 	<div class="s-label centered reveal">Before You Reach Out</div>
-	<h2 class="s-title reveal" style="text-align:center;">Quick <span class="h-blue">Answers</span></h2>
+	<h2 class="s-title reveal" style="text-align:center;">
+		Quick <span class="h-blue">Answers</span>
+	</h2>
 	<div class="contact-faq-inner reveal">
 		<FaqList items={faqs} />
 	</div>
@@ -197,7 +272,9 @@
 		text-decoration: none;
 		transition: color 0.2s;
 	}
-	.cip-val :global(a:hover) { color: var(--accent); }
+	.cip-val :global(a:hover) {
+		color: var(--accent);
+	}
 	.cip-social {
 		display: flex;
 		gap: 12px;
@@ -213,7 +290,9 @@
 		letter-spacing: 1px;
 		color: rgba(255, 255, 255, 0.3);
 		text-decoration: none;
-		transition: border-color 0.3s, color 0.3s;
+		transition:
+			border-color 0.3s,
+			color 0.3s;
 	}
 	.cip-soc-link:hover {
 		border-color: var(--accent);
@@ -275,13 +354,17 @@
 		appearance: none;
 		-webkit-appearance: none;
 	}
-	.form-input:focus { border-color: var(--accent); }
+	.form-input:focus {
+		border-color: var(--accent);
+	}
 	.form-textarea {
 		height: auto;
 		padding: 14px 16px;
 		resize: vertical;
 	}
-	.form-select { cursor: pointer; }
+	.form-select {
+		cursor: pointer;
+	}
 	.btn-full {
 		width: 100%;
 		display: block;
@@ -332,7 +415,9 @@
 		border: 1px solid var(--accent);
 		padding: 8px 20px;
 		text-decoration: none;
-		transition: background 0.3s, color 0.3s;
+		transition:
+			background 0.3s,
+			color 0.3s;
 	}
 	.map-ph-link:hover {
 		background: var(--accent);
@@ -349,15 +434,27 @@
 		margin-right: auto;
 	}
 	@media (max-width: 1024px) {
-		.contact-page-grid { grid-template-columns: 1fr; }
+		.contact-page-grid {
+			grid-template-columns: 1fr;
+		}
 		.contact-info-panel,
-		.contact-form-panel { padding: 60px 32px; }
-		.contact-faq-section { padding: 64px 32px 80px; }
+		.contact-form-panel {
+			padding: 60px 32px;
+		}
+		.contact-faq-section {
+			padding: 64px 32px 80px;
+		}
 	}
 	@media (max-width: 640px) {
 		.contact-info-panel,
-		.contact-form-panel { padding: 48px 20px; }
-		.form-row { grid-template-columns: 1fr; }
-		.contact-faq-section { padding: 56px 20px 64px; }
+		.contact-form-panel {
+			padding: 48px 20px;
+		}
+		.form-row {
+			grid-template-columns: 1fr;
+		}
+		.contact-faq-section {
+			padding: 56px 20px 64px;
+		}
 	}
 </style>

@@ -38,8 +38,10 @@
 	--overlay-88:rgba(10, 10, 10, 0.88);
 
 	/* ── Gold alpha ── */
-	--accent-45: rgba(196, 34, 128, 0.45);
-	--accent-08: rgba(196, 34, 128, 0.08);
+    --accent-20: rgba(196, 34, 128, 0.20);
+    --accent-40: rgba(196, 34, 128, 0.40);
+    --accent-60: rgba(196, 34, 128, 0.40);
+    --accent-80: rgba(196, 34, 128, 0.40);
 
 	/* ── Typography ── */
 	--font-heading: "Century Gothic", "AppleGothic", sans-serif;

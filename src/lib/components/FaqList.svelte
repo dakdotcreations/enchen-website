@@ -32,16 +32,16 @@
 	.faq-q {
 		width: 100%;
 		text-align: left;
-		padding: 22px 0;
+		padding: var(--space-6) 0;
 		background: none;
 		border: none;
 		cursor: none;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;
-		gap: 24px;
+		gap: var(--space-6);
 		font-family: "DM Sans", sans-serif;
-		font-size: 14px;
+		font-size: var(--text-lg);
 		color: var(--text);
 		font-weight: 400;
 		transition: color 0.3s;
@@ -50,7 +50,7 @@
 		color: var(--accent);
 	}
 	.faq-icon {
-		font-size: 20px;
+		font-size: var(--text-xl);
 		color: var(--accent);
 		flex-shrink: 0;
 		transition: transform 0.3s;
@@ -67,8 +67,8 @@
 		transition: max-height 0.4s ease, padding 0.3s ease;
 	}
 	.faq-a-inner {
-		padding: 0 0 24px 0;
-		font-size: 13px;
+		padding: 0 0 var(--space-6) 0;
+		font-size: var(--text-body);
 		line-height: 1.9;
 		color: var(--black-60);
 		max-width: 680px;

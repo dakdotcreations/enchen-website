@@ -36,7 +36,7 @@ body {
 	position: fixed;
 	width: 1.75rem;
 	height: 1.75rem;
-	border: 1px solid var(--accent-45);
+	border: 1px solid var(--accent-40);
 	border-radius: var(--radius-full);
 	pointer-events: none;
 	z-index: 9998;

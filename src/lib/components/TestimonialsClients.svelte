@@ -17,37 +17,38 @@
 <style>
 	.test-clients-section {
 		background: var(--off-white);
-		padding: 100px 64px;
+		padding: var(--space-28) var(--space-16);
+	}
+    @media (max-width: 1024px) {
+		.test-clients-section {
+			padding: 64px 32px 80px;
+		}
+	}
+	@media (max-width: 640px) {
+		.test-clients-section {
+			padding: 56px 20px 64px;
+		}
 	}
 	.clients-four-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
 		gap: 1px;
-		background: var(--border);
-		margin-top: 56px;
+		margin-top: var(--space-14);
 	}
 	.cl-item {
-		background: white;
+		background: var(--white);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		padding: 36px 28px;
+		padding: var(--space-9) var(--space-7);
 		transition: background 0.3s;
 	}
-	.cl-item:hover { background: var(--off-white); }
+	.cl-item:hover { background: white; }
 	.cl-item :global(img) {
-		max-height: 36px;
-		max-width: 110px;
+		max-height: var(--space-20);
 		object-fit: contain;
 		filter: grayscale(1) opacity(0.45);
 		transition: filter 0.3s;
 	}
 	.cl-item:hover :global(img) { filter: grayscale(0) opacity(0.85); }
-	@media (max-width: 1024px) {
-		.test-clients-section { padding: 64px 32px; }
-		.clients-four-grid { grid-template-columns: repeat(3, 1fr); }
-	}
-	@media (max-width: 640px) {
-		.clients-four-grid { grid-template-columns: repeat(2, 1fr); }
-	}
 </style>

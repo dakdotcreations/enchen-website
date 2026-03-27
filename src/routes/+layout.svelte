@@ -4,8 +4,10 @@
 	import { onMount } from 'svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
-	import Footer from '$lib/components/sections/footer.svelte'
-    import Lenis from 'lenis';
+	import Footer from '$lib/components/sections/footer.svelte';
+	import Lenis from 'lenis';
+	import gsap from 'gsap';
+	import { setLenisInstance } from '$lib/lenis';
 
 	let { children } = $props();
 
@@ -20,15 +22,12 @@
 	function closeMob() { mobileOpen = false; }
 
     function initLenis() {
-        // lenis
 		const lenis = new Lenis();
+		setLenisInstance(lenis);
 
-		function raf(time: any) {
-			lenis.raf(time);
-			requestAnimationFrame(raf);
-		}
-
-		requestAnimationFrame(raf);
+		// GSAP ticker drives Lenis — cleaner than a manual rAF loop
+		gsap.ticker.add((time) => lenis.raf(time * 1000));
+		gsap.ticker.lagSmoothing(0);
     }
 
 	onMount(() => {

@@ -81,3 +81,10 @@ body {
 	}
 }
 
+
+.container {
+    width: 100%;
+    padding-left: var(--padding-global);
+    padding-right: var(--padding-global);
+}
+

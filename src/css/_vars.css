@@ -110,6 +110,34 @@
     --space-80: 20rem;     /* 320px */
 
 	/* ── Border radius ── */
-	--radius-full: 50%;
+	--radius-full: 40rem;
 	--radius-pill: 1.5rem;  /* 24px */
+
+
+    /* screens */
+    --screen-sm: 640px;
+    --screen-md: 768px;
+    --screen-lg: 1024px;
+
+    --padding-global: var(--space-4);
+    --padding-global-sm: var(--space-2);
+}
+
+@media (min-width: 640px) {
+    :root {
+        --padding-global: var(--space-8);
+        --padding-global-sm: var(--space-4);
+    }
+}
+@media (min-width: 768px) {
+    :root {
+        --padding-global: var(--space-12);
+        --padding-global-sm: var(--space-6);
+    }
+}
+@media (min-width: 1024px) {
+    :root {
+        --padding-global: var(--space-16);
+        --padding-global-sm: var(--space-8);
+    }
 }

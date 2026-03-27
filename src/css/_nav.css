@@ -17,6 +17,9 @@
 	padding: var(--space-2) var(--space-16);
 	/* border-bottom: 1px solid var(--black-80); */
 }
+#navbar.nav-hidden {
+	transform: translateY(-100%);
+}
 .nav-logo {
 	display: flex;
 	align-items: center;

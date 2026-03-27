@@ -13,6 +13,7 @@
 
 	let mobileOpen = $state(false);
 	let scrolled = $state(false);
+	let navHidden = $state(false);
 	let curtain = $state<'idle' | 'cover' | 'lift'>('idle');
 
 	// cursor
@@ -32,8 +33,21 @@
 
 	onMount(() => {
 		// scroll nav
-		const onScroll = () => { scrolled = window.scrollY > 60; };
-		window.addEventListener('scroll', onScroll);
+		let lastY = 0;
+		const THRESHOLD = 32; // ~2rem
+		const onScroll = () => {
+			const y = window.scrollY;
+			scrolled = y > THRESHOLD;
+			if (y < THRESHOLD) {
+				navHidden = false;
+			} else if (y > lastY) {
+				navHidden = true;  // scrolling down
+			} else {
+				navHidden = false; // scrolling up
+			}
+			lastY = y;
+		};
+		window.addEventListener('scroll', onScroll, { passive: true });
 
 		// cursor
 		const onMove = (e: MouseEvent) => { mx = e.clientX; my = e.clientY; };
@@ -106,7 +120,7 @@
 </div>
 
 <!-- Nav -->
-<nav id="navbar" class:scrolled>
+<nav id="navbar" class:scrolled class:nav-hidden={navHidden}>
 	<a href="/" class="nav-logo">
 		<img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
 		<span class="nav-logo-text">ENCHEN<span>.</span></span>

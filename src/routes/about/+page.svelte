@@ -6,6 +6,7 @@ import MissionVision from '$lib/components/MissionVision.svelte';
 import WhyEnchen from '$lib/components/WhyEnchen.svelte';
 import TeamSection from '$lib/components/TeamSection.svelte';
 import OurTimeline from '$lib/components/OurTimeline.svelte';
+import HomeProcess from '$lib/components/HomeProcess.svelte';
 import CtaStrip from '$lib/components/CtaStrip.svelte';
 </script>
 
@@ -24,6 +25,7 @@ hasOrb={true}
 <MissionVision />
 <WhyEnchen />
 <OurTimeline />
+<HomeProcess />
 <CtaStrip
 eyebrow="Ready to Begin?"
 title="Let's Create Something<br><em>Remarkable Together</em>"

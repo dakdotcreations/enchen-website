@@ -3,7 +3,6 @@
 	import Marquee from "$lib/components/Marquee.svelte"
 	import HomeServices from "$lib/components/HomeServices.svelte"
 	import HomeAbout from "$lib/components/HomeAbout.svelte"
-	import HomeProcess from "$lib/components/HomeProcess.svelte"
 	import HomePortfolio from "$lib/components/HomePortfolio.svelte"
 	import HomeClients from "$lib/components/HomeClients.svelte"
 	import HomeTestimonials from "$lib/components/HomeTestimonials.svelte"
@@ -21,7 +20,6 @@
 <Marquee />
 <HomeServices />
 <HomeAbout />
-<HomeProcess />
 <HomePortfolio />
 <HomeClients />
 <HomeTestimonials />

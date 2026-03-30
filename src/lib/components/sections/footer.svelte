@@ -83,8 +83,12 @@
 	</div>
 	<div class="foot-bottom">
 		<div class="foot-copy">
-			© 2026 <span>Enchen Creative Hub</span>. All rights reserved. | Powered by
-            <a href="https://dakdot.com" target="_blank" rel="noopener noreferrer">DakDot Creations</a>
+            <div>
+                © 2026 <span class="accent">Enchen Creative Hub</span>. All rights reserved. 
+            </div>
+            <div>
+                Powered by <a class="accent" href="https://dakdot.com" target="_blank" rel="noopener noreferrer">DakDot Creations</a>
+            </div>
 			.
 		</div>
 		<div class="foot-location">Nakasero, Uganda</div>
@@ -95,14 +99,24 @@
 	footer {
 		background: var(--black);
 		border-top: 1px solid var(--white-20);
-		padding: var(--space-22) var(--space-16) var(--space-11);
+		padding: var(--space-22) var(--padding-global) var(--space-11);
 	}
 	.foot-top {
 		display: grid;
-		grid-template-columns: 2fr 1fr 1fr 1fr;
+		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
 		gap: var(--space-14);
 		margin-bottom: var(--space-12);
 	}
+    @media (max-width: 640px) {
+        .foot-top {
+            
+            & > div:first-child {
+                grid-column: span 2;
+                display: grid;
+                justify-content: center;
+            }
+        }
+    }
 	.foot-logo-wrap {
 		display: flex;
 		align-items: center;
@@ -121,28 +135,6 @@
 		color: var(--white-20);
 		text-transform: uppercase;
 		margin-bottom: var(--space-7);
-	}
-
-	.foot-social {
-		display: flex;
-		gap: var(--space-2);
-	}
-	.soc-link {
-		width: var(--space-8);
-		height: var(--space-8);
-		border: 1px solid var(--white-20);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		color: var(--white-20);
-		text-decoration: none;
-		font-size: var(--text-xs);
-		font-weight: 500;
-		transition: all 0.3s;
-	}
-	.soc-link:hover {
-		border-color: var(--accent);
-		color: var(--accent);
 	}
 
 	.foot-col-title {
@@ -177,23 +169,25 @@
 		font-size: var(--text-sm);
 		color: var(--white-20);
 
-        & span, & a{
-            color: var(--accent);
-            opacity: 0.6;
-            text-decoration: none;
+        .accent {
+            opacity: 0.8;
         }
-
 	}
+    @media (min-width: 640px) {
+        .foot-copy {
+            display: flex;
+
+            & > div:first-child::after {
+                content: "|";
+                margin: 0 var(--space-2);
+            }
+        }
+    }
 	.foot-location {
 		display: flex;
 		align-items: center;
 		gap: var(--space-2);
 		font-size: var(--text-sm);
 		color: var(--white-20);
-	}
-	.foot-location::before {
-		content: "◦";
-		color: var(--accent);
-		opacity: 0.5;
 	}
 </style>

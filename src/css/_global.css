@@ -88,3 +88,10 @@ body {
     padding-right: var(--padding-global);
 }
 
+.accent {
+    color: var(--accent);
+}
+
+a {
+    text-decoration: none;
+}

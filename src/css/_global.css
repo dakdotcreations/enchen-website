@@ -17,32 +17,6 @@ body {
 	background: var(--white);
 	color: var(--text);
 	overflow-x: hidden;
-	cursor: none;
-}
-
-/* ── Cursor ── */
-.cursor {
-	position: fixed;
-	width: 0.375rem;
-	height: 0.375rem;
-	background: var(--accent);
-	border-radius: var(--radius-full);
-	pointer-events: none;
-	z-index: 9999;
-	transform: translate(-50%, -50%);
-	transition: transform 0.15s ease;
-}
-.cursor-ring {
-	position: fixed;
-	width: 1.75rem;
-	height: 1.75rem;
-	border: 1px solid var(--accent-40);
-	border-radius: var(--radius-full);
-	pointer-events: none;
-	z-index: 9998;
-	transform: translate(-50%, -50%);
-	transition: all 0.18s ease;
-	opacity: 0.8;
 }
 
 
@@ -81,3 +55,17 @@ body {
 	}
 }
 
+
+.container {
+    width: 100%;
+    padding-left: var(--padding-global);
+    padding-right: var(--padding-global);
+}
+
+.accent {
+    color: var(--accent);
+}
+
+a {
+    text-decoration: none;
+}

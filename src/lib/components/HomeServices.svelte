@@ -6,14 +6,14 @@
 				Design Services<br /><span class="h-blue">Tailored</span> to You
 			</h2>
 		</div>
-		<p class="s-body reveal" style="max-width:340px;">
+		<p class="s-body light reveal" style="max-width:340px;">
 			From initial concept to final handover — end-to-end design solutions for every space and
 			budget.
 		</p>
 	</div>
 	<div class="services-grid reveal">
 		<div class="svc-img-card">
-			<img src="/images/projects/cls6.jpg" alt="Corporate office interior" class="svc-img-placeholder" />
+			<img src="/images/home/Corporate & Office Design.webp" alt=" " class="svc-img-placeholder" />
 			<div class="svc-img-footer">
 				<div>
 					<div class="svc-img-num">01</div>
@@ -37,7 +37,7 @@
 			</div>
 		</div>
 		<div class="svc-img-card">
-			<img src="/images/projects/llv.jpg" alt="Luxury residential interior" class="svc-img-placeholder" />
+			<img src="/images/home/Residential Design.webp" alt="Luxury residential interior" class="svc-img-placeholder" />
 			<div class="svc-img-footer">
 				<div>
 					<div class="svc-img-num">02</div>
@@ -61,7 +61,7 @@
 			</div>
 		</div>
 		<div class="svc-img-card">
-			<img src="/images/projects/bhl.jpg" alt="Boutique hotel commercial space" class="svc-img-placeholder" />
+			<img src="/images/home/Commercial Spaces.webp" alt="Boutique hotel commercial space" class="svc-img-placeholder" />
 			<div class="svc-img-footer">
 				<div>
 					<div class="svc-img-num">03</div>
@@ -90,7 +90,7 @@
 <style>
 	#services {
 		background: var(--dark);
-		padding: var(--space-30) var(--space-16);
+		padding: var(--space-30) var(--padding-global);
 	}
 	.services-intro {
 		display: flex;
@@ -235,9 +235,6 @@
 		opacity: 0.6;
 	}
 	@media (max-width: 1024px) {
-		#services {
-			padding: 80px 32px;
-		}
 		.services-grid {
 			grid-template-columns: 1fr;
 		}

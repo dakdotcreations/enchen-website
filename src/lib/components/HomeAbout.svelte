@@ -1,3 +1,7 @@
+<script lang="ts">
+	import { Lightbulb, Leaf, Crosshair, HandHeart } from '@lucide/svelte';
+</script>
+
 <section id="about">
 	<div class="s-label reveal">About Enchen</div>
 	<div class="about-grid">
@@ -18,22 +22,22 @@
 		</div>
 		<div class="about-values reveal">
 			<div class="v-card">
-				<div class="v-icon blue">◈</div>
+				<div class="v-icon blue"><Lightbulb size={16} /></div>
 				<div class="v-name">Innovation</div>
 				<div class="v-desc">Advanced technology and bold thinking in every brief.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon mag">◈</div>
+				<div class="v-icon mag"><Leaf size={16} /></div>
 				<div class="v-name">Sustainability</div>
 				<div class="v-desc">Green, responsible design built for the future.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon pur">◈</div>
+				<div class="v-icon pur"><Crosshair size={16} /></div>
 				<div class="v-name">Precision</div>
 				<div class="v-desc">Every detail considered, nothing left to chance.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon teal">◈</div>
+				<div class="v-icon teal"><HandHeart size={16} /></div>
 				<div class="v-name">Client First</div>
 				<div class="v-desc">Your vision is the blueprint for everything we do.</div>
 			</div>

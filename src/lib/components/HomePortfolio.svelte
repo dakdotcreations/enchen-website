@@ -2,7 +2,7 @@
 	import { projects } from '$lib/projects';
 
 	const featuredSlugs = [
-		'executive-headquarters',
+		'padre-pio-insurance',
 		'luxury-lakeside-villa',
 		'premium-members-lounge',
 		'penthouse-suite-redesign',

@@ -9,6 +9,7 @@ import hotelLobby from './boutique-hotel-lobby.json';
 import contemporaryApt from './contemporary-apartment.json';
 import officeRitOut from './regional-office-fit-out.json';
 import restaurantBar from './restaurant-and-bar.json';
+import padrePio from './padre-pio-insurance.json';
 
 export const projects: Project[] = [
 	executiveHQ,
@@ -20,4 +21,5 @@ export const projects: Project[] = [
 	contemporaryApt,
 	officeRitOut,
 	restaurantBar,
+	padrePio,
 ] as Project[];

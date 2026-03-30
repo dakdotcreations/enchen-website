@@ -1,0 +1,54 @@
+{
+	"slug": "padre-pio-insurance",
+	"title": "Padre Pio Insurance Offices",
+	"location": "Kampala, Uganda",
+	"tag": "commercial",
+	"featured": true,
+	"thumbnail": "/images/projects/padrepio/1.webp",
+	"content": [
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>Padre Pio required a complete interior fit-out for two adjacent commercial units — one for their Micro Insurance Company and one for their Insurance Brokers division. Both spaces were delivered from empty shell, with the client's goal being a professional, brand-consistent environment that would build confidence with walk-in customers and visiting partners alike.</p>"
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/padrepio/4.webp",
+			"alt": "Padre Pio Insurance offices glass frontage",
+			"caption": "The completed glass-fronted retail units — both brands visible and approachable from the street."
+		},
+		{
+			"type": "text",
+			"heading": "Approach",
+			"body": "<p>Our first task was establishing a shared design language that could accommodate two distinct brands within a single architectural expression. The solution was a continuous spatial framework — consistent flooring, ceiling coffers with integrated LED cove lighting, and warm oak shelving niches — within which each unit's brand identity is expressed through accent walls and signage.</p><p>The Padre Pio purple makes an immediate statement on entry, applied as a full-height feature wall carrying the company logo and brand mark. A bold geometric steel cross-brace element divides the public service zone from the back-of-house, adding visual depth and a contemporary structural quality to what would otherwise be a straightforward rectangular plan.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/padrepio/2.webp",
+					"alt": "Open plan service floor with brand wall",
+					"caption": "The Insurance Brokers unit — brand wall, service counters, and the steel divider element in context."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/padrepio/3.webp",
+					"alt": "Service counter and reception overview",
+					"caption": "The service counter zone — fluted panel fronts, visitor seating, and reception desk integrated into a single fluid layout."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/padrepio/1.webp",
+			"alt": "Client-facing service counter detail",
+			"caption": "The teller counter — three client-facing positions with a fluted panel fascia, backlit display alcoves, and chrome-base cantilever chairs."
+		},
+		{
+			"type": "text",
+			"heading": "Outcome",
+			"body": "<p>Both units were completed on schedule and handed over fully operational. The design successfully translates Padre Pio's brand values — accessibility, professionalism, and trust — into a physical environment that communicates credibility from the moment a client approaches the glass frontage. The fit-out has since become a reference point for the group's branch rollout programme.</p>"
+		}
+	]
+}

@@ -1,27 +1,50 @@
-<script>
-    import { 
-        SquareDashedMousePointer,
-        MessageCircleMore,
-        Rocket,
-        Leaf,
-         } from "@lucide/svelte"; 
+<script lang="ts">
+	import { SquareDashedMousePointer, MessageCircleMore, Rocket, Leaf } from '@lucide/svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { getLenisInstance } from '$lib/lenis';
+
+	let mm: ReturnType<typeof gsap.matchMedia>;
+
+	onMount(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const lenis = getLenisInstance();
+		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+
+		mm = gsap.matchMedia();
+		mm.add('(min-width: 1025px)', () => {
+			ScrollTrigger.create({
+				trigger: '.about-grid',
+				start: 'top top',
+				end: 'bottom bottom',
+				pin: '.about-visual',
+				pinSpacing: false,
+                markers: true,
+			});
+		});
+	});
+
+	onDestroy(() => {
+		const lenis = getLenisInstance();
+		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		mm?.revert();
+	});
 </script>
 
-<section id="story" style="background: var(--off-white);">
-	<div class="s-label reveal">Who We Are</div>
+<div id="story" style="background: var(--off-white);">
+	<div class="s-label reveal container">Who We Are</div>
 	<div class="about-grid">
-		<div class="about-visual reveal">
-			<div class="about-card-main">
-				<div class="about-card-bg"></div>
-				<div class="about-card-text">ECH</div>
-			</div>
+		<div class="about-visual">
+			<img src="/images/home/space.webp" alt="Enchen interior design project" class="about-story-img" />
 			<div class="about-badge">
 				<div class="badge-top">Est.</div>
-				<div class="badge-main">2022</div>
+				<div class="badge-main">2025</div>
 				<div class="badge-sub">Kampala, Uganda</div>
 			</div>
 		</div>
-		<div>
+		<div class="about-content">
 			<h2 class="s-title reveal">
 				Designing Spaces<br />That <span class="h-blue">Endure</span>
 			</h2>
@@ -87,18 +110,23 @@
 			</div>
 		</div>
 	</div>
-</section>
+</div>
 
 <style>
-	#story {
-		padding: 120px 64px;
-	}
+    #story {
+        padding-top: var(--space-30);
+    }
 	.about-grid {
+        padding-bottom: var(--space-30);
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 88px;
-		align-items: center;
+		gap: var(--padding-global);
+		align-items: start;
 		margin-top: 80px;
+
+        & .about-content {
+            padding-right: var(--padding-global);
+        }
 
 		& .about-body {
 			display: grid;
@@ -107,73 +135,45 @@
 	}
 	.about-visual {
 		position: relative;
-	}
-	.about-card-main {
 		width: 100%;
-		aspect-ratio: 3/4;
-		background: var(--dark);
-		position: relative;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-	}
-	.about-card-bg {
-		position: absolute;
-		inset: 0;
-		background: linear-gradient(135deg, #2c2729 0%, #1a1618 100%);
-	}
-	.about-card-text {
-		font-family: var(--font-heading);
-		font-size: 88px;
-		font-weight: 700;
-		color: rgba(255, 255, 255, 0.04);
-		letter-spacing: -4px;
-		position: relative;
-		z-index: 1;
-	}
-	.about-badge {
-		position: absolute;
-		bottom: -24px;
-		right: -24px;
-		background: var(--accent);
-		padding: 28px 32px;
-		text-align: center;
-	}
-	.badge-top {
-		font-size: 8px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.65);
-		margin-bottom: 4px;
-	}
-	.badge-main {
-		font-family: var(--font-heading);
-		font-size: 36px;
-		font-weight: 700;
-		color: white;
-		letter-spacing: -0.04em;
-		line-height: 1;
-	}
-	.badge-sub {
-		font-size: 8px;
-		letter-spacing: 2px;
-		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.55);
-		margin-top: 4px;
-	}
-	.about-tag {
-		display: inline-flex;
-		align-items: center;
-		gap: 8px;
-		border: 1px solid var(--border);
-		background: transparent;
-		color: var(--text-mid);
-		font-size: 9px;
-		letter-spacing: 3px;
-		text-transform: uppercase;
-		padding: 6px 16px;
-		margin-bottom: 28px;
+        height: 100vh;
+        overflow: hidden;
+        & .about-story-img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+        & .about-badge {
+            position: absolute;
+            bottom: var(--space-4);
+            right: var(--space-4);
+            background: var(--accent);
+            padding: 28px 32px;
+            text-align: center;
+            & .badge-top {
+                font-size: 8px;
+                letter-spacing: 3px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.65);
+                margin-bottom: 4px;
+            }
+            & .badge-main {
+                font-family: var(--font-heading);
+                font-size: 36px;
+                font-weight: 700;
+                color: white;
+                letter-spacing: -0.04em;
+                line-height: 1;
+            }
+            & .badge-sub {
+                font-size: 8px;
+                letter-spacing: 2px;
+                text-transform: uppercase;
+                color: rgba(255, 255, 255, 0.55);
+                margin-top: 4px;
+            }
+        }
 	}
 	.about-values {
 		display: grid;
@@ -214,16 +214,7 @@
 		color: var(--black-60);
 	}
 	@media (max-width: 1024px) {
-		#story {
-			padding: 80px 32px;
-		}
 		.about-grid {
-			grid-template-columns: 1fr;
-			gap: 44px;
-		}
-	}
-	@media (max-width: 640px) {
-		.about-values {
 			grid-template-columns: 1fr;
 		}
 	}

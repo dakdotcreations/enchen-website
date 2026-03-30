@@ -64,7 +64,7 @@
 	#hero {
 		position: relative;
 		width: 100%;
-		height: 100dvh;
+		height: 100svh;
 		overflow: hidden;
 		background: var(--black);
 

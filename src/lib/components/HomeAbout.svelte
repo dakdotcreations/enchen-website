@@ -56,7 +56,7 @@
 <style>
 	#about {
 		background: var(--off-white);
-		padding: var(--space-30) var(--space-16);
+		padding: var(--space-30) var(--padding-global);
 
 		.about-grid {
 			display: grid;
@@ -118,11 +118,11 @@
 			}
 		}
 
-		@media (max-width: 640px) {
+		/* @media (max-width: 640px) {
 			.about-values {
 				grid-template-columns: 1fr;
 			}
-		}
+		} */
 	}
 
 	/* Wide strip */

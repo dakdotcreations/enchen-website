@@ -131,19 +131,8 @@
 
 /* ── Responsive ── */
 @media (max-width: 64rem) {
-	nav,
-	nav.scrolled {
-		padding: var(--space-5) var(--space-8);
-	}
-	.nav-links,
-	.nav-cta {
-		display: none;
-	}
-	.hamburger {
-		display: flex;
-	}
 	section {
-		padding: var(--space-20) var(--space-8);
+		padding: var(--space-20) var(--padding-global);
 	}
 	.foot-top {
 		grid-template-columns: 1fr 1fr;

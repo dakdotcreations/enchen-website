@@ -121,21 +121,23 @@
 
 <!-- Nav -->
 <nav id="navbar" class:scrolled class:nav-hidden={navHidden}>
-	<a href="/" class="nav-logo">
-		<img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
-		<span class="nav-logo-text">ENCHEN<span>.</span></span>
-	</a>
-	<ul class="nav-links">
-		{#each navLinks as link}
-			<li>
-				<a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a>
-			</li>
-		{/each}
-	</ul>
-	<a href="/contact" class="nav-cta">Start a Project</a>
-	<button class="hamburger" aria-label="Open navigation menu" onclick={() => (mobileOpen = true)}>
-		<span></span><span></span><span></span>
-	</button>
+    <div class="nav-container container">
+        <a href="/" class="nav-logo">
+            <img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
+            <span class="nav-logo-text">ENCHEN<span>.</span></span>
+        </a>
+        <ul class="nav-links">
+            {#each navLinks as link}
+                <li>
+                    <a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a>
+                </li>
+            {/each}
+        </ul>
+        <a href="/contact" class="nav-cta">Start a Project</a>
+        <button class="hamburger" aria-label="Open navigation menu" onclick={() => (mobileOpen = true)}>
+            <span></span><span></span><span></span>
+        </button>
+    </div>
 </nav>
 
 {@render children()}

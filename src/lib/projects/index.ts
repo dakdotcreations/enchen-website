@@ -10,6 +10,7 @@ import contemporaryApt from './contemporary-apartment.json';
 import officeRitOut from './regional-office-fit-out.json';
 import restaurantBar from './restaurant-and-bar.json';
 import padrePio from './padre-pio-insurance.json';
+import wilkenTelecom from './wilken-telecom-offices.json';
 
 export const projects: Project[] = [
 	executiveHQ,
@@ -22,4 +23,5 @@ export const projects: Project[] = [
 	officeRitOut,
 	restaurantBar,
 	padrePio,
+	wilkenTelecom,
 ] as Project[];

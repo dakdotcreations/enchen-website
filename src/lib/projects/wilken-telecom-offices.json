@@ -1,0 +1,60 @@
+{
+	"slug": "wilken-telecom-offices",
+	"title": "Wilken Telecom Offices",
+	"location": "Kampala, Uganda",
+	"tag": "corporate",
+	"featured": true,
+	"thumbnail": "/images/projects/wilkentel/1.webp",
+	"content": [
+		{
+			"type": "image",
+			"src": "/images/projects/wilkentel/1.webp",
+			"alt": "Wilken Telecom office reception and entrance",
+			"caption": "The main reception — a restrained, brand-forward entrance that sets the tone for the floors above."
+		},
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>Wilken Telecom required a full interior fit-out for their Kampala headquarters — a multi-floor commercial tenancy that needed to function as both a productive working environment and a confident expression of the company's identity in the telecoms sector. The brief called for a contemporary corporate aesthetic with clear spatial hierarchy between client-facing and operational zones.</p>"
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/wilkentel/2.webp",
+			"alt": "Open-plan workstation floor",
+			"caption": "The open-plan workstation floor — a clean, well-lit environment designed for focus and informal collaboration."
+		},
+		{
+			"type": "text",
+			"heading": "Approach",
+			"body": "<p>Our design strategy centred on establishing a consistent material palette — dark structural accents, warm wood-tone surfaces, and a restrained use of the Wilken brand colour — applied across reception, open-floor working areas, and enclosed meeting rooms. Lighting was treated as an active design element throughout: recessed cove profiles and pendant clusters define zones without disrupting the open ceiling plane.</p><p>The workstation layout prioritises natural light at the perimeter, with enclosed meeting rooms positioned at the core. A feature staircase and branded wall graphics provide legibility across floors and reinforce the company's market positioning at every circulation point.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/wilkentel/3.webp",
+					"alt": "Meeting room with branded wall graphics",
+					"caption": "An enclosed meeting room — full-height glazing maintains sightlines while acoustic panels control reverberation."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/wilkentel/4.webp",
+					"alt": "Executive office and private workspace",
+					"caption": "Executive office zone — bespoke joinery, integrated cable management, and acoustic ceiling treatment."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/wilkentel/5.webp",
+			"alt": "Staff breakout and collaboration area",
+			"caption": "The staff breakout area — a deliberate contrast to the workstation floor, designed to encourage informal exchange."
+		},
+		{
+			"type": "text",
+			"heading": "Outcome",
+			"body": "<p>The completed fit-out delivers a workplace that functions efficiently across its full programme — from high-footfall client reception through to focused executive work. Wilken Telecom now occupies a space that communicates the scale and confidence of the business to every visitor, while giving their team an environment built around how they actually work.</p>"
+		}
+	]
+}

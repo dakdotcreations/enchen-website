@@ -2,8 +2,8 @@
 	import { projects } from '$lib/projects';
 
 	const featuredSlugs = [
+		'wilken-telecom-offices',
 		'padre-pio-insurance',
-		'luxury-lakeside-villa',
 		'premium-members-lounge',
 		'penthouse-suite-redesign',
 		'restaurant-and-bar',

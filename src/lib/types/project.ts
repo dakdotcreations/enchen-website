@@ -31,8 +31,6 @@ export type Project = {
 	title: string;
 	location: string;
 	tag: Tag;
-	/** Whether this project appears in the homepage hero slideshow */
-	featured?: boolean;
 	/** Path under /static — leave empty until real image is added */
 	thumbnail: string;
 	content: ContentBlock[];

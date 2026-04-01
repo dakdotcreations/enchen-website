@@ -2,7 +2,7 @@
 	import { Lightbulb, Leaf, Crosshair, HandHeart } from '@lucide/svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
 	import { getLenisInstance } from '$lib/lenis';
 	import { slideIn } from '$lib/animations/anims';
 

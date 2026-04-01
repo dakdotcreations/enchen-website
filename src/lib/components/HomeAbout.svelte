@@ -86,7 +86,7 @@
 <!-- About – wide image strip -->
 <div class="about-wide-strip">
 	<div class="about-wide-inner">
-		<img src="/images/projects/cls1.jpg" alt="Enchen interior design project" class="about-wide-img" />
+		<img src="/images/home/office-lobby-desk.webp" alt="Enchen interior design project" class="about-wide-img" />
 		<div class="about-wide-label">ENCHEN</div>
         <div class="about-wide-overlay"></div>
 	</div>

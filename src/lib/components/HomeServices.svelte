@@ -103,7 +103,7 @@
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: var(--space-2);
+		gap: var(--space-4);
 	}
 	.svc-img-card {
 		position: relative;

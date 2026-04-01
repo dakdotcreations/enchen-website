@@ -88,7 +88,7 @@
 		grid-template-areas:
 			"p1 p1 p1 p1 p1 p1 p1 p2 p2 p2 p2 p2"
 			"p3 p3 p3 p3 p4 p4 p4 p4 p5 p5 p5 p5";
-		gap: 0.625rem;
+		gap: var(--space-4);
 
         & > :nth-child(1) { grid-area: p1; }
         & > :nth-child(2) { grid-area: p2; }

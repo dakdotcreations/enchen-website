@@ -7,7 +7,7 @@
 	import Footer from '$lib/components/sections/footer.svelte';
 	import PageLoader from '$lib/components/PageLoader.svelte';
 	import Lenis from 'lenis';
-	import gsap from 'gsap';
+	import { loadGsap } from '$lib/utils/useGsap';
 	import { setLenisInstance } from '$lib/lenis';
 	import { fadeIn } from '$lib/animations/anims';
 
@@ -42,7 +42,8 @@
 		});
 	}
 
-    function initLenis() {
+    async function initLenis() {
+		const { gsap } = await loadGsap();
 		const lenis = new Lenis({
             duration: 1.5,
             easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
@@ -50,7 +51,7 @@
 		setLenisInstance(lenis);
 
 		// GSAP ticker drives Lenis — cleaner than a manual rAF loop
-		gsap.ticker.add((time) => lenis.raf(time * 1000));
+		gsap.ticker.add((time: number) => lenis.raf(time * 1000));
 		gsap.ticker.lagSmoothing(0);
     }
 

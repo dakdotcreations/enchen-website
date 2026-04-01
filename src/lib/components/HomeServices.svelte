@@ -31,7 +31,7 @@
 
 	let grid: HTMLElement;
 
-	$effect(() => slideIn(grid));
+	$effect(() => { slideIn(grid); });
 </script>
 
 <section id="services">

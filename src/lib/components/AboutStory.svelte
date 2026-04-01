@@ -1,17 +1,20 @@
 <script lang="ts">
 	import { SquareDashedMousePointer, MessageCircleMore, Rocket, Leaf } from '@lucide/svelte';
 	import { onMount, onDestroy } from 'svelte';
-	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { loadGsap } from '$lib/utils/useGsap';
 	import { getLenisInstance } from '$lib/lenis';
 
-	let mm: ReturnType<typeof gsap.matchMedia>;
+	let mm: any;
+	let lenisCleanup: (() => void) | null = null;
 
-	onMount(() => {
-		gsap.registerPlugin(ScrollTrigger);
+	onMount(async () => {
+		const { gsap, ScrollTrigger } = await loadGsap();
 
 		const lenis = getLenisInstance();
-		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+		if (lenis) {
+			lenis.on('scroll', ScrollTrigger.update);
+			lenisCleanup = () => lenis.off('scroll', ScrollTrigger.update);
+		}
 
 		mm = gsap.matchMedia();
 		mm.add('(min-width: 1025px)', () => {
@@ -27,8 +30,7 @@
 	});
 
 	onDestroy(() => {
-		const lenis = getLenisInstance();
-		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		lenisCleanup?.();
 		mm?.revert();
 	});
 </script>

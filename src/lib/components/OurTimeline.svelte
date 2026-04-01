@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
 	import gsap from 'gsap';
-	import { ScrollTrigger } from 'gsap/dist/ScrollTrigger';
+	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
 	import { getLenisInstance } from '$lib/lenis';
 	import { slideIn } from '$lib/animations/anims';
 

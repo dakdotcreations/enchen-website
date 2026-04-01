@@ -56,8 +56,8 @@
 				aria-label="Go to slide {i + 1}"></button>
 		{/each}
 	</div>
-	<button class="hero-arrow hero-prev" onclick={prevSlide} aria-label="Previous slide">←</button>
-	<button class="hero-arrow hero-next" onclick={nextSlide} aria-label="Next slide">→</button>
+	<!-- <button class="hero-arrow hero-prev" onclick={prevSlide} aria-label="Previous slide">←</button>
+	<button class="hero-arrow hero-next" onclick={nextSlide} aria-label="Next slide">→</button> -->
 </section>
 
 <style>

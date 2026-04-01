@@ -5,6 +5,8 @@
 	const featuredSlugs = [
 		'wilken-telecom-offices',
 		'padre-pio-insurance',
+		'private-residence',
+		'fao-offices',
 	];
 	const featured = featuredSlugs.map((slug) => projects.find((p) => p.slug === slug)!);
 

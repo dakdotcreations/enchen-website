@@ -1,12 +1,7 @@
-import gsap from "gsap";
-import ScrollTrigger from "gsap/dist/ScrollTrigger";
-import SplitText from "gsap/dist/SplitText";
+import { loadGsap } from '$lib/utils/useGsap';
 
-
-gsap.registerPlugin(ScrollTrigger, SplitText);
-
-
-export function observeText(start: string = 'top 80%', end: string = 'top 20%', scrub: boolean = true) {
+export async function observeText(start: string = 'top 80%', end: string = 'top 20%', scrub: boolean = true) {
+    const { gsap, SplitText } = await loadGsap();
     const split_types = document.querySelectorAll('.reveal-type') as NodeList
 
     split_types.forEach((char: any) => {
@@ -31,10 +26,11 @@ export function observeText(start: string = 'top 80%', end: string = 'top 20%', 
     })
 }
 
-export function slideIn(
+export async function slideIn(
     parent: HTMLElement,
     { top = 200, start = 'top 80%', end = 'top 20%', markers = false } = {}
 ) {
+    const { gsap } = await loadGsap();
     const sliders = parent.querySelectorAll('.slide-in') as NodeListOf<HTMLElement>
 
     gsap.from(sliders, {
@@ -54,7 +50,8 @@ export function slideIn(
     })
 }
 
-export function fadeIn() {
+export async function fadeIn() {
+    const { gsap } = await loadGsap();
     const faders = document.querySelectorAll('.fade-in') as NodeListOf<HTMLElement>
 
     faders.forEach((fader: HTMLElement) => {

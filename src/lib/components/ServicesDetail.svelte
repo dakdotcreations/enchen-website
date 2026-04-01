@@ -1,7 +1,6 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { loadGsap } from '$lib/utils/useGsap';
 	import { getLenisInstance } from '$lib/lenis';
 
 	const services = [
@@ -115,19 +114,21 @@
 
 	let sectionEl: HTMLElement;
 	let imageSlides: HTMLElement[] = [];
-	let triggers: ScrollTrigger[] = [];
+	let triggers: any[] = [];
 	let currentIndex = 0;
+	let _gsap: any = null;
+	let _ScrollTrigger: any = null;
 
 	function transitionTo(next: number) {
-		if (next === currentIndex) return;
+		if (!_gsap || next === currentIndex) return;
 
-		gsap.to(imageSlides[currentIndex], {
+		_gsap.to(imageSlides[currentIndex], {
 			opacity: 0,
 			scale: 1.04,
 			duration: 0.75,
 			ease: 'power2.inOut',
 		});
-		gsap.fromTo(
+		_gsap.fromTo(
 			imageSlides[next],
 			{ opacity: 0, scale: 0.97 },
 			{ opacity: 1, scale: 1, duration: 0.75, ease: 'power2.inOut' }
@@ -136,51 +137,55 @@
 	}
 
 	$effect(() => {
-		gsap.registerPlugin(ScrollTrigger);
-		const lenis = getLenisInstance();
-		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+		loadGsap().then(({ gsap, ScrollTrigger }) => {
+			_gsap = gsap;
+			_ScrollTrigger = ScrollTrigger;
 
-		gsap.set(imageSlides[0], { opacity: 1, scale: 1 });
-		gsap.set(imageSlides.slice(1), { opacity: 0, scale: 0.97 });
+			const lenis = getLenisInstance();
+			if (lenis) lenis.on('scroll', ScrollTrigger.update);
 
-		const panels = sectionEl.querySelectorAll<HTMLElement>('.svc-panel');
-		panels.forEach((panel, i) => {
-			// Transition trigger
-			const st = ScrollTrigger.create({
-				trigger: panel,
-				start: 'top 55%',
-				end: 'bottom 55%',
-				onEnter: () => transitionTo(i),
-				onEnterBack: () => transitionTo(i),
+			gsap.set(imageSlides[0], { opacity: 1, scale: 1 });
+			gsap.set(imageSlides.slice(1), { opacity: 0, scale: 0.97 });
+
+			const panels = sectionEl.querySelectorAll<HTMLElement>('.svc-panel');
+			panels.forEach((panel, i) => {
+				// Transition trigger
+				const st = ScrollTrigger.create({
+					trigger: panel,
+					start: 'top 55%',
+					end: 'bottom 55%',
+					onEnter: () => transitionTo(i),
+					onEnterBack: () => transitionTo(i),
+				});
+				triggers.push(st);
+
+				// Ken Burns scroll zoom on the image
+				const img = imageSlides[i]?.querySelector('img');
+				if (img) {
+					const zoom = gsap.fromTo(
+						img,
+						{ scale: 1 },
+						{
+							scale: 1.1,
+							ease: 'none',
+							scrollTrigger: {
+								trigger: panel,
+								start: 'top bottom',
+								end: 'bottom top',
+								scrub: true,
+							},
+						}
+					);
+					triggers.push(zoom.scrollTrigger);
+				}
 			});
-			triggers.push(st);
-
-			// Ken Burns scroll zoom on the image
-			const img = imageSlides[i]?.querySelector('img');
-			if (img) {
-				const zoom = gsap.fromTo(
-					img,
-					{ scale: 1 },
-					{
-						scale: 1.1,
-						ease: 'none',
-						scrollTrigger: {
-							trigger: panel,
-							start: 'top bottom',
-							end: 'bottom top',
-							scrub: true,
-						},
-					}
-				);
-				triggers.push(zoom.scrollTrigger!);
-			}
 		});
 	});
 
 	onDestroy(() => {
 		const lenis = getLenisInstance();
-		if (lenis) lenis.off('scroll', ScrollTrigger.update);
-		triggers.forEach((t) => t.kill());
+		if (lenis && _ScrollTrigger) lenis.off('scroll', _ScrollTrigger.update);
+		triggers.forEach((t) => t?.kill());
 		triggers = [];
 	});
 </script>

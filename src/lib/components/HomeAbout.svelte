@@ -1,41 +1,43 @@
 <script lang="ts">
 	import { Lightbulb, Leaf, Crosshair, HandHeart } from '@lucide/svelte';
 	import { onDestroy } from 'svelte';
-	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { loadGsap } from '$lib/utils/useGsap';
 	import { getLenisInstance } from '$lib/lenis';
 	import { slideIn } from '$lib/animations/anims';
 
 	let valuesGrid: HTMLElement;
-	let st: gsap.core.Tween | null = null;
+	let st: any = null;
+	let _ScrollTrigger: any = null;
 
 	$effect(() => {
-		gsap.registerPlugin(ScrollTrigger);
+		loadGsap().then(({ gsap, ScrollTrigger }) => {
+			_ScrollTrigger = ScrollTrigger;
 
-		const lenis = getLenisInstance();
-		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+			const lenis = getLenisInstance();
+			if (lenis) lenis.on('scroll', ScrollTrigger.update);
 
-		st = gsap.fromTo(
-			'.about-wide-img',
-			{ yPercent: -12 },
-			{
-				yPercent: 12,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: '.about-wide-strip',
-					start: 'top bottom',
-					end: 'bottom top',
-					scrub: true,
-				},
-			}
-		);
+			st = gsap.fromTo(
+				'.about-wide-img',
+				{ yPercent: -12 },
+				{
+					yPercent: 12,
+					ease: 'none',
+					scrollTrigger: {
+						trigger: '.about-wide-strip',
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: true,
+					},
+				}
+			);
 
-		slideIn(valuesGrid);
+			slideIn(valuesGrid);
+		});
 	});
 
 	onDestroy(() => {
 		const lenis = getLenisInstance();
-		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		if (lenis && _ScrollTrigger) lenis.off('scroll', _ScrollTrigger.update);
 		st?.kill();
 	});
 </script>

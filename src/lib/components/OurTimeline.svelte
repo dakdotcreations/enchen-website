@@ -1,40 +1,43 @@
 <script lang="ts">
 	import { onDestroy } from 'svelte';
-	import gsap from 'gsap';
-	import ScrollTrigger from 'gsap/dist/ScrollTrigger';
+	import { loadGsap } from '$lib/utils/useGsap';
 	import { getLenisInstance } from '$lib/lenis';
 	import { slideIn } from '$lib/animations/anims';
 
 	let tlList: HTMLDivElement;
 	let tlVisual: HTMLDivElement;
-	let st: gsap.core.Tween | null = null;
+	let st: any = null;
+	let _ScrollTrigger: any = null;
 
 	$effect(() => {
-		gsap.registerPlugin(ScrollTrigger);
-		const lenis = getLenisInstance();
-		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+		loadGsap().then(({ gsap, ScrollTrigger }) => {
+			_ScrollTrigger = ScrollTrigger;
 
-		slideIn(tlList);
+			const lenis = getLenisInstance();
+			if (lenis) lenis.on('scroll', ScrollTrigger.update);
 
-		st = gsap.fromTo(
-			tlVisual.querySelector('.tl-visual-img'),
-			{ yPercent: -10 },
-			{
-				yPercent: 10,
-				ease: 'none',
-				scrollTrigger: {
-					trigger: tlVisual,
-					start: 'top bottom',
-					end: 'bottom top',
-					scrub: true,
-				},
-			}
-		);
+			slideIn(tlList);
+
+			st = gsap.fromTo(
+				tlVisual.querySelector('.tl-visual-img'),
+				{ yPercent: -10 },
+				{
+					yPercent: 10,
+					ease: 'none',
+					scrollTrigger: {
+						trigger: tlVisual,
+						start: 'top bottom',
+						end: 'bottom top',
+						scrub: true,
+					},
+				}
+			);
+		});
 	});
 
 	onDestroy(() => {
 		const lenis = getLenisInstance();
-		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		if (lenis && _ScrollTrigger) lenis.off('scroll', _ScrollTrigger.update);
 		st?.kill();
 	});
 	const items = [

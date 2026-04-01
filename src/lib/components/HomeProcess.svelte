@@ -73,8 +73,8 @@
 </script>
 
 <section id="process">
-	<div class="s-label reveal">How We Work</div>
-	<h2 class="s-title reveal">Our <span class="h-mag">Process</span></h2>
+	<div class="s-label">How We Work</div>
+	<h2 class="s-title">Our <span class="h-mag">Process</span></h2>
 
 	<div class="process-track">
 		{#each steps as step, idx}

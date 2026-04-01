@@ -1,17 +1,21 @@
+<script lang="ts">
+
+</script>
+
 <section id="services">
 	<div class="services-intro">
 		<div>
-			<div class="s-label reveal">What We Do</div>
-			<h2 class="s-title light reveal">
+			<div class="s-label">What We Do</div>
+			<h2 class="s-title light">
 				Design Services<br /><span class="h-blue">Tailored</span> to You
 			</h2>
 		</div>
-		<p class="s-body light reveal" style="max-width:340px;">
+		<p class="s-body light" style="max-width:340px;">
 			From initial concept to final handover — end-to-end design solutions for every space and
 			budget.
 		</p>
 	</div>
-	<div class="services-grid reveal">
+	<div class="services-grid">
 		<div class="svc-img-card">
 			<img src="/images/home/Corporate & Office Design.webp" alt=" " class="svc-img-placeholder" />
 			<div class="svc-img-footer">

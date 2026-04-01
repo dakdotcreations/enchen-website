@@ -12,16 +12,16 @@
 </script>
 
 <section id="portfolio">
-	<div class="s-label reveal">Our Work</div>
-	<h2 class="s-title light reveal">Featured <span class="h-blue">Projects</span></h2>
-	<div class="port-filter reveal">
+	<div class="s-label">Our Work</div>
+	<h2 class="s-title light">Featured <span class="h-blue">Projects</span></h2>
+	<div class="port-filter">
 		{#each filters as f}
 			<button class="f-btn" class:active={activeFilter === f} onclick={() => (activeFilter = f)}>
 				{f === 'All' ? 'All' : f[0].toUpperCase() + f.slice(1)}
 			</button>
 		{/each}
 	</div>
-	<div class="port-grid reveal">
+	<div class="port-grid">
 		{#each featured as item, i}
 			{#if activeFilter === 'All' || activeFilter === item.tag}
 				<a href="/portfolio/{item.slug}" class="port-item">
@@ -39,7 +39,7 @@
 			{/if}
 		{/each}
 	</div>
-	<div class="port-cta reveal">
+	<div class="port-cta">
 		<a href="/contact" class="btn outline" style="color:rgba(255,255,255,0.7)">Discuss Your Project →</a>
 	</div>
 </section>

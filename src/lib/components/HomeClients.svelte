@@ -1,9 +1,9 @@
 <div id="clients">
-	<div class="clients-row reveal">
+	<div class="clients-row">
 		<span class="clients-label">Trusted By</span>
 		<div class="clients-rule"></div>
 	</div>
-	<div class="clients-grid reveal">
+	<div class="clients-grid">
 		<div class="cl-item"><img src="/images/clients/stanbic-bank.webp" alt="Stanbic Bank" /></div>
 		<div class="cl-item"><img src="/images/clients/mtn.webp" alt="MTN" /></div>
 		<div class="cl-item"><img src="/images/clients/airtel.webp" alt="Airtel" /></div>

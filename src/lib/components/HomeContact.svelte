@@ -8,16 +8,16 @@
 </script>
 
 <section id="contact">
-	<div class="s-label reveal">Get In Touch</div>
-	<h2 class="s-title reveal">Start Your <span class="h-blue">Project</span></h2>
+	<div class="s-label">Get In Touch</div>
+	<h2 class="s-title">Start Your <span class="h-blue">Project</span></h2>
 	<div class="contact-grid">
-		<div class="reveal">
+		<div class="">
 			<div class="c-detail"><div class="c-icon">📍</div><div><div class="c-title">Our Studio</div><div class="c-val">Enchen Creative Hub<br>Ntinda, Kampala, Uganda</div></div></div>
 			<div class="c-detail"><div class="c-icon">✉️</div><div><div class="c-title">Email Us</div><div class="c-val">hello@enchencreativehub.com</div></div></div>
 			<div class="c-detail"><div class="c-icon">📞</div><div><div class="c-title">Call Us</div><div class="c-val">+256 700 000 000</div></div></div>
 			<div class="c-detail"><div class="c-icon">🕐</div><div><div class="c-title">Studio Hours</div><div class="c-val">Mon – Fri: 8:00 am – 6:00 pm<br>Saturday: 9:00 am – 2:00 pm</div></div></div>
 		</div>
-		<div class="reveal rd2">
+		<div class="">
 			<div class="form-row">
 				<div class="f-field"><label for="h-fname">First Name</label><input id="h-fname" type="text" placeholder="James" /></div>
 				<div class="f-field"><label for="h-lname">Last Name</label><input id="h-lname" type="text" placeholder="Mwangi" /></div>

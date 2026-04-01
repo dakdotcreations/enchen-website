@@ -1,7 +1,7 @@
 <div class="timeline-section">
-	<div class="s-label reveal">Key Projects</div>
-	<h2 class="s-title reveal">Work That <span class="h-blue">Defines</span><br />Our Standard</h2>
-	<div class="tl-grid reveal">
+	<div class="s-label">Key Projects</div>
+	<h2 class="s-title">Work That <span class="h-blue">Defines</span><br />Our Standard</h2>
+	<div class="tl-grid">
 		<div class="tl-list">
 			<div class="tl-item">
 				<div class="tl-num">01</div>
@@ -45,7 +45,7 @@
 			</div>
 		</div>
 		<div>
-			<div class="tl-visual reveal">
+			<div class="tl-visual">
 				<img src="/images/home/milestones.webp" alt="Enchen key project" class="tl-visual-img" />
 				<div class="tl-visual-bottom">
 					<div class="tl-visual-text">ECH</div>

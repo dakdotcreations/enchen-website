@@ -1,7 +1,7 @@
 <section style="background: var(--off-white); padding: 120px 64px;">
-	<div class="s-label reveal">Why Choose Us</div>
-	<h2 class="s-title reveal">What Sets Us <span class="h-blue">Apart</span></h2>
-	<div class="why-grid reveal" style="margin-top:56px;">
+	<div class="s-label">Why Choose Us</div>
+	<h2 class="s-title">What Sets Us <span class="h-blue">Apart</span></h2>
+	<div class="why-grid" style="margin-top:56px;">
 		<div class="why-item">
 			<div class="why-num">01</div>
 			<div class="why-title">End-to-End Service</div>

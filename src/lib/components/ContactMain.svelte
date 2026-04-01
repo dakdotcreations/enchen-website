@@ -202,11 +202,11 @@
 
 <!-- FAQ -->
 <div class="contact-faq-section">
-	<div class="s-label centered reveal">Before You Reach Out</div>
-	<h2 class="s-title reveal" style="text-align:center;">
+	<div class="s-label centered">Before You Reach Out</div>
+	<h2 class="s-title" style="text-align:center;">
 		Quick <span class="h-blue">Answers</span>
 	</h2>
-	<div class="contact-faq-inner reveal">
+	<div class="contact-faq-inner">
 		<FaqList items={faqs} />
 	</div>
 </div>

@@ -1,11 +1,11 @@
 <section style="background: var(--dark); padding: 120px 64px;">
-	<div class="s-label reveal">How We Work</div>
-	<h2 class="s-title light reveal">Our <span class="h-blue">Process</span></h2>
-	<p class="s-body light reveal" style="max-width:540px; margin: 16px 0 56px;">
+	<div class="s-label">How We Work</div>
+	<h2 class="s-title light">Our <span class="h-blue">Process</span></h2>
+	<p class="s-body light" style="max-width:540px; margin: 16px 0 56px;">
 		We follow a structured, transparent process that keeps you informed and in control at every
 		step — from first conversation to final handover.
 	</p>
-	<div class="process-grid reveal">
+	<div class="process-grid">
 		<div class="proc-item">
 			<div class="proc-num">01</div>
 			<div class="proc-info">

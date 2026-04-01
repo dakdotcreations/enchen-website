@@ -1,6 +1,6 @@
 <section id="services-detail">
 	<div class="svc-detail-wrap">
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">01</div>
 				<div class="svc-row-name">Corporate &amp; Office Design</div>
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">02</div>
 				<div class="svc-row-name">Residential Design</div>
@@ -59,7 +59,7 @@
 			</div>
 		</div>
 
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">03</div>
 				<div class="svc-row-name">Commercial Spaces</div>
@@ -88,7 +88,7 @@
 			</div>
 		</div>
 
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">04</div>
 				<div class="svc-row-name">3D Visualisation &amp; Rendering</div>
@@ -117,7 +117,7 @@
 			</div>
 		</div>
 
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">05</div>
 				<div class="svc-row-name">Project Management</div>
@@ -141,7 +141,7 @@
 			</div>
 		</div>
 
-		<div class="svc-row reveal">
+		<div class="svc-row">
 			<div class="svc-row-left">
 				<div class="svc-row-num">06</div>
 				<div class="svc-row-name">Renovation &amp; Fit-Out</div>

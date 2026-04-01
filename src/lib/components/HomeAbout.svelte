@@ -3,24 +3,24 @@
 </script>
 
 <section id="about">
-	<div class="s-label reveal">About Enchen</div>
+	<div class="s-label">About Enchen</div>
 	<div class="about-grid">
 		<div>
-			<h2 class="s-title reveal">
+			<h2 class="s-title">
 				Spaces That <span class="h-blue">Inspire</span><br />&amp; Endure
 			</h2>
-			<p class="s-body reveal">
+			<p class="s-body">
 				Enchen Creative Hub is an architectural and interior design firm delivering bold,
 				functional, and inspiring environments. We work with residential, corporate, and
 				commercial clients — providing tailored design solutions that convert ideas into
 				remarkable real spaces.
 			</p>
-			<p class="s-body reveal" style="margin-top:18px;">
+			<p class="s-body" style="margin-top:18px;">
 				Our vision is to become the leading turnkey interior design company recognized
 				globally for quality, innovation, and designs that elevate brands.
 			</p>
 		</div>
-		<div class="about-values reveal">
+		<div class="about-values">
 			<div class="v-card">
 				<div class="v-icon blue"><Lightbulb size={16} /></div>
 				<div class="v-name">Innovation</div>

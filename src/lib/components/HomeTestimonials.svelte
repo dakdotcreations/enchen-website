@@ -1,7 +1,7 @@
 <section id="testimonials">
-	<div class="s-label reveal">Client Voices</div>
-	<h2 class="s-title light reveal">What Our Clients <span class="h-mag">Say</span></h2>
-	<div class="test-grid reveal">
+	<div class="s-label">Client Voices</div>
+	<h2 class="s-title light">What Our Clients <span class="h-mag">Say</span></h2>
+	<div class="test-grid">
 		<div class="test-card">
 			<div class="q-mark">"</div>
 			<p class="test-text">Enchen transformed our headquarters into a space that perfectly embodies our brand. The attention to detail was extraordinary, and the team was professional from concept to completion.</p>

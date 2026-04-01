@@ -17,10 +17,6 @@
 	let navHidden = $state(false);
 	let curtain = $state<'idle' | 'cover' | 'lift'>('idle');
 
-	// cursor
-	let mx = $state(0), my = $state(0);
-	let rx = $state(0), ry = $state(0);
-
 	// loading screen
 	let loading = $state(true);
 	let progress = $state(0);
@@ -101,7 +97,7 @@
 
         initLenis();
 
-		// ── Initial reveal setup (fixes HMR vanish) ──
+		// ── Initial setup (fixes HMR vanish) ──
 		requestAnimationFrame(setupReveal);
 
 		return () => {
@@ -136,10 +132,6 @@
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>
-
-<!-- Custom cursor -->
-<div class="cursor" style="left:{mx}px;top:{my}px;"></div>
-<div class="cursor-ring" style="left:{rx}px;top:{ry}px;"></div>
 
 <!-- Mobile menu -->
 <div class="mobile-menu" class:open={mobileOpen}>

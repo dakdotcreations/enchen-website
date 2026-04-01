@@ -11,13 +11,13 @@
 </script>
 
 <div class="port-full-section">
-	<div class="s-label reveal">Selected Projects</div>
-	<div class="port-filter reveal">
+	<div class="s-label">Selected Projects</div>
+	<div class="port-filter">
 		{#each filters as f}
 			<button class="f-btn" class:active={activeFilter === f} onclick={() => (activeFilter = f)}>{f}</button>
 		{/each}
 	</div>
-	<div class="port-full-grid reveal">
+	<div class="port-full-grid">
 		{#each items as p, i}
 			{#if activeFilter === 'All' || activeFilter.toLowerCase() === p.tag}
 				<a href="/portfolio/{p.slug}" class="port-full-item">

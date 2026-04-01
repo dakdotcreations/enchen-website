@@ -11,10 +11,10 @@
 </script>
 
 <div class="cta-strip">
-	<div class="s-label reveal">{eyebrow}</div>
-	<h2 class="cta-title reveal">{@html title}</h2>
-	<p class="cta-body reveal">{body}</p>
-	<div class="cta-actions reveal">
+	<div class="s-label">{eyebrow}</div>
+	<h2 class="cta-title">{@html title}</h2>
+	<p class="cta-body">{body}</p>
+	<div class="cta-actions">
 		<a href={primaryHref} class="btn primary">{primaryLabel}</a>
 		<a href={secondaryHref} class="btn outline">{secondaryLabel}</a>
 	</div>

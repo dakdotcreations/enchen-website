@@ -24,7 +24,7 @@
 	<div class="port-grid reveal">
 		{#each featured as item, i}
 			{#if activeFilter === 'All' || activeFilter === item.tag}
-				<a href="/portfolio/{item.slug}" class="port-item" style="grid-area: p{i + 1};">
+				<a href="/portfolio/{item.slug}" class="port-item">
 					<div class="port-img">
 						<div class="port-inner" style="background-image:url({item.thumbnail});"></div>
 					</div>
@@ -89,6 +89,12 @@
 			"p1 p1 p1 p1 p1 p1 p1 p2 p2 p2 p2 p2"
 			"p3 p3 p3 p3 p4 p4 p4 p4 p5 p5 p5 p5";
 		gap: 0.625rem;
+
+        & > :nth-child(1) { grid-area: p1; }
+        & > :nth-child(2) { grid-area: p2; }
+        & > :nth-child(3) { grid-area: p3; }
+        & > :nth-child(4) { grid-area: p4; }
+        & > :nth-child(5) { grid-area: p5; }
 	}
 	.port-item {
 		position: relative;
@@ -122,14 +128,6 @@
 		padding: 1.5rem;
 	}
 	.port-item:hover .port-overlay { opacity: 1; }
-	.port-cat {
-		font-size: 0.5625rem;
-		letter-spacing: 0.1875rem;
-		text-transform: uppercase;
-		color: var(--accent);
-		margin-bottom: 0.3125rem;
-		opacity: 0.75;
-	}
 	.port-name {
 		font-family: var(--font-heading);
 		font-size: 1.0625rem;

@@ -422,6 +422,9 @@
 		.contact-page-grid {
 			grid-template-columns: 1fr;
 		}
+        .contact-info-panel {
+            position: relative;
+        }
 		.contact-info-panel,
 		.contact-form-panel {
 			padding: 60px 32px;

@@ -1,10 +1,9 @@
 <script lang="ts">
 	import '../app.css';
-	import { page } from '$app/stores';
-	import { onMount } from 'svelte';
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	import Footer from '$lib/components/sections/footer.svelte';
+	import Navbar from '$lib/components/sections/Navbar.svelte';
 	import PageLoader from '$lib/components/PageLoader.svelte';
 	import Lenis from 'lenis';
 	import { loadGsap } from '$lib/utils/useGsap';
@@ -14,16 +13,11 @@
 
 	let { children } = $props();
 
-	let mobileOpen = $state(false);
-	let scrolled = $state(false);
-	let navHidden = $state(false);
 	let curtain = $state<'idle' | 'cover' | 'lift'>('idle');
 
 	// loading screen
 	let loading = $state(true);
 	let progress = $state(0);
-
-	function closeMob() { mobileOpen = false; }
 
 	function setupReveal() {
 		const obs = new IntersectionObserver(
@@ -81,33 +75,11 @@
 			window.addEventListener('load', finishLoading, { once: true });
 		}
 
-		// ── Scroll nav ──
-		let lastY = 0;
-		const THRESHOLD = 32; // ~2rem
-		const onScroll = () => {
-			const y = window.scrollY;
-			scrolled = y > THRESHOLD;
-			if (y < THRESHOLD) {
-				navHidden = false;
-			} else if (y > lastY) {
-				navHidden = true;  // scrolling down
-			} else {
-				navHidden = false; // scrolling up
-			}
-			lastY = y;
-		};
-		window.addEventListener('scroll', onScroll, { passive: true });
-
         initLenis();
 
 		// ── Initial setup (fixes HMR vanish) ──
 		requestAnimationFrame(setupReveal);
-
-        fadeIn()
-
-		return () => {
-			window.removeEventListener('scroll', onScroll);
-		};
+		fadeIn();
 	});
 
 	beforeNavigate(() => {
@@ -124,13 +96,7 @@
 		setupReveal();
 	});
 
-	const navLinks = [
-		{ href: '/about', label: 'About' },
-		{ href: '/services', label: 'Services' },
-		{ href: '/portfolio', label: 'Portfolio' },
-		{ href: '/testimonials', label: 'Testimonials' },
-		{ href: '/contact', label: 'Contact' }
-	];
+
 </script>
 
 <PageLoader {progress} {loading} />
@@ -138,34 +104,7 @@
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>
 
-<!-- Mobile menu -->
-<div class="mobile-menu" class:open={mobileOpen}>
-	<button class="mobile-close" onclick={() => (mobileOpen = false)}>✕</button>
-	{#each navLinks as link}
-		<a href={link.href} onclick={closeMob}>{link.label}</a>
-	{/each}
-</div>
-
-<!-- Nav -->
-<nav id="navbar" class:scrolled class:nav-hidden={navHidden}>
-    <div class="nav-container container">
-        <a href="/" class="nav-logo">
-            <img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
-            <span class="nav-logo-text">ENCHEN<span>.</span></span>
-        </a>
-        <ul class="nav-links">
-            {#each navLinks as link}
-                <li>
-                    <a href={link.href} class:active={$page.url.pathname === link.href}>{link.label}</a>
-                </li>
-            {/each}
-        </ul>
-        <a href="/contact" class="nav-cta">Start a Project</a>
-        <button class="hamburger" aria-label="Open navigation menu" onclick={() => (mobileOpen = true)}>
-            <span></span><span></span><span></span>
-        </button>
-    </div>
-</nav>
+<Navbar />
 
 {@render children()}
 

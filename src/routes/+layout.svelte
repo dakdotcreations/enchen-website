@@ -9,6 +9,8 @@
 	import Lenis from 'lenis';
 	import gsap from 'gsap';
 	import { setLenisInstance } from '$lib/lenis';
+	import { fadeIn } from '$lib/animations/anims';
+
 
 	let { children } = $props();
 
@@ -52,7 +54,7 @@
 		gsap.ticker.lagSmoothing(0);
     }
 
-	onMount(() => {
+	$effect(() => {
 		// ── Loading screen ──
 		const startTime = Date.now();
 		const MIN_DISPLAY = 1500;
@@ -63,7 +65,7 @@
 			setTimeout(() => {
 				const fillTick = setInterval(() => {
 					if (progress < 100) {
-						progress = Math.min(100, progress + 1);
+						progress = Math.min(100, progress + 4);
 					} else {
 						clearInterval(fillTick);
 						setTimeout(() => { loading = false; }, 500);
@@ -99,6 +101,8 @@
 
 		// ── Initial setup (fixes HMR vanish) ──
 		requestAnimationFrame(setupReveal);
+
+        fadeIn()
 
 		return () => {
 			window.removeEventListener('scroll', onScroll);

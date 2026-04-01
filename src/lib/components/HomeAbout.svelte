@@ -1,43 +1,81 @@
 <script lang="ts">
 	import { Lightbulb, Leaf, Crosshair, HandHeart } from '@lucide/svelte';
+	import { onMount, onDestroy } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { getLenisInstance } from '$lib/lenis';
+	import { slideIn } from '$lib/animations/anims';
+
+	let valuesGrid: HTMLElement;
+	let st: gsap.core.Tween | null = null;
+
+	$effect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+
+		const lenis = getLenisInstance();
+		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+
+		st = gsap.fromTo(
+			'.about-wide-img',
+			{ yPercent: -12 },
+			{
+				yPercent: 12,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: '.about-wide-strip',
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: true,
+				},
+			}
+		);
+
+		slideIn(valuesGrid);
+	});
+
+	onDestroy(() => {
+		const lenis = getLenisInstance();
+		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		st?.kill();
+	});
 </script>
 
 <section id="about">
 	<div class="s-label">About Enchen</div>
 	<div class="about-grid">
-		<div>
+		<div bind:this={valuesGrid}>
 			<h2 class="s-title">
-				Spaces That <span class="h-blue">Inspire</span><br />&amp; Endure
+				Spaces That <span class="h-blue">Inspire</span><br />& Endure
 			</h2>
-			<p class="s-body">
+			<p class="s-body slide-in">
 				Enchen Creative Hub is an architectural and interior design firm delivering bold,
 				functional, and inspiring environments. We work with residential, corporate, and
 				commercial clients — providing tailored design solutions that convert ideas into
 				remarkable real spaces.
 			</p>
-			<p class="s-body" style="margin-top:18px;">
+			<p class="s-body slide-in" style="margin-top:18px;">
 				Our vision is to become the leading turnkey interior design company recognized
 				globally for quality, innovation, and designs that elevate brands.
 			</p>
 		</div>
 		<div class="about-values">
 			<div class="v-card">
-				<div class="v-icon blue"><Lightbulb size={16} /></div>
+				<div class="v-icon"><Lightbulb size={16} /></div>
 				<div class="v-name">Innovation</div>
 				<div class="v-desc">Advanced technology and bold thinking in every brief.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon mag"><Leaf size={16} /></div>
+				<div class="v-icon"><Leaf size={16} /></div>
 				<div class="v-name">Sustainability</div>
 				<div class="v-desc">Green, responsible design built for the future.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon pur"><Crosshair size={16} /></div>
+				<div class="v-icon"><Crosshair size={16} /></div>
 				<div class="v-name">Precision</div>
 				<div class="v-desc">Every detail considered, nothing left to chance.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon teal"><HandHeart size={16} /></div>
+				<div class="v-icon"><HandHeart size={16} /></div>
 				<div class="v-name">Client First</div>
 				<div class="v-desc">Your vision is the blueprint for everything we do.</div>
 			</div>
@@ -96,6 +134,7 @@
 					font-size: var(--text-md);
 					border: 1px solid var(--border);
 					background: var(--white);
+                    border-radius: var(--space-8);
 				}
 
 				.v-name {
@@ -154,11 +193,13 @@
 
 			.about-wide-img {
 				position: absolute;
-				inset: 0;
+				left: 0;
 				width: 100%;
-				height: 100%;
+				height: 130%;
+				top: -15%;
 				object-fit: cover;
 				object-position: center;
+				will-change: transform;
 			}
 
 			.about-wide-label {

@@ -1,9 +1,13 @@
 <script lang="ts">
-	let submitLabel = $state('Send Enquiry →');
+	import { MapPin, Mail, Phone, Clock } from '@lucide/svelte';
+
+	let submitLabel = $state("Send Enquiry")
 	function handleSubmit(e: Event) {
-		e.preventDefault();
-		submitLabel = '✓ Enquiry Sent';
-		setTimeout(() => { submitLabel = 'Send Enquiry →'; }, 3500);
+		e.preventDefault()
+		submitLabel = "Enquiry Sent"
+		setTimeout(() => {
+			submitLabel = "Send Enquiry"
+		}, 3500)
 	}
 </script>
 
@@ -12,17 +16,55 @@
 	<h2 class="s-title">Start Your <span class="h-blue">Project</span></h2>
 	<div class="contact-grid">
 		<div class="">
-			<div class="c-detail"><div class="c-icon">📍</div><div><div class="c-title">Our Studio</div><div class="c-val">Enchen Creative Hub<br>Ntinda, Kampala, Uganda</div></div></div>
-			<div class="c-detail"><div class="c-icon">✉️</div><div><div class="c-title">Email Us</div><div class="c-val">hello@enchencreativehub.com</div></div></div>
-			<div class="c-detail"><div class="c-icon">📞</div><div><div class="c-title">Call Us</div><div class="c-val">+256 700 000 000</div></div></div>
-			<div class="c-detail"><div class="c-icon">🕐</div><div><div class="c-title">Studio Hours</div><div class="c-val">Mon – Fri: 8:00 am – 6:00 pm<br>Saturday: 9:00 am – 2:00 pm</div></div></div>
+			<div class="c-detail">
+				<div class="c-icon"><MapPin size={16} /></div>
+				<div>
+					<div class="c-title">Our Studio</div>
+					<div class="c-val">Enchen Creative Hub<br />Nakasero, Kampala, Uganda</div>
+				</div>
+			</div>
+			<div class="c-detail">
+				<div class="c-icon"><Mail size={16} /></div>
+				<div>
+					<div class="c-title">Email Us</div>
+					<div class="c-val">hello@enchencreative.com</div>
+				</div>
+			</div>
+			<div class="c-detail">
+				<div class="c-icon"><Phone size={16} /></div>
+				<div>
+					<div class="c-title">Call Us</div>
+					<div class="c-val">+256 752 606 904</div>
+				</div>
+			</div>
+			<div class="c-detail">
+				<div class="c-icon"><Clock size={16} /></div>
+				<div>
+					<div class="c-title">Studio Hours</div>
+					<div class="c-val">
+						Mon - Fri: 8:00 am - 6:00 pm<br />Saturday: 9:00 am - 2:00 pm
+					</div>
+				</div>
+			</div>
 		</div>
 		<div class="">
 			<div class="form-row">
-				<div class="f-field"><label for="h-fname">First Name</label><input id="h-fname" type="text" placeholder="James" /></div>
-				<div class="f-field"><label for="h-lname">Last Name</label><input id="h-lname" type="text" placeholder="Mwangi" /></div>
+				<div class="f-field">
+					<label for="h-fname">First Name</label><input
+						id="h-fname"
+						type="text" />
+				</div>
+				<div class="f-field">
+					<label for="h-lname">Last Name</label><input
+						id="h-lname"
+						type="text" />
+				</div>
 			</div>
-			<div class="f-field"><label for="h-email">Email Address</label><input id="h-email" type="email" placeholder="you@company.com" /></div>
+			<div class="f-field">
+				<label for="h-email">Email Address</label><input
+					id="h-email"
+					type="email" />
+			</div>
 			<div class="f-field">
 				<label for="h-project">Project Type</label>
 				<select id="h-project">
@@ -34,7 +76,12 @@
 					<option>3D Visualisation</option>
 				</select>
 			</div>
-			<div class="f-field"><label for="h-message">Brief Message</label><textarea id="h-message" rows="4" placeholder="Tell us about your project..."></textarea></div>
+			<div class="f-field">
+				<label for="h-message">Brief Message</label><textarea
+					id="h-message"
+					rows="4"
+					placeholder="Tell us about your project..."></textarea>
+			</div>
 			<button class="f-submit" type="button" onclick={handleSubmit}>{submitLabel}</button>
 		</div>
 	</div>
@@ -72,10 +119,11 @@
 		align-items: center;
 		justify-content: center;
 		font-size: 14px;
+        border-radius: var(--space-8);
 	}
 	.c-title {
-		font-size: 8px;
-		letter-spacing: 3px;
+		font-size: var(--text-sm);
+		/* letter-spacing: 3px; */
 		text-transform: uppercase;
 		color: var(--accent);
 		margin-bottom: 6px;
@@ -92,15 +140,14 @@
 		gap: 12px;
 	}
 	.f-field {
-		margin-bottom: 12px;
+		margin-bottom: var(--space-4);
 	}
 	.f-field label {
 		display: block;
-		font-size: 8px;
-		letter-spacing: 3px;
+		font-size: var(--text-base);
 		text-transform: uppercase;
 		color: var(--black-60);
-		margin-bottom: 8px;
+		margin-bottom: var(--space-2);
 	}
 	.f-field input,
 	.f-field textarea,
@@ -114,8 +161,9 @@
 		font-size: 13px;
 		outline: none;
 		transition: border-color 0.3s;
-		
+
 		appearance: none;
+        border-radius: var(--space-2);
 	}
 	.f-field input:focus,
 	.f-field textarea:focus,
@@ -130,25 +178,35 @@
 		width: 100%;
 		border: none;
 		background: var(--dark);
-		color: white;
+		color: var(--white);
 		font-family: "DM Sans", sans-serif;
 		font-size: 10px;
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		padding: 15px;
-		
-		transition: background 0.3s, color 0.3s;
+
+		transition:
+			background 0.3s,
+			color 0.3s;
 		margin-top: 6px;
+        border-radius:  var(--space-2);
 	}
 	.f-submit:hover {
 		background: var(--accent);
 		color: var(--black);
 	}
 	@media (max-width: 1024px) {
-		#contact { padding: 80px 32px; }
-		.contact-grid { grid-template-columns: 1fr; gap: 44px; }
+		#contact {
+			padding: 80px 32px;
+		}
+		.contact-grid {
+			grid-template-columns: 1fr;
+			gap: 44px;
+		}
 	}
 	@media (max-width: 640px) {
-		.form-row { grid-template-columns: 1fr; }
+		.form-row {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

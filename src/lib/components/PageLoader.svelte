@@ -6,13 +6,13 @@
 	type Milestone = { main: string; };
 
 	const milestones: Milestone[] = [
-		{ main: 'Kampala, Uganda'},
-		{ main: 'Corporate & Commercial'},
-		{ main: 'Residential & Hospitality'},
+		{ main: 'Corporate & Commercial Design'},
+		{ main: 'Residential & Hospitality Interior Design'},
 		{ main: 'Architectural Fit-Outs'},
+        { main: 'Project Management'},
 	];
 
-	const CYCLE = 1800;  // ms each milestone is shown
+	const CYCLE = 1600;  // ms each milestone is shown
 	const FADE  = 200;   // ms for fade out/in
 
 	let milestoneVisible = $state(true);

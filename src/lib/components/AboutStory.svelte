@@ -199,6 +199,7 @@
 		font-size: 14px;
 		border: 1px solid var(--border);
 		background: var(--white);
+        border-radius: var(--space-8);
 	}
 	.v-name {
 		font-size: var(--text-sm);

@@ -4,21 +4,33 @@
 	<div class="test-grid">
 		<div class="test-card">
 			<div class="q-mark">"</div>
-			<p class="test-text">Enchen transformed our headquarters into a space that perfectly embodies our brand. The attention to detail was extraordinary, and the team was professional from concept to completion.</p>
+			<p class="test-text">
+				Enchen transformed our headquarters into a space that perfectly embodies our brand.
+				The attention to detail was extraordinary, and the team was professional from
+				concept to completion.
+			</p>
 			<div class="test-div"></div>
 			<div class="test-author">James Mwangi</div>
 			<div class="test-role">CEO, Telecom East Africa</div>
 		</div>
 		<div class="test-card">
 			<div class="q-mark">"</div>
-			<p class="test-text">Working with Enchen Creative Hub was a revelation. They understood our vision immediately and delivered a home that exceeds every expectation. Truly bold, beautiful design.</p>
+			<p class="test-text">
+				Working with Enchen Creative Hub was a revelation. They understood our vision
+				immediately and delivered a home that exceeds every expectation. Truly bold,
+				beautiful design.
+			</p>
 			<div class="test-div"></div>
 			<div class="test-author">Amara Osei</div>
 			<div class="test-role">Homeowner, Luxury Residence</div>
 		</div>
 		<div class="test-card">
 			<div class="q-mark">"</div>
-			<p class="test-text">From first meeting to final handover, Enchen brought creativity, discipline, and genuine passion. Our office now reflects who we are — modern, dynamic, and client-focused.</p>
+			<p class="test-text">
+				From first meeting to final handover, Enchen brought creativity, discipline, and
+				genuine passion. Our office now reflects who we are — modern, dynamic, and
+				client-focused.
+			</p>
 			<div class="test-div"></div>
 			<div class="test-author">Sarah Nakigozi</div>
 			<div class="test-role">Managing Partner, Professional Services</div>
@@ -34,16 +46,18 @@
 	.test-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 1px;
-		background: rgba(255, 255, 255, 0.04);
-		margin-top: 72px;
+		gap: var(--space-4);
+		margin-top: var(--space-10);
 	}
 	.test-card {
-		background: #252225;
-		padding: 48px 40px;
+		background: var(--black-40);
+		padding: var(--space-10);
 		transition: background 0.3s;
+        border-radius: var(--space-8);
 	}
-	.test-card:hover { background: #2e292b; }
+	.test-card:hover {
+		background: var(--black-80);
+	}
 	.q-mark {
 		font-family: var(--font-heading);
 		font-size: 56px;
@@ -80,7 +94,11 @@
 		color: rgba(255, 255, 255, 0.28);
 	}
 	@media (max-width: 1024px) {
-		#testimonials { padding: 80px 32px; }
-		.test-grid { grid-template-columns: 1fr; }
+		#testimonials {
+			padding: 80px 32px;
+		}
+		.test-grid {
+			grid-template-columns: 1fr;
+		}
 	}
 </style>

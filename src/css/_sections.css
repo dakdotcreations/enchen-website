@@ -5,7 +5,6 @@ section {
 }
 .s-label {
 	font-size: var(--text-xs);
-	letter-spacing: var(--tracking-sm);
 	text-transform: uppercase;
 	color: var(--accent);
 	margin-bottom: var(--space-5);

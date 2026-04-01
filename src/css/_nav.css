@@ -98,6 +98,7 @@
             text-decoration: none;
             transition: all 0.3s;
             display: none;
+            border-radius: var(--space-2);
             
             &:hover {
                 border-color: var(--accent);

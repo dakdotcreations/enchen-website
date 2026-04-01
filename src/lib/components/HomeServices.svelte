@@ -1,5 +1,37 @@
 <script lang="ts">
+	import { slideIn } from '$lib/animations/anims';
+    import { ArrowUp } from "@lucide/svelte";
 
+	const services = [
+		{
+			num: '01',
+			name: 'Corporate & Office Design',
+			img: '/images/home/Corporate & Office Design.webp',
+			alt: ' ',
+			desc: 'Workplaces that inspire performance, reinforce brand identity, and prioritise employee wellbeing.',
+			items: ['Open plan & private offices', 'Conference & meeting rooms', 'Lounge & wellness zones', 'Brand-aligned interiors'],
+		},
+		{
+			num: '02',
+			name: 'Residential Design',
+			img: '/images/home/Residential Design.webp',
+			alt: 'Luxury residential interior',
+			desc: 'From luxury villas to contemporary homes — spaces crafted around how you truly live.',
+			items: ['Luxury villas & mansions', 'Modern & contemporary homes', 'Smart home integration', 'Space planning & furnishing'],
+		},
+		{
+			num: '03',
+			name: 'Commercial Spaces',
+			img: '/images/home/Commercial Spaces.webp',
+			alt: 'Boutique hotel commercial space',
+			desc: 'Retail, hospitality, and commercial developments designed to drive results and express brand identity.',
+			items: ['Interior fit-out', '3D visualization & virtual tours', 'Sustainable & green building', 'Construction supervision'],
+		},
+	];
+
+	let grid: HTMLElement;
+
+	$effect(() => slideIn(grid));
 </script>
 
 <section id="services">
@@ -15,79 +47,31 @@
 			budget.
 		</p>
 	</div>
-	<div class="services-grid">
-		<div class="svc-img-card">
-			<img src="/images/home/Corporate & Office Design.webp" alt=" " class="svc-img-placeholder" />
-			<div class="svc-img-footer">
-				<div>
-					<div class="svc-img-num">01</div>
-					<div class="svc-img-name">Corporate &amp; Office Design</div>
+	<div class="services-grid" bind:this={grid}>
+		{#each services as svc}
+			<div class="svc-img-card slide-in">
+				<img src={svc.img} alt={svc.alt} class="svc-img-placeholder" />
+				<div class="svc-img-footer">
+					<div>
+						<div class="svc-img-num">{svc.num}</div>
+						<div class="svc-img-name">{svc.name}</div>
+					</div>
+					<div class="svc-img-arrow">
+                        <ArrowUp size={16} />
+                    </div>
 				</div>
-				<div class="svc-img-arrow">↗</div>
-			</div>
-			<div class="svc-img-overlay">
-				<div class="svc-hover-num">01</div>
-				<div class="svc-hover-name">Corporate &amp; Office Design</div>
-				<p class="svc-hover-desc">
-					Workplaces that inspire performance, reinforce brand identity, and prioritise
-					employee wellbeing.
-				</p>
-				<ul class="svc-hover-items">
-					<li>Open plan &amp; private offices</li>
-					<li>Conference &amp; meeting rooms</li>
-					<li>Lounge &amp; wellness zones</li>
-					<li>Brand-aligned interiors</li>
-				</ul>
-			</div>
-		</div>
-		<div class="svc-img-card">
-			<img src="/images/home/Residential Design.webp" alt="Luxury residential interior" class="svc-img-placeholder" />
-			<div class="svc-img-footer">
-				<div>
-					<div class="svc-img-num">02</div>
-					<div class="svc-img-name">Residential Design</div>
+				<div class="svc-img-overlay">
+					<div class="svc-hover-num">{svc.num}</div>
+					<div class="svc-hover-name">{svc.name}</div>
+					<p class="svc-hover-desc">{svc.desc}</p>
+					<ul class="svc-hover-items">
+						{#each svc.items as item}
+							<li>{item}</li>
+						{/each}
+					</ul>
 				</div>
-				<div class="svc-img-arrow">↗</div>
 			</div>
-			<div class="svc-img-overlay">
-				<div class="svc-hover-num">02</div>
-				<div class="svc-hover-name">Residential Design</div>
-				<p class="svc-hover-desc">
-					From luxury villas to contemporary homes — spaces crafted around how you truly
-					live.
-				</p>
-				<ul class="svc-hover-items">
-					<li>Luxury villas &amp; mansions</li>
-					<li>Modern &amp; contemporary homes</li>
-					<li>Smart home integration</li>
-					<li>Space planning &amp; furnishing</li>
-				</ul>
-			</div>
-		</div>
-		<div class="svc-img-card">
-			<img src="/images/home/Commercial Spaces.webp" alt="Boutique hotel commercial space" class="svc-img-placeholder" />
-			<div class="svc-img-footer">
-				<div>
-					<div class="svc-img-num">03</div>
-					<div class="svc-img-name">Commercial Spaces</div>
-				</div>
-				<div class="svc-img-arrow">↗</div>
-			</div>
-			<div class="svc-img-overlay">
-				<div class="svc-hover-num">03</div>
-				<div class="svc-hover-name">Commercial Spaces</div>
-				<p class="svc-hover-desc">
-					Retail, hospitality, and commercial developments designed to drive results and
-					express brand identity.
-				</p>
-				<ul class="svc-hover-items">
-					<li>Interior fit-out</li>
-					<li>3D visualization &amp; virtual tours</li>
-					<li>Sustainable &amp; green building</li>
-					<li>Construction supervision</li>
-				</ul>
-			</div>
-		</div>
+		{/each}
 	</div>
 </section>
 
@@ -96,6 +80,7 @@
 		background: var(--dark);
 		padding: var(--space-30) var(--padding-global);
 	}
+
 	.services-intro {
 		display: flex;
 		justify-content: space-between;
@@ -104,18 +89,32 @@
 		flex-wrap: wrap;
 		gap: var(--space-6);
 	}
+
 	.services-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		gap: var(--space-4);
+
+		@media (max-width: 1024px) {
+			grid-template-columns: 1fr;
+		}
 	}
+
 	.svc-img-card {
 		position: relative;
 		overflow: hidden;
-		
 		aspect-ratio: 3/4;
 		background: var(--dark-mid);
+		border-radius: var(--space-8);
+
+		&:hover .svc-img-placeholder { transform: scale(1.05); }
+		&:hover .svc-img-footer { opacity: 0; }
+		&:hover .svc-img-overlay {
+			opacity: 1;
+			transform: translateY(0);
+		}
 	}
+
 	.svc-img-placeholder {
 		position: absolute;
 		inset: 0;
@@ -124,9 +123,7 @@
 		object-fit: cover;
 		transition: transform 0.6s ease;
 	}
-	.svc-img-card:hover .svc-img-placeholder {
-		transform: scale(1.05);
-	}
+
 	.svc-img-footer {
 		position: absolute;
 		bottom: 0;
@@ -140,9 +137,7 @@
 		z-index: 2;
 		transition: opacity 0.35s ease;
 	}
-	.svc-img-card:hover .svc-img-footer {
-		opacity: 0;
-	}
+
 	.svc-img-name {
 		font-family: var(--font-heading);
 		font-size: var(--text-lg);
@@ -151,6 +146,7 @@
 		letter-spacing: -0.03em;
 		line-height: 1.2;
 	}
+
 	.svc-img-num {
 		font-size: var(--text-sm);
 		letter-spacing: 3px;
@@ -159,6 +155,7 @@
 		margin-bottom: 8px;
 		opacity: 0.8;
 	}
+
 	.svc-img-arrow {
 		width: 36px;
 		height: 36px;
@@ -172,10 +169,11 @@
 		transition: all 0.3s;
 		margin-bottom: 2px;
 	}
+
 	.svc-img-overlay {
 		position: absolute;
 		inset: 0;
-		background: rgba(34, 30, 31, 0.92);
+		background: linear-gradient(to top, rgba(12, 12, 12, 0.9) 0%, rgba(12, 12, 12, 0.8) 45%, transparent 100%);
 		padding: 36px 28px;
 		opacity: 0;
 		transform: translateY(16px);
@@ -186,12 +184,8 @@
 		flex-direction: column;
 		justify-content: flex-end;
 		z-index: 3;
-		border-top: 2px solid var(--accent);
 	}
-	.svc-img-card:hover .svc-img-overlay {
-		opacity: 1;
-		transform: translateY(0);
-	}
+
 	.svc-hover-num {
 		font-size: var(--text-sm);
 		letter-spacing: 3px;
@@ -200,6 +194,7 @@
 		margin-bottom: var(--space-2);
 		opacity: 0.8;
 	}
+
 	.svc-hover-name {
 		font-family: var(--font-heading);
 		font-size: var(--text-xl);
@@ -208,39 +203,38 @@
 		letter-spacing: -0.03em;
 		margin-bottom: 14px;
 	}
+
 	.svc-hover-desc {
 		font-size: var(--text-body);
 		line-height: 1.8;
 		color: var(--white);
-        opacity: 0.8;
+		opacity: 0.8;
 		margin-bottom: 20px;
 	}
+
 	.svc-hover-items {
 		list-style: none;
 		display: flex;
 		flex-direction: column;
 		gap: 8px;
-	}
-	.svc-hover-items li {
-		font-size: var(--text-md);
-		color: var(--white);
-        opacity: 0.6;
-		display: flex;
-		align-items: center;
-		gap: var(--space-2);
-		letter-spacing: 0.2px;
-	}
-	.svc-hover-items li::before {
-		content: "";
-		width: 10px;
-		height: 1px;
-		flex-shrink: 0;
-		background: var(--accent);
-		opacity: 0.6;
-	}
-	@media (max-width: 1024px) {
-		.services-grid {
-			grid-template-columns: 1fr;
+
+		li {
+			font-size: var(--text-md);
+			color: var(--white);
+			opacity: 0.6;
+			display: flex;
+			align-items: center;
+			gap: var(--space-2);
+			letter-spacing: 0.2px;
+
+			&::before {
+				content: "";
+				width: 10px;
+				height: 1px;
+				flex-shrink: 0;
+				background: var(--accent);
+				opacity: 0.6;
+			}
 		}
 	}
 </style>

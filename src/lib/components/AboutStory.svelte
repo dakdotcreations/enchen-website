@@ -21,7 +21,7 @@
 				end: 'bottom bottom',
 				pin: '.about-visual',
 				pinSpacing: false,
-                markers: true,
+                markers: false,
 			});
 		});
 	});
@@ -34,7 +34,7 @@
 </script>
 
 <div id="story" style="background: var(--off-white);">
-	<div class="s-label reveal container">Who We Are</div>
+	<div class="s-label container">Who We Are</div>
 	<div class="about-grid">
 		<div class="about-visual">
 			<img src="/images/home/space.webp" alt="Enchen interior design project" class="about-story-img" />
@@ -45,30 +45,30 @@
 			</div>
 		</div>
 		<div class="about-content">
-			<h2 class="s-title reveal">
+			<h2 class="s-title">
 				Designing Spaces<br />That <span class="h-blue">Endure</span>
 			</h2>
 			<div class="about-body">
-				<p class="s-body reveal">
+				<p class="s-body">
 					Enchen Creative Hub is an architectural interior design firm dedicated to
 					crafting inspiring and functional spaces. With a passion for innovation and
 					sustainability, we deliver tailored solutions across private residences,
 					corporate environments, and commercial developments, turning visions into
 					reality.
 				</p>
-				<p class="s-body reveal">
+				<p class="s-body">
 					We are a multidisciplinary team of architects, interior designers, and project
 					managers united by a passion for craft. We believe the best design begins with
 					listening — understanding how you live, how you work, and what you aspire to
 					create.
 				</p>
-				<p class="s-body reveal">
+				<p class="s-body">
 					Our approach is grounded in precision and guided by aesthetics. We take projects
 					from initial concept through to construction completion, acting as a single
 					trusted partner for every stage of the journey.
 				</p>
 			</div>
-			<div class="about-values reveal" style="margin-top:44px;">
+			<div class="about-values" style="margin-top:44px;">
 				<div class="v-card">
 					<div class="v-icon blue">
                         <SquareDashedMousePointer size={16} />
@@ -199,6 +199,7 @@
 		font-size: 14px;
 		border: 1px solid var(--border);
 		background: var(--white);
+        border-radius: var(--space-8);
 	}
 	.v-name {
 		font-size: var(--text-sm);

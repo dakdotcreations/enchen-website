@@ -98,6 +98,7 @@
             text-decoration: none;
             transition: all 0.3s;
             display: none;
+            border-radius: var(--space-2);
             
             &:hover {
                 border-color: var(--accent);
@@ -110,7 +111,6 @@
             display: none;
             flex-direction: column;
             gap: 0.3125rem;
-            cursor: none;
             background: none;
             border: none;
             padding: var(--space-1);
@@ -166,7 +166,6 @@
 	border: none;
 	color: var(--white-40);
 	font-size: 1.25rem;
-	cursor: none;
 	line-height: 1;
 }
 

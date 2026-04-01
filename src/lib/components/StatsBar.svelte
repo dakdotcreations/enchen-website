@@ -3,7 +3,7 @@
 </script>
 
 <div class="stats-bar-wrap">
-	<div class="stats-bar reveal">
+	<div class="stats-bar">
 		{#each stats as s}
 			<div class="sb-item">
 				<div class="sb-num">{s.num}{#if s.suffix}<em>{s.suffix}</em>{/if}</div>

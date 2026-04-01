@@ -10,12 +10,9 @@
 	import { projects } from "$lib/projects/index"
 
 	const featuredSlugs = [
-		'padre-pio-insurance',
 		'wilken-telecom-offices',
-		'executive-headquarters',
-		'luxury-lakeside-villa',
-		'penthouse-suite-redesign',
-		'boutique-hotel-lobby',
+		'padre-pio-insurance',
+        'private-residence',
 	];
 	const featuredSlides = projects.filter((p) => featuredSlugs.includes(p.slug));
 </script>

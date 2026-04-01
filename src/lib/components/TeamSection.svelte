@@ -1,8 +1,8 @@
 <div class="team-section">
-	<div class="s-label reveal">The Team</div>
-	<h2 class="s-title reveal">The People Behind<br><span class="h-blue">Every Project</span></h2>
-	<p class="s-body reveal" style="margin-top:12px;">A small, focused team of dedicated professionals — each one chosen for their craft, their commitment, and their passion for excellence.</p>
-	<div class="team-grid reveal">
+	<div class="s-label">The Team</div>
+	<h2 class="s-title">The People Behind<br><span class="h-blue">Every Project</span></h2>
+	<p class="s-body" style="margin-top:12px;">A small, focused team of dedicated professionals — each one chosen for their craft, their commitment, and their passion for excellence.</p>
+	<div class="team-grid">
 		<div class="team-card">
 			<div class="team-photo"><div class="team-photo-inner"><div class="team-photo-placeholder">EK</div></div><div class="team-photo-grad"></div></div>
 			<div class="team-info">
@@ -46,7 +46,7 @@
 		background: var(--white);
 		overflow: hidden;
 		transition: background 0.3s;
-		cursor: none;
+		
 	}
 	.team-card:hover { background: var(--off-white); }
 	.team-photo {

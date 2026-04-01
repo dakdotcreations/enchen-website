@@ -1,7 +1,7 @@
 <section style="background: var(--dark); padding: 120px 64px;">
-	<div class="s-label reveal">Our Direction</div>
-	<h2 class="s-title light reveal">Mission &amp; <span class="h-blue">Vision</span></h2>
-	<div class="mv-grid reveal">
+	<div class="s-label">Our Direction</div>
+	<h2 class="s-title light">Mission &amp; <span class="h-blue">Vision</span></h2>
+	<div class="mv-grid">
 		<div class="mv-card">
 			<div class="mv-title">Our Mission</div>
 			<p class="mv-body">
@@ -21,13 +21,13 @@
 	.mv-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
-		gap: 1px;
-		background: rgba(255, 255, 255, 0.04);
-		margin-top: 72px;
+		gap: var(--padding-global);
+		margin-top: var(--space-20);
 	}
 	.mv-card {
-		background: #2a2527;
+		background: var(--black-80);
 		padding: 56px 52px;
+        border-radius: var(--space-8);
 	}
 	.mv-title {
 		font-family: var(--font-heading);

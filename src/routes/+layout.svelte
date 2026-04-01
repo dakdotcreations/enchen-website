@@ -5,9 +5,12 @@
 	import { afterNavigate, beforeNavigate } from '$app/navigation';
 
 	import Footer from '$lib/components/sections/footer.svelte';
+	import PageLoader from '$lib/components/PageLoader.svelte';
 	import Lenis from 'lenis';
 	import gsap from 'gsap';
 	import { setLenisInstance } from '$lib/lenis';
+	import { fadeIn } from '$lib/animations/anims';
+
 
 	let { children } = $props();
 
@@ -15,10 +18,6 @@
 	let scrolled = $state(false);
 	let navHidden = $state(false);
 	let curtain = $state<'idle' | 'cover' | 'lift'>('idle');
-
-	// cursor
-	let mx = $state(0), my = $state(0);
-	let rx = $state(0), ry = $state(0);
 
 	// loading screen
 	let loading = $state(true);
@@ -44,7 +43,10 @@
 	}
 
     function initLenis() {
-		const lenis = new Lenis();
+		const lenis = new Lenis({
+            duration: 1.5,
+            easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+        });
 		setLenisInstance(lenis);
 
 		// GSAP ticker drives Lenis — cleaner than a manual rAF loop
@@ -52,34 +54,23 @@
 		gsap.ticker.lagSmoothing(0);
     }
 
-	onMount(() => {
+	$effect(() => {
 		// ── Loading screen ──
 		const startTime = Date.now();
-		const MIN_DISPLAY = 1000;
-
-		const slowTick = setInterval(() => {
-			if (progress < 70) {
-				progress = Math.min(70, progress + Math.floor(Math.random() * 3) + 2);
-			} else if (progress < 90) {
-				progress = progress + 1;
-			} else {
-				clearInterval(slowTick);
-			}
-		}, 30);
+		const MIN_DISPLAY = 1500;
 
 		function finishLoading() {
-			clearInterval(slowTick);
 			const elapsed = Date.now() - startTime;
 			const remaining = Math.max(0, MIN_DISPLAY - elapsed);
 			setTimeout(() => {
-				const fastTick = setInterval(() => {
+				const fillTick = setInterval(() => {
 					if (progress < 100) {
 						progress = Math.min(100, progress + 4);
 					} else {
-						clearInterval(fastTick);
-						setTimeout(() => { loading = false; }, 350);
+						clearInterval(fillTick);
+						setTimeout(() => { loading = false; }, 500);
 					}
-				}, 16);
+				}, 30);
 			}, remaining);
 		}
 
@@ -108,8 +99,10 @@
 
         initLenis();
 
-		// ── Initial reveal setup (fixes HMR vanish) ──
+		// ── Initial setup (fixes HMR vanish) ──
 		requestAnimationFrame(setupReveal);
+
+        fadeIn()
 
 		return () => {
 			window.removeEventListener('scroll', onScroll);
@@ -139,21 +132,10 @@
 	];
 </script>
 
-<!-- Loading screen -->
-<div class="page-loader" class:loaded={!loading}>
-	<img src="/images/full-logo.png" class="loader-logo" alt="Enchen Creative Hub" />
-	<div class="loader-counter">{progress}<span class="loader-pct">%</span></div>
-	<div class="loader-bar-track">
-		<div class="loader-bar-fill" style="width:{progress}%"></div>
-	</div>
-</div>
+<PageLoader {progress} {loading} />
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>
-
-<!-- Custom cursor -->
-<div class="cursor" style="left:{mx}px;top:{my}px;"></div>
-<div class="cursor-ring" style="left:{rx}px;top:{ry}px;"></div>
 
 <!-- Mobile menu -->
 <div class="mobile-menu" class:open={mobileOpen}>

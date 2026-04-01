@@ -5,9 +5,9 @@
 </script>
 
 <div class="test-full-section">
-	<div class="s-label reveal">What Our Clients Say</div>
-	<h2 class="s-title reveal">Client <span class="h-blue">Experiences</span></h2>
-	<div class="test-full-grid reveal">
+	<div class="s-label">What Our Clients Say</div>
+	<h2 class="s-title">Client <span class="h-blue">Experiences</span></h2>
+	<div class="test-full-grid">
 		{#each items as t}
 			<div class="test-full-card">
 				<div class="test-stars">

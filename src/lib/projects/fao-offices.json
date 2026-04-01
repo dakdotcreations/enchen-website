@@ -1,0 +1,47 @@
+{
+	"slug": "fao-offices",
+	"title": "FAO Uganda Offices",
+	"location": "Kampala, Uganda",
+	"tag": "corporate",
+	"thumbnail": "/images/projects/fao/1.webp",
+	"content": [
+		{
+			"type": "image",
+			"src": "/images/projects/fao/1.webp",
+			"alt": "FAO Uganda office interior",
+			"caption": "The main working floor — a composed, light-filled environment calibrated for focus and institutional credibility."
+		},
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>The Food and Agriculture Organization of the United Nations required a full interior refurbishment of their Kampala country office. The brief centred on creating a contemporary, functional working environment that honoured the organisation's global standards while responding to the local context — a space that would be equally at home for daily operations, international delegations, and high-level government meetings.</p>"
+		},
+		{
+			"type": "text",
+			"heading": "Approach",
+			"body": "<p>Our approach balanced institutional clarity with warmth. A restrained palette of white, warm grey, and natural timber tones runs throughout — dignified without being austere. The spatial layout was reorganised to improve circulation between the open-plan workstation floor, meeting rooms, and executive offices, with consistent ceiling coffers and recessed linear lighting tying each zone together.</p><p>Meeting rooms were fitted with full-height glazing to maintain visual connectivity across the floor plate, while acoustic panelling and bespoke joinery ensure each enclosed space functions to a high standard. Brand identity is applied with precision — the FAO emblem and organisational colour are referenced at key reception and wayfinding points without overwhelming the interior character.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/fao/2.webp",
+					"alt": "FAO conference and meeting room",
+					"caption": "The primary conference room — full-height glazed partitions, acoustic wall panels, and recessed ceiling lighting."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/fao/3.webp",
+					"alt": "Executive office zone",
+					"caption": "Executive office zone — bespoke desk joinery, integrated storage, and controlled natural light."
+				}
+			]
+		},
+		{
+			"type": "text",
+			"heading": "Outcome",
+			"body": "<p>The refurbished offices deliver a working environment that meets the operational and representational needs of an international organisation operating at the highest levels. Staff benefit from a more legible, comfortable, and well-serviced workspace, while visiting partners and government counterparts encounter a setting that communicates competence and purpose from the moment they arrive.</p>"
+		}
+	]
+}

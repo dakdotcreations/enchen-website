@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { Project } from '$lib/types/project';
+    import { slideIn } from "$lib/animations/anims";
 
 	let { items }: { items: Project[] } = $props();
 	const filters = ['All', 'Corporate', 'Residential', 'Commercial'];
@@ -8,19 +9,25 @@
 	function cap(s: string) {
 		return s.charAt(0).toUpperCase() + s.slice(1);
 	}
+
+    let portfolioGrid: HTMLElement;
+
+    $effect(() => {
+        slideIn(portfolioGrid);
+    });
 </script>
 
 <div class="port-full-section">
-	<div class="s-label reveal">Selected Projects</div>
-	<div class="port-filter reveal">
+	<div class="s-label">Selected Projects</div>
+	<div class="port-filter">
 		{#each filters as f}
 			<button class="f-btn" class:active={activeFilter === f} onclick={() => (activeFilter = f)}>{f}</button>
 		{/each}
 	</div>
-	<div class="port-full-grid reveal">
+	<div class="port-full-grid" bind:this={portfolioGrid}>
 		{#each items as p, i}
 			{#if activeFilter === 'All' || activeFilter.toLowerCase() === p.tag}
-				<a href="/portfolio/{p.slug}" class="port-full-item">
+				<a href="/portfolio/{p.slug}" class="port-full-item slide-in">
 					<div class="port-full-img">
 						<div class="port-full-badge">{cap(p.tag)}</div>
 						{#if p.thumbnail}
@@ -63,7 +70,7 @@
 		color: rgba(255, 255, 255, 0.3);
 		background: none;
 		border: none;
-		cursor: none;
+		
 		padding: 6px 0;
 		transition: color 0.3s;
 		position: relative;
@@ -82,15 +89,17 @@
 	.port-full-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: 10px;
+		gap: var(--space-4);
 	}
 	.port-full-item {
 		position: relative;
 		overflow: hidden;
-		cursor: none;
+		
 		display: block;
 		text-decoration: none;
 		color: inherit;
+
+        border-radius: var(--space-8);
 	}
 	.port-thumb-img {
 		position: absolute;
@@ -170,6 +179,7 @@
 		transition: opacity 0.3s;
 		font-weight: 700;
 		z-index: 2;
+        border-radius: var(--space-4);
 	}
 	.port-full-item:hover .port-full-badge { opacity: 1; }
 	@media (max-width: 1024px) {

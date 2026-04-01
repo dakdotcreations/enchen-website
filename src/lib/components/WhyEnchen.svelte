@@ -1,8 +1,18 @@
-<section style="background: var(--off-white); padding: 120px 64px;">
-	<div class="s-label reveal">Why Choose Us</div>
-	<h2 class="s-title reveal">What Sets Us <span class="h-blue">Apart</span></h2>
-	<div class="why-grid reveal" style="margin-top:56px;">
-		<div class="why-item">
+<script lang="ts">
+	import { slideIn } from "$lib/animations/anims";
+
+	let grid: HTMLDivElement;
+
+	$effect(() => {
+        slideIn(grid, { top: 50, start: 'top 90%', end: 'top 60%' });
+    })
+</script>
+
+<section style="background: var(--off-white);">
+	<div class="s-label">Why Choose Us</div>
+	<h2 class="s-title">What Sets Us <span class="h-blue">Apart</span></h2>
+	<div class="why-grid" bind:this={grid}>
+		<div class="why-item slide-in">
 			<div class="why-num">01</div>
 			<div class="why-title">End-to-End Service</div>
 			<div class="why-body">
@@ -11,7 +21,7 @@
 				accountability.
 			</div>
 		</div>
-		<div class="why-item">
+		<div class="why-item slide-in">
 			<div class="why-num">02</div>
 			<div class="why-title">Local Expertise</div>
 			<div class="why-body">
@@ -20,7 +30,7 @@
 				international firms cannot replicate.
 			</div>
 		</div>
-		<div class="why-item">
+		<div class="why-item slide-in">
 			<div class="why-num">03</div>
 			<div class="why-title">Tailored Approach</div>
 			<div class="why-body">
@@ -28,7 +38,7 @@
 				and a design strategy built specifically around your goals, budget, and timeline.
 			</div>
 		</div>
-		<div class="why-item">
+		<div class="why-item slide-in">
 			<div class="why-num">04</div>
 			<div class="why-title">Transparent Process</div>
 			<div class="why-body">
@@ -43,13 +53,12 @@
 	.why-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
-		gap: 0;
 	}
 	.why-item {
-		padding: 44px 36px;
-		border: 1px solid var(--border);
+		padding: var(--space-8);
 		margin: -0.5px;
 		transition: background 0.3s;
+        border-radius: var(--space-8);
 	}
 	.why-item:hover {
 		background: var(--white);
@@ -65,7 +74,6 @@
 	}
 	.why-title {
 		font-size: var(--text-base);
-		letter-spacing: 1px;
 		text-transform: uppercase;
 		color: var(--text);
 		margin-bottom: var(--space-3);

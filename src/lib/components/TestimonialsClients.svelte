@@ -5,9 +5,9 @@
 </script>
 
 <section class="test-clients-section">
-	<div class="s-label centered reveal">Our Clients</div>
-	<h2 class="s-title reveal" style="text-align:center;">Trusted by Leading<br><span class="h-blue">Organisations</span></h2>
-	<div class="clients-four-grid reveal">
+	<div class="s-label centered">Our Clients</div>
+	<h2 class="s-title" style="text-align:center;">Trusted by Leading<br><span class="h-blue">Organisations</span></h2>
+	<div class="clients-four-grid">
 		{#each clients as c}
 			<div class="cl-item"><img src={c.src} alt={c.alt} /></div>
 		{/each}

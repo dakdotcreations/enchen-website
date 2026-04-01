@@ -41,12 +41,12 @@
 <div class="proj-content">
 	{#each data.project.content as block}
 		{#if block.type === "text"}
-			<div class="proj-block pblock-text reveal">
+			<div class="proj-block pblock-text">
 				{#if block.heading}<h2 class="pblock-heading">{block.heading}</h2>{/if}
 				<div class="pblock-body">{@html block.body}</div>
 			</div>
 		{:else if block.type === "image"}
-			<figure class="proj-block pblock-image reveal">
+			<figure class="proj-block pblock-image">
 				{#if block.src}
 					<img src={block.src} alt={block.alt} />
 				{:else}
@@ -57,7 +57,7 @@
 					</figcaption>{/if}
 			</figure>
 		{:else if block.type === "video"}
-			<figure class="proj-block pblock-video reveal">
+			<figure class="proj-block pblock-video">
 				<div class="pblock-video-wrap">
 					<iframe src={block.src} title="Project video" allowfullscreen loading="lazy"
 					></iframe>
@@ -67,7 +67,7 @@
 					</figcaption>{/if}
 			</figure>
 		{:else if block.type === "columns"}
-			<div class="proj-block pblock-columns reveal">
+			<div class="proj-block pblock-columns">
 				{#each block.items as col}
 					<div class="pblock-col">
 						{#if col.type === "text"}

@@ -42,11 +42,11 @@
 <ServicesDetail />
 
 <div class="svc-faq-section">
-	<div class="s-label centered reveal">Common Questions</div>
-	<h2 class="s-title reveal" style="text-align:center;">
+	<div class="s-label centered">Common Questions</div>
+	<h2 class="s-title" style="text-align:center;">
 		Everything You<br />Need to <span class="h-blue">Know</span>
 	</h2>
-	<div class="svc-faq-inner reveal">
+	<div class="svc-faq-inner">
 		<FaqList items={faqs} />
 	</div>
 </div>

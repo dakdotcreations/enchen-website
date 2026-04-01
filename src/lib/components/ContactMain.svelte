@@ -216,10 +216,16 @@
 		display: grid;
 		grid-template-columns: 1fr 1.4fr;
 		background: var(--off-white);
+        position: relative;
 	}
 	.contact-info-panel {
 		background: var(--black);
 		padding: 80px 56px;
+        position: sticky;
+        top: 0;
+        display: grid;
+        align-content: center;
+        max-height: 100vh;
 	}
 	.cip-label {
 		font-size: 10px;
@@ -275,29 +281,7 @@
 	.cip-val :global(a:hover) {
 		color: var(--accent);
 	}
-	.cip-social {
-		display: flex;
-		gap: 12px;
-	}
-	.cip-soc-link {
-		width: 36px;
-		height: 36px;
-		border: 1px solid rgba(255, 255, 255, 0.12);
-		display: flex;
-		align-items: center;
-		justify-content: center;
-		font-size: 9px;
-		letter-spacing: 1px;
-		color: rgba(255, 255, 255, 0.3);
-		text-decoration: none;
-		transition:
-			border-color 0.3s,
-			color 0.3s;
-	}
-	.cip-soc-link:hover {
-		border-color: var(--accent);
-		color: var(--accent);
-	}
+	
 	.contact-form-panel {
 		background: white;
 		padding: 80px 56px;
@@ -336,8 +320,7 @@
 		margin-bottom: 16px;
 	}
 	.form-label {
-		font-size: 10px;
-		letter-spacing: 2px;
+		font-size: var(--text-base);
 		text-transform: uppercase;
 		color: var(--text-mid);
 	}
@@ -353,6 +336,8 @@
 		font-family: inherit;
 		appearance: none;
 		-webkit-appearance: none;
+
+        border-radius: var(--space-2);
 	}
 	.form-input:focus {
 		border-color: var(--accent);

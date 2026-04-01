@@ -1,51 +1,83 @@
+<script lang="ts">
+	import { onDestroy } from 'svelte';
+	import gsap from 'gsap';
+	import { ScrollTrigger } from 'gsap/ScrollTrigger';
+	import { getLenisInstance } from '$lib/lenis';
+	import { slideIn } from '$lib/animations/anims';
+
+	let tlList: HTMLDivElement;
+	let tlVisual: HTMLDivElement;
+	let st: gsap.core.Tween | null = null;
+
+	$effect(() => {
+		gsap.registerPlugin(ScrollTrigger);
+		const lenis = getLenisInstance();
+		if (lenis) lenis.on('scroll', ScrollTrigger.update);
+
+		slideIn(tlList);
+
+		st = gsap.fromTo(
+			tlVisual.querySelector('.tl-visual-img'),
+			{ yPercent: -10 },
+			{
+				yPercent: 10,
+				ease: 'none',
+				scrollTrigger: {
+					trigger: tlVisual,
+					start: 'top bottom',
+					end: 'bottom top',
+					scrub: true,
+				},
+			}
+		);
+	});
+
+	onDestroy(() => {
+		const lenis = getLenisInstance();
+		if (lenis) lenis.off('scroll', ScrollTrigger.update);
+		st?.kill();
+	});
+	const items = [
+		{
+			num: '01',
+			title: 'Banking Institution',
+			desc: 'Designed a reception and banking hall concept that was adopted as a prototype for rollout across multiple branches.',
+		},
+		{
+			num: '02',
+			title: 'Consulate Office',
+			desc: 'Successfully designed and executed a fully functional Consulate space, meeting both aesthetic and operational requirements.',
+		},
+		{
+			num: '03',
+			title: 'Insurance Company',
+			desc: 'Delivered a complete interior design and fit-out for an empty shell, transforming it into a fully operational office environment.',
+		},
+		{
+			num: '04',
+			title: 'Telecommunications Company',
+			desc: 'Designed and executed a full interior fit-out from shell, creating a modern and functional workspace aligned with brand standards.',
+		},
+	];
+</script>
+
 <div class="timeline-section">
 	<div class="s-label">Key Projects</div>
 	<h2 class="s-title">Work That <span class="h-blue">Defines</span><br />Our Standard</h2>
 	<div class="tl-grid">
-		<div class="tl-list">
-			<div class="tl-item">
-				<div class="tl-num">01</div>
-				<div class="tl-content">
-					<div class="tl-title">Banking Institution</div>
-					<p class="tl-desc">
-						Designed a reception and banking hall concept that was adopted as a
-						prototype for rollout across multiple branches.
-					</p>
+		<div class="tl-list" bind:this={tlList}>
+			{#each items as item}
+				<div class="tl-item slide-in">
+					<div class="tl-num">{item.num}</div>
+					<div class="tl-content">
+						<div class="tl-title">{item.title}</div>
+						<p class="tl-desc">{item.desc}</p>
+					</div>
 				</div>
-			</div>
-			<div class="tl-item">
-				<div class="tl-num">02</div>
-				<div class="tl-content">
-					<div class="tl-title">Consulate Office</div>
-					<p class="tl-desc">
-						Successfully designed and executed a fully functional Consulate space,
-						meeting both aesthetic and operational requirements.
-					</p>
-				</div>
-			</div>
-			<div class="tl-item">
-				<div class="tl-num">03</div>
-				<div class="tl-content">
-					<div class="tl-title">Insurance Company</div>
-					<p class="tl-desc">
-						Delivered a complete interior design and fit-out for an empty shell,
-						transforming it into a fully operational office environment.
-					</p>
-				</div>
-			</div>
-			<div class="tl-item">
-				<div class="tl-num">04</div>
-				<div class="tl-content">
-					<div class="tl-title">Telecommunications Company</div>
-					<p class="tl-desc">
-						Designed and executed a full interior fit-out from shell, creating a modern
-						and functional workspace aligned with brand standards.
-					</p>
-				</div>
-			</div>
+			{/each}
 		</div>
 		<div>
-			<div class="tl-visual">
+			<div class="tl-visual" bind:this={tlVisual}>
 				<img src="/images/home/milestones.webp" alt="Enchen key project" class="tl-visual-img" />
 				<div class="tl-visual-bottom">
 					<div class="tl-visual-text">ECH</div>
@@ -109,7 +141,7 @@
 	}
 	.tl-visual {
 		background: var(--dark);
-		aspect-ratio: 4/5;
+		aspect-ratio: 3/3;
 		position: relative;
 		overflow: hidden;
 	}
@@ -117,9 +149,11 @@
 		position: absolute;
 		inset: 0;
 		width: 100%;
-		height: 100%;
+		height: 120%;
+		top: -10%;
 		object-fit: cover;
 		object-position: center;
+		will-change: transform;
 	}
 	.tl-visual-bottom {
 		position: absolute;

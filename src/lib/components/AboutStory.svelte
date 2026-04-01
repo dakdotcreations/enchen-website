@@ -21,7 +21,7 @@
 				end: 'bottom bottom',
 				pin: '.about-visual',
 				pinSpacing: false,
-                markers: true,
+                markers: false,
 			});
 		});
 	});

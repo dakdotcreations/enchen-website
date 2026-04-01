@@ -108,7 +108,7 @@
 	.svc-img-card {
 		position: relative;
 		overflow: hidden;
-		cursor: none;
+		
 		aspect-ratio: 3/4;
 		background: var(--dark-mid);
 	}

@@ -110,7 +110,6 @@
             display: none;
             flex-direction: column;
             gap: 0.3125rem;
-            cursor: none;
             background: none;
             border: none;
             padding: var(--space-1);
@@ -166,7 +165,6 @@
 	border: none;
 	color: var(--white-40);
 	font-size: 1.25rem;
-	cursor: none;
 	line-height: 1;
 }
 

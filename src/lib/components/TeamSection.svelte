@@ -46,7 +46,7 @@
 		background: var(--white);
 		overflow: hidden;
 		transition: background 0.3s;
-		cursor: none;
+		
 	}
 	.team-card:hover { background: var(--off-white); }
 	.team-photo {

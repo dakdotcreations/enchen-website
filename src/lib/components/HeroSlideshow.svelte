@@ -196,7 +196,6 @@
                 border-radius: 50%;
                 background: rgba(255, 255, 255, 0.25);
                 border: none;
-                cursor: none;
                 transition: all 0.35s;
                 padding: 0;
     
@@ -218,7 +217,6 @@
             color: white;
             width: 48px;
             height: 48px;
-            cursor: none;
             display: flex;
             align-items: center;
             justify-content: center;

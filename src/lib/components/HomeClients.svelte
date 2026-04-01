@@ -49,7 +49,7 @@
 		border: 1px solid var(--border);
 		margin: -0.5px;
 		transition: all 0.3s;
-		cursor: none;
+		
 	}
 	.cl-item:hover { background: #fff; }
 	.cl-item img {

@@ -114,7 +114,7 @@
 		font-size: 13px;
 		outline: none;
 		transition: border-color 0.3s;
-		cursor: none;
+		
 		appearance: none;
 	}
 	.f-field input:focus,
@@ -136,7 +136,7 @@
 		letter-spacing: 3px;
 		text-transform: uppercase;
 		padding: 15px;
-		cursor: none;
+		
 		transition: background 0.3s, color 0.3s;
 		margin-top: 6px;
 	}

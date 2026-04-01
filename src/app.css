@@ -47,7 +47,6 @@
 	position: relative;
 	overflow: hidden;
 	transition: background 0.3s;
-	cursor: none;
 }
 .svc-card::before {
 	content: "";

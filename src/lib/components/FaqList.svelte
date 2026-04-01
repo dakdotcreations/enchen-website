@@ -35,7 +35,6 @@
 		padding: var(--space-6) 0;
 		background: none;
 		border: none;
-		cursor: none;
 		display: flex;
 		align-items: center;
 		justify-content: space-between;

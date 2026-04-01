@@ -82,7 +82,7 @@
 		padding: var(--space-8) 0;
 		border-bottom: 1px solid var(--border);
 		transition: background 0.3s;
-		cursor: none;
+		
 	}
 	.tl-item:first-child {
 		border-top: 1px solid var(--border);

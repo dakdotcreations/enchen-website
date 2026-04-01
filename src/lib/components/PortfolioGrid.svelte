@@ -63,7 +63,7 @@
 		color: rgba(255, 255, 255, 0.3);
 		background: none;
 		border: none;
-		cursor: none;
+		
 		padding: 6px 0;
 		transition: color 0.3s;
 		position: relative;
@@ -87,7 +87,7 @@
 	.port-full-item {
 		position: relative;
 		overflow: hidden;
-		cursor: none;
+		
 		display: block;
 		text-decoration: none;
 		color: inherit;

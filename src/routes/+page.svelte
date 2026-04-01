@@ -12,10 +12,6 @@
 	const featuredSlugs = [
 		'padre-pio-insurance',
 		'wilken-telecom-offices',
-		'executive-headquarters',
-		'luxury-lakeside-villa',
-		'penthouse-suite-redesign',
-		'boutique-hotel-lobby',
 	];
 	const featuredSlides = projects.filter((p) => featuredSlugs.includes(p.slug));
 </script>

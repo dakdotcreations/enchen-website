@@ -59,7 +59,7 @@
 	onMount(() => {
 		// ── Loading screen ──
 		const startTime = Date.now();
-		const MIN_DISPLAY = 1200;
+		const MIN_DISPLAY = 1500;
 
 		function finishLoading() {
 			const elapsed = Date.now() - startTime;

@@ -46,12 +46,12 @@
 			tag: 'Retail · Hospitality · Leisure',
 			image: '/images/home/service-commercial.webp',
 			descs: [
-				'Commercial spaces must work harder than any other type of environment. They need to attract customers, communicate brand values, create the right atmosphere, and support high volumes of activity, all simultaneously.',
-				'Our commercial portfolio includes restaurants, bars, hotels, lounges, retail showrooms, and mixed-use developments. We understand the commercial imperatives that drive these projects and design spaces that deliver on both aesthetics and business performance.',
+				'Commercial spaces must work harder than any other type of environment. They need to attract customers, communicate brand values, create the right atmosphere, and support high volumes of activity all simultaneously.',
+				'Our commercial portfolio includes restaurants, airport terminals and lobbies, hotels, lounges, retail showrooms, and mixed-use developments. We understand the commercial imperatives that drive these projects and design spaces that deliver on both aesthetics and business performance.',
 			],
 			features: [
 				'Restaurant & bar design',
-				'Hotel lobbies & guest rooms',
+				'Airport & hotel lobbies',
 				'Retail & showroom fitouts',
 				'Lounge & VIP space design',
 				'Brand experience environments',

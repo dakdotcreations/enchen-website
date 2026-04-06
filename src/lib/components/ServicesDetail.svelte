@@ -24,7 +24,7 @@
 		},
 		{
 			num: '02',
-			name: 'Residential Design',
+			name: 'Commercial Residential Properties',
 			tag: 'Villas · Apartments · Penthouses',
 			image: '/images/home/service-residential.webp',
 			descs: [

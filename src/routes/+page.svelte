@@ -13,7 +13,6 @@
 		'wilken-telecom-offices',
 		'padre-pio-insurance',
 		'finance-trust-bank',
-		'private-residence',
 	];
 	const featuredSlides = projects.filter((p) => featuredSlugs.includes(p.slug));
 </script>

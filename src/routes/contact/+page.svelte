@@ -4,7 +4,7 @@ import ContactMain from '$lib/components/ContactMain.svelte';
 </script>
 
 <svelte:head>
-<title>Contact — Enchen Creative Hub</title>
+<title>Contact, Enchen Creative Hub</title>
 </svelte:head>
 
 <PageHero

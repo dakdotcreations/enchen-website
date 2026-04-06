@@ -13,7 +13,7 @@
 	const faqs = [
 		{
 			q: "What happens after I submit the form?",
-			a: "Within one business day, a member of the Enchen team will review your enquiry and respond personally. If your project is a good fit, we will propose a time for an initial consultation — either in person or by video call — at no charge.",
+			a: "Within one business day, a member of the Enchen team will review your enquiry and respond personally. If your project is a good fit, we will propose a time for an initial consultation, either in person or by video call, at no charge.",
 		},
 		{
 			q: "How quickly do you respond to enquiries?",
@@ -148,7 +148,7 @@
 					<option>3D Visualisation &amp; Rendering</option>
 					<option>Project Management</option>
 					<option>Renovation &amp; Fit-Out</option>
-					<option>Not sure — I'd like to discuss</option>
+					<option>Not sure, I'd like to discuss</option>
 				</select>
 			</div>
 			<div class="form-row">

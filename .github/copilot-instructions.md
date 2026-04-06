@@ -1,4 +1,4 @@
-# Enchen Creative Hub — Copilot Instructions
+# Enchen Creative Hub, Copilot Instructions
 
 A **Svelte 5 static portfolio/agency site** with no back-end, no CMS, and no testing framework. All data is hardcoded in page scripts.
 
@@ -21,7 +21,7 @@ No test runner is configured. Use `npm run check` to verify types after edits.
 - **Data**: Hardcoded arrays in `<script lang="ts">` blocks. No external API calls or CMS.
 - **Layout**: `src/routes/+layout.svelte` manages the global nav, footer, custom cursor, mobile menu, and scroll-reveal via `IntersectionObserver`.
 
-## Svelte 5 Runes — Critical Conventions
+## Svelte 5 Runes, Critical Conventions
 
 `runes: true` is enforced globally in `svelte.config.js` for **all** `.svelte` files. This means:
 
@@ -37,11 +37,11 @@ No test runner is configured. Use `npm run check` to verify types after edits.
   <button onclick={() => (open = !open)}>Toggle</button>
   <form onsubmit={handleSubmit}>
   ```
-- **Slot rendering** uses snippets: `{@render children()}` — not `<slot />`.
+- **Slot rendering** uses snippets: `{@render children()}`, not `<slot />`.
 
 ## Styling Conventions
 
-- **All styles live in `src/app.css`** — no `<style>` blocks inside `.svelte` files, no CSS Modules, no Tailwind.
+- **All styles live in `src/app.css`**, no `<style>` blocks inside `.svelte` files, no CSS Modules, no Tailwind.
 - Add new styles to `app.css` and apply them as plain class names in markup.
 - Use the existing **CSS custom properties** for all colors and typography:
   ```css
@@ -54,15 +54,15 @@ No test runner is configured. Use `npm run check` to verify types after edits.
   /* UI */
   --border: #D9D6CF; --light: #EDEAE3; --off-white: #F6F3EE; --white: #FAFAF8;
   ```
-- **Fonts**: `Century Gothic` (headings — system font, tight letter-spacing via `letter-spacing: -0.04em`) and `DM Sans` (body/UI — loaded via Google Fonts in `app.html`). The heading font is referenced via the `--font-heading` CSS variable. Do not add additional font imports.
+- **Fonts**: `Century Gothic` (headings, system font, tight letter-spacing via `letter-spacing: -0.04em`) and `DM Sans` (body/UI, loaded via Google Fonts in `app.html`). The heading font is referenced via the `--font-heading` CSS variable. Do not add additional font imports.
 - **Scroll-reveal**: Add `class="reveal"` to elements that should animate in on scroll. The layout's `IntersectionObserver` adds `.visible` automatically.
-- **Responsive**: Two breakpoints — `max-width: 1024px` (tablet) and `max-width: 640px` (mobile).
+- **Responsive**: Two breakpoints, `max-width: 1024px` (tablet) and `max-width: 640px` (mobile).
 
 ## TypeScript
 
 - `strict: true`. All script blocks use `<script lang="ts">`.
-- Keep type annotations minimal — only annotate where the type isn't obvious (e.g., `$state<number | null>(null)`).
+- Keep type annotations minimal, only annotate where the type isn't obvious (e.g., `$state<number | null>(null)`).
 
 ## Adapter
 
-`@sveltejs/adapter-auto` — auto-detects Vercel, Netlify, Node, etc. on deploy. No adapter config changes needed for standard deployment targets.
+`@sveltejs/adapter-auto`, auto-detects Vercel, Netlify, Node, etc. on deploy. No adapter config changes needed for standard deployment targets.

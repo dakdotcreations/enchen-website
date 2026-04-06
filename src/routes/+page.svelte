@@ -19,7 +19,7 @@
 </script>
 
 <svelte:head>
-	<title>Enchen Creative Hub — Architectural &amp; Interior Design | Commercial Spaces</title>
+	<title>Enchen Creative Hub, Architectural &amp; Interior Design | Commercial Spaces</title>
 </svelte:head>
 
 <HeroSlideshow slides={featuredSlides} />

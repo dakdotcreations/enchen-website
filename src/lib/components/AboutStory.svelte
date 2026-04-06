@@ -61,7 +61,7 @@
 				<p class="s-body">
 					We are a multidisciplinary team of architects, interior designers, and project
 					managers united by a passion for craft. We believe the best design begins with
-					listening — understanding how you live, how you work, and what you aspire to
+					listening, understanding how you live, how you work, and what you aspire to
 					create.
 				</p>
 				<p class="s-body">

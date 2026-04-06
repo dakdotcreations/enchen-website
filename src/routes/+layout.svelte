@@ -44,7 +44,7 @@
         });
 		setLenisInstance(lenis);
 
-		// GSAP ticker drives Lenis — cleaner than a manual rAF loop
+		// GSAP ticker drives Lenis, cleaner than a manual rAF loop
 		gsap.ticker.add((time: number) => lenis.raf(time * 1000));
 		gsap.ticker.lagSmoothing(0);
     }

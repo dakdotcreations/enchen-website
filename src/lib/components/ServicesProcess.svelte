@@ -3,7 +3,7 @@
 	<h2 class="s-title light">Our <span class="h-blue">Process</span></h2>
 	<p class="s-body light" style="max-width:540px; margin: 16px 0 56px;">
 		We follow a structured, transparent process that keeps you informed and in control at every
-		step — from first conversation to final handover.
+		step, from first conversation to final handover.
 	</p>
 	<div class="process-grid">
 		<div class="proc-item">
@@ -22,8 +22,8 @@
 			<div class="proc-info">
 				<div class="proc-name">Concept Design</div>
 				<div class="proc-desc">
-					Our designers develop initial concepts — including spatial layouts, mood boards,
-					material palettes, and preliminary 3D visualisations — for your review and
+					Our designers develop initial concepts, including spatial layouts, mood boards,
+					material palettes, and preliminary 3D visualisations, for your review and
 					feedback. We iterate until the concept perfectly captures your vision.
 				</div>
 			</div>
@@ -46,7 +46,7 @@
 				<div class="proc-desc">
 					We manage the construction and fit-out phase, coordinating all trades and
 					suppliers to ensure flawless execution. The project is complete only when every
-					detail meets our standard — and yours.
+					detail meets our standard, and yours.
 				</div>
 			</div>
 		</div>

@@ -22,31 +22,31 @@
 		},
 		{
 			initials: "AO",
-			body: "Working with Enchen was a revelation. From the very first meeting, it was clear they genuinely cared about understanding what we wanted our home to feel like — not just what we wanted it to look like. The result is a home that feels perfectly designed for us. We are constantly receiving compliments from guests.",
+			body: "Working with Enchen was a revelation. From the very first meeting, it was clear they genuinely cared about understanding what we wanted our home to feel like, not just what we wanted it to look like. The result is a home that feels perfectly designed for us. We are constantly receiving compliments from guests.",
 			name: "Amara Osei",
 			role: "Private Residential Client",
 		},
 		{
 			initials: "SN",
-			body: "The 3D visualisations Enchen produced for our development were extraordinary. They allowed us to make confident decisions about design long before construction began — and they made our sales presentations significantly more compelling. Revenue from pre-sales was up 40% compared to our previous project. A genuinely transformative service.",
+			body: "The 3D visualisations Enchen produced for our development were extraordinary. They allowed us to make confident decisions about design long before construction began, and they made our sales presentations significantly more compelling. Revenue from pre-sales was up 40% compared to our previous project. A genuinely transformative service.",
 			name: "Sarah Nakigozi",
 			role: "Director, Nakigozi Property Development",
 		},
 		{
 			initials: "RS",
-			body: "We engaged Enchen to redesign our regional office ahead of a major expansion. They not only delivered a space we are proud of — they helped us think more carefully about how our physical environment reflects our brand and supports our culture. The project management was flawless. Every deadline met, every decision documented.",
+			body: "We engaged Enchen to redesign our regional office ahead of a major expansion. They not only delivered a space we are proud of, they helped us think more carefully about how our physical environment reflects our brand and supports our culture. The project management was flawless. Every deadline met, every decision documented.",
 			name: "Robert Ssebayiga",
 			role: "Managing Director, Victoria Group",
 		},
 		{
 			initials: "FH",
-			body: "Enchen transformed our boutique hotel lobby from a forgettable arrival experience into a true destination. Guests now specifically comment on the lobby in their reviews — it has become part of our brand identity. The team understood the hospitality brief intuitively, and the level of detail in the execution is remarkable.",
+			body: "Enchen transformed our boutique hotel lobby from a forgettable arrival experience into a true destination. Guests now specifically comment on the lobby in their reviews, it has become part of our brand identity. The team understood the hospitality brief intuitively, and the level of detail in the execution is remarkable.",
 			name: "Fatima Hassan",
 			role: "Owner, The Kololo Boutique Hotel",
 		},
 		{
 			initials: "MO",
-			body: "I have worked with design firms across three countries, and Enchen compares very favourably with any of them. Their approach is genuinely collaborative — they listen carefully, they challenge constructively, and they deliver with precision. Our new regional headquarters has made a real difference to how we attract and retain talent.",
+			body: "I have worked with design firms across three countries, and Enchen compares very favourably with any of them. Their approach is genuinely collaborative, they listen carefully, they challenge constructively, and they deliver with precision. Our new regional headquarters has made a real difference to how we attract and retain talent.",
 			name: "Michael Odongo",
 			role: "Head of Operations, Pan-African Finance Group",
 		},
@@ -73,16 +73,16 @@
 </script>
 
 <svelte:head>
-	<title>Testimonials — Enchen Creative Hub</title>
+	<title>Testimonials, Enchen Creative Hub</title>
 </svelte:head>
 
 <PageHero
 	breadcrumb="Testimonials"
 	eyebrow="Client Stories"
 	title="Voices That<br><em>Define Our Work</em>"
-	sub="The measure of our work is not what we say about it — it is what our clients say. Here is what they have shared about their experience working with Enchen Creative Hub." />
+	sub="The measure of our work is not what we say about it, it is what our clients say. Here is what they have shared about their experience working with Enchen Creative Hub." />
 <FeaturedQuote
-	text="Enchen did not just redesign our office — they transformed how our entire team feels about coming to work. The space they created communicates exactly who we are as a company. It is simply exceptional."
+	text="Enchen did not just redesign our office, they transformed how our entire team feels about coming to work. The space they created communicates exactly who we are as a company. It is simply exceptional."
 	name="James Mwangi"
 	role="CEO, TeleCom East Africa Ltd" />
 <!-- <StatsBar {stats} /> -->

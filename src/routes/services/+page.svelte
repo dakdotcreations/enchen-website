@@ -8,7 +8,7 @@
 	const faqs = [
 		{
 			q: "How do I start a project with Enchen Creative Hub?",
-			a: "The simplest way is to fill in our contact form or call us directly. We'll arrange an initial consultation — either in person at your site or by video call — to understand your project, discuss your vision, and outline how we can help. There is no obligation at this stage.",
+			a: "The simplest way is to fill in our contact form or call us directly. We'll arrange an initial consultation, either in person at your site or by video call, to understand your project, discuss your vision, and outline how we can help. There is no obligation at this stage.",
 		},
 		{
 			q: "How long does a typical project take?",
@@ -16,7 +16,7 @@
 		},
 		{
 			q: "Do you work outside of Kampala?",
-			a: "Yes. While our studio is based in Ntinda, Kampala, we have delivered projects across Uganda and in neighbouring East African markets. For projects outside Kampala, we structure our involvement to suit the project's location — combining remote design management with scheduled on-site visits at key project milestones.",
+			a: "Yes. While our studio is based in Ntinda, Kampala, we have delivered projects across Uganda and in neighbouring East African markets. For projects outside Kampala, we structure our involvement to suit the project's location, combining remote design management with scheduled on-site visits at key project milestones.",
 		},
 		{
 			q: "What is your fee structure?",
@@ -30,7 +30,7 @@
 </script>
 
 <svelte:head>
-	<title>Services — Enchen Creative Hub</title>
+	<title>Services, Enchen Creative Hub</title>
 </svelte:head>
 
 <PageHero

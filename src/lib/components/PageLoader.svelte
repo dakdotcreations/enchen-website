@@ -6,8 +6,8 @@
 	type Milestone = { main: string; };
 
 	const milestones: Milestone[] = [
-		{ main: 'Corporate & Commercial Design'},
-		{ main: 'Residential & Hospitality Interior Design'},
+		{ main: 'Interior Design'},
+		{ main: '3D Visualization'},
 		{ main: 'Architectural Fit-Outs'},
         { main: 'Project Management'},
 	];

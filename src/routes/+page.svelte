@@ -12,13 +12,13 @@
 	const featuredSlugs = [
 		'wilken-telecom-offices',
 		'padre-pio-insurance',
-        'private-residence',
+		'finance-trust-bank',
 	];
 	const featuredSlides = projects.filter((p) => featuredSlugs.includes(p.slug));
 </script>
 
 <svelte:head>
-	<title>Enchen Creative Hub — Architectural &amp; Interior Design | Commercial Spaces</title>
+	<title>Enchen Creative Hub, Architectural &amp; Interior Design | Commercial Spaces</title>
 </svelte:head>
 
 <HeroSlideshow slides={featuredSlides} />

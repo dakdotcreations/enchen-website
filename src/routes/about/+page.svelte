@@ -11,14 +11,14 @@
 </script>
 
 <svelte:head>
-	<title>About — Enchen Creative Hub</title>
+	<title>About, Enchen Creative Hub</title>
 </svelte:head>
 
 <PageHero
 	breadcrumb="About"
 	eyebrow="Our Story"
 	title="The Studio Behind<br><em>the Ideas</em>"
-	sub="Founded in the heart of Kampala, Enchen Creative Hub is an architectural and interior design firm built on the belief that great spaces do more than look beautiful — they elevate how people live, work, and connect."
+	sub="Founded in the heart of Kampala, Enchen Creative Hub is an architectural and interior design firm built on the belief that great spaces do more than look beautiful, they elevate how people live, work, and connect."
 	hasOrb={true} />
 <AboutStory />
 <MissionVision />

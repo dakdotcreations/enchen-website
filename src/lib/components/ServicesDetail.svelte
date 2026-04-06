@@ -10,7 +10,7 @@
 			tag: 'Commercial · B2B',
 			image: '/images/home/service-corporate.webp',
 			descs: [
-				'Your office is a direct reflection of your brand. We design corporate environments — headquarters, boardrooms, executive suites, and open-plan workspaces — that communicate authority, foster productivity, and make a lasting impression on every visitor.',
+				'Your office is a direct reflection of your brand. We design corporate environments, headquarters, boardrooms, executive suites, and open-plan workspaces, that communicate authority, foster productivity, and make a lasting impression on every visitor.',
 				"Our corporate design process begins with a deep understanding of your organisation's culture, workflow, and brand identity. We then craft a spatial strategy that balances aesthetics with the functional demands of a modern workplace.",
 			],
 			features: [
@@ -24,11 +24,11 @@
 		},
 		{
 			num: '02',
-			name: 'Residential Design',
+			name: 'Commercial Residential Properties',
 			tag: 'Villas · Apartments · Penthouses',
 			image: '/images/home/service-residential.webp',
 			descs: [
-				'Your residence is the most personal space you will ever inhabit. We work closely with clients to design villas, apartments, and penthouses that are as refined as they are liveable — spaces that reflect your personality, support your lifestyle, and feel distinctly yours.',
+				'Your residence is the most personal space you will ever inhabit. We work closely with clients to design villas, apartments, and penthouses that are as refined as they are liveable, spaces that reflect your personality, support your lifestyle, and feel distinctly yours.',
 				'From full architectural collaboration on new builds to complete interior redesigns of existing properties, our residential service covers every detail: spatial planning, material curation, bespoke furniture, lighting design, and final styling.',
 			],
 			features: [
@@ -46,12 +46,12 @@
 			tag: 'Retail · Hospitality · Leisure',
 			image: '/images/home/service-commercial.webp',
 			descs: [
-				'Commercial spaces must work harder than any other type of environment. They need to attract customers, communicate brand values, create the right atmosphere, and support high volumes of activity — all simultaneously.',
-				'Our commercial portfolio includes restaurants, bars, hotels, lounges, retail showrooms, and mixed-use developments. We understand the commercial imperatives that drive these projects and design spaces that deliver on both aesthetics and business performance.',
+				'Commercial spaces must work harder than any other type of environment. They need to attract customers, communicate brand values, create the right atmosphere, and support high volumes of activity all simultaneously.',
+				'Our commercial portfolio includes restaurants, airport terminals and lobbies, hotels, lounges, retail showrooms, and mixed-use developments. We understand the commercial imperatives that drive these projects and design spaces that deliver on both aesthetics and business performance.',
 			],
 			features: [
 				'Restaurant & bar design',
-				'Hotel lobbies & guest rooms',
+				'Airport & hotel lobbies',
 				'Retail & showroom fitouts',
 				'Lounge & VIP space design',
 				'Brand experience environments',
@@ -82,7 +82,7 @@
 			tag: 'Coordination · Supervision',
 			image: '/images/home/service-project-management.webp',
 			descs: [
-				'Design is only as good as its execution. Our project management service ensures your design is delivered exactly as intended — to the right quality, within budget, and on schedule. We act as your representative on-site, coordinating contractors, suppliers, and specialist trades throughout the build.',
+				'Design is only as good as its execution. Our project management service ensures your design is delivered exactly as intended, to the right quality, within budget, and on schedule. We act as your representative on-site, coordinating contractors, suppliers, and specialist trades throughout the build.',
 			],
 			features: [
 				'Contractor procurement & vetting',
@@ -99,7 +99,7 @@
 			tag: 'Refurbishment · Upgrades',
 			image: '/images/home/service-fitouts.webp',
 			descs: [
-				'Transforming an existing space often demands more skill than designing from scratch. Our renovation and fit-out service is designed for clients who want to dramatically upgrade their environment without starting over — maximising the value of existing structures while introducing new design thinking.',
+				'Transforming an existing space often demands more skill than designing from scratch. Our renovation and fit-out service is designed for clients who want to dramatically upgrade their environment without starting over, maximising the value of existing structures while introducing new design thinking.',
 			],
 			features: [
 				'Full & partial interior renovations',

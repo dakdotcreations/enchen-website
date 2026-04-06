@@ -1,7 +1,7 @@
 <div class="team-section">
 	<div class="s-label">The Team</div>
 	<h2 class="s-title">The People Behind<br><span class="h-blue">Every Project</span></h2>
-	<p class="s-body" style="margin-top:12px;">A small, focused team of dedicated professionals — each one chosen for their craft, their commitment, and their passion for excellence.</p>
+	<p class="s-body" style="margin-top:12px;">A small, focused team of dedicated professionals, each one chosen for their craft, their commitment, and their passion for excellence.</p>
 	<div class="team-grid">
 		<div class="team-card">
 			<div class="team-photo"><div class="team-photo-inner"><div class="team-photo-placeholder">EK</div></div><div class="team-photo-grad"></div></div>
@@ -24,7 +24,7 @@
 			<div class="team-info">
 				<div class="team-name">David Omondi</div>
 				<div class="team-role">Head of Projects &amp; Construction</div>
-				<p class="team-bio">David oversees the delivery of every project from the moment designs are approved. A qualified quantity surveyor and project manager, he ensures each build is delivered to specification, on time, and within budget — without compromise.</p>
+				<p class="team-bio">David oversees the delivery of every project from the moment designs are approved. A qualified quantity surveyor and project manager, he ensures each build is delivered to specification, on time, and within budget, without compromise.</p>
 			</div>
 		</div>
 	</div>

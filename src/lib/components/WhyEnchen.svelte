@@ -16,7 +16,7 @@
 			<div class="why-num">01</div>
 			<div class="why-title">End-to-End Service</div>
 			<div class="why-body">
-				We handle every phase — from conceptual design and 3D visualisation through to
+				We handle every phase, from conceptual design and 3D visualisation through to
 				procurement, construction supervision, and final handover. One team, complete
 				accountability.
 			</div>
@@ -25,8 +25,8 @@
 			<div class="why-num">02</div>
 			<div class="why-title">Local Expertise</div>
 			<div class="why-body">
-				Rooted in Kampala, we understand the East African context — climate, culture,
-				materials, and the regulatory environment — giving our projects depth that
+				Rooted in Kampala, we understand the East African context, climate, culture,
+				materials, and the regulatory environment, giving our projects depth that
 				international firms cannot replicate.
 			</div>
 		</div>

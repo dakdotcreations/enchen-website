@@ -31,7 +31,7 @@ export type Project = {
 	title: string;
 	location: string;
 	tag: Tag;
-	/** Path under /static — leave empty until real image is added */
+	/** Path under /static, leave empty until real image is added */
 	thumbnail: string;
 	content: ContentBlock[];
 };

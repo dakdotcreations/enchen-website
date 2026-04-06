@@ -7,6 +7,7 @@
 		'padre-pio-insurance',
 		'private-residence',
 		'fao-offices',
+		'finance-trust-bank',
 	];
 	const featured = featuredSlugs.map((slug) => projects.find((p) => p.slug === slug)!);
 

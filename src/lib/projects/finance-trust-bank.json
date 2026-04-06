@@ -1,0 +1,82 @@
+{
+	"slug": "finance-trust-bank",
+	"title": "Finance Trust Bank",
+	"location": "Kampala, Uganda",
+	"tag": "commercial",
+	"thumbnail": "/images/projects/finance-trust-bank/10.webp",
+	"content": [
+		{
+			"type": "image",
+			"src": "/images/projects/finance-trust-bank/10.webp",
+			"alt": "Finance Trust Bank branch interior",
+			"caption": "The completed branch, a confident, customer-forward banking environment designed to build trust on entry."
+		},
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>Finance Trust Bank required a full interior fit-out for their branch premises, a client-facing space that needed to communicate institutional credibility while remaining approachable and accessible to a broad customer base. The brief called for a clean, contemporary banking environment with clear spatial hierarchy between public service zones, teller counters, and private consultation areas.</p>"
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/finance-trust-bank/1.webp",
+			"alt": "Finance Trust Bank branch entrance and reception",
+			"caption": "The public entrance, branded signage, polished surfaces, and a welcoming reception desk anchor the customer journey from arrival."
+		},
+		{
+			"type": "text",
+			"heading": "Approach",
+			"body": "<p>Our design strategy focused on translating Finance Trust Bank's brand values, reliability, accessibility, and professionalism, into a coherent spatial language. A warm neutral palette of off-white panelling, timber-toned counters, and the bank's corporate accent colour anchors the identity throughout without relying on heavy branding. Ceiling coffers with integrated LED cove lighting define each functional zone, while full-height glazed partitions keep the floor plan open and legible for first-time visitors.</p><p>The teller line was designed to reduce perceived queuing stress, individual service bays with low-profile screens offer privacy without creating a barrier between staff and customers. A dedicated waiting area with upholstered seating and a digital queue-management display completes the service sequence.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/finance-trust-bank/3.webp",
+					"alt": "Teller counter service bays",
+					"caption": "The teller counter, individual service bays with fluted panel fronts and integrated privacy screens."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/finance-trust-bank/4.webp",
+					"alt": "Customer waiting and seating area",
+					"caption": "The customer waiting zone, upholstered seating, a digital queue display, and branded feature wall behind."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/finance-trust-bank/7.webp",
+			"alt": "Private consultation room",
+			"caption": "A private consultation room, glazed partition walls, acoustic panels, and bespoke joinery for client-facing advisory sessions."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/finance-trust-bank/5.webp",
+					"alt": "Manager office interior",
+					"caption": "The branch manager's office, integrated storage, clean desk layout, and brand-consistent finishes throughout."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/finance-trust-bank/6.webp",
+					"alt": "Staff operational area",
+					"caption": "The back-of-house operational zone, workstations, cable-managed desks, and acoustic ceiling treatment."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/finance-trust-bank/9.webp",
+			"alt": "Branch detail and material palette",
+			"caption": "Material palette detail, timber-toned surfaces, polished composite flooring, and the bank's signature accent colour applied as a feature band at counter height."
+		},
+		{
+			"type": "text",
+			"heading": "Outcome",
+			"body": "<p>The completed branch delivers a banking environment that performs across every customer touchpoint, from the moment of arrival through teller service to private advisory meetings. Finance Trust Bank now occupies a space that communicates the scale and stability of the institution while keeping the customer experience at the centre of every design decision. The fit-out has been noted internally as a template for future branch refurbishments.</p>"
+		}
+	]
+}

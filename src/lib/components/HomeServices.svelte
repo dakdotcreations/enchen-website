@@ -13,11 +13,11 @@
 		},
 		{
 			num: '02',
-			name: 'Residential Design',
+			name: 'Commercial Residential Properties',
 			img: '/images/home/Residential Design.webp',
 			alt: 'Luxury residential interior',
-			desc: 'From luxury villas to contemporary homes — spaces crafted around how you truly live.',
-			items: ['Luxury villas & mansions', 'Modern & contemporary homes', 'Smart home integration', 'Space planning & furnishing'],
+			desc: 'Upscale residential developments crafted for lasting value, from boutique apartments to sprawling estates and luxury villas.',
+			items: ['Apartment complexes & condominiums', 'Gated estates & villa communities', 'Mixed-use residential developments', 'Space planning & furnishing'],
 		},
 		{
 			num: '03',
@@ -43,7 +43,7 @@
 			</h2>
 		</div>
 		<p class="s-body light" style="max-width:340px;">
-			From initial concept to final handover — end-to-end design solutions for every space and
+			From initial concept to final handover, end-to-end design solutions for every space and
 			budget.
 		</p>
 	</div>

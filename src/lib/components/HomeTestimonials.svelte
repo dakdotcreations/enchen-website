@@ -28,7 +28,7 @@
 			<div class="q-mark">"</div>
 			<p class="test-text">
 				From first meeting to final handover, Enchen brought creativity, discipline, and
-				genuine passion. Our office now reflects who we are — modern, dynamic, and
+				genuine passion. Our office now reflects who we are, modern, dynamic, and
 				client-focused.
 			</p>
 			<div class="test-div"></div>

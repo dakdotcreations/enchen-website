@@ -17,7 +17,7 @@
 </script>
 
 <svelte:head>
-	<title>{data.project.title} — Enchen Creative Hub</title>
+	<title>{data.project.title}, Enchen Creative Hub</title>
 </svelte:head>
 
 <!-- Hero -->

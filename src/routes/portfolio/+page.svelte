@@ -14,7 +14,7 @@
 </script>
 
 <svelte:head>
-	<title>Portfolio — Enchen Creative Hub</title>
+	<title>Portfolio, Enchen Creative Hub</title>
 </svelte:head>
 
 <PageHero

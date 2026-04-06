@@ -52,7 +52,7 @@
 			<p class="s-body slide-in">
 				Enchen Creative Hub is an architectural and interior design firm delivering bold,
 				functional, and inspiring environments. We work with residential, corporate, and
-				commercial clients — providing tailored design solutions that convert ideas into
+				commercial clients, providing tailored design solutions that convert ideas into
 				remarkable real spaces.
 			</p>
 			<p class="s-body slide-in" style="margin-top:18px;">

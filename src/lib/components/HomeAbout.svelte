@@ -47,16 +47,13 @@
 	<div class="about-grid">
 		<div bind:this={valuesGrid}>
 			<h2 class="s-title">
-				Spaces That <span class="h-blue">Inspire</span><br />& Endure
+				Bold <span class="h-blue">Ideas</span><br />Bold Creations
 			</h2>
 			<p class="s-body slide-in">
-				Enchen Creative Hub is an architectural and interior design firm delivering bold,
-				functional, and inspiring environments. We work with residential, corporate, and
-				commercial clients, providing tailored design solutions that convert ideas into
-				remarkable real spaces.
+				Enchen Creative Hub is a design and build architectural interior design turnkey firm delivering bold, functional, and inspiring environments. We work with corporate, and commercial clients, providing tailored design solutions that convert ideas into remarkable real spaces.
 			</p>
 			<p class="s-body slide-in" style="margin-top:18px;">
-				Our vision is to become the leading turnkey interior design company recognized
+				Our vision is to become the leading turnkey architectural interior design company recognized
 				globally for quality, innovation, and designs that elevate brands.
 			</p>
 		</div>

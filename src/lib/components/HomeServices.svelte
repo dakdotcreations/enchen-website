@@ -5,7 +5,7 @@
 	const services = [
 		{
 			num: '01',
-			name: 'Corporate & Office Design',
+			name: 'Office Spaces',
 			img: '/images/home/Corporate & Office Design.webp',
 			alt: ' ',
 			desc: 'Workplaces that inspire performance, reinforce brand identity, and prioritise employee wellbeing.',
@@ -13,7 +13,7 @@
 		},
 		{
 			num: '02',
-			name: 'Commercial Residential Properties',
+			name: 'Commercial Properties',
 			img: '/images/home/Residential Design.webp',
 			alt: 'Luxury residential interior',
 			desc: 'Upscale residential developments crafted for lasting value, from boutique apartments to sprawling estates and luxury villas.',

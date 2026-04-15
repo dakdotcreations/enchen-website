@@ -2,12 +2,44 @@
 	import { MapPin, Mail, Phone, Clock } from '@lucide/svelte';
 
 	let submitLabel = $state("Send Enquiry")
-	function handleSubmit(e: Event) {
+	let submitError = $state("")
+	let isSubmitting = $state(false)
+
+	let firstName = $state("")
+	let lastName = $state("")
+	let email = $state("")
+	let projectType = $state("")
+	let message = $state("")
+
+	async function handleSubmit(e: Event) {
 		e.preventDefault()
-		submitLabel = "Enquiry Sent"
-		setTimeout(() => {
+		if (isSubmitting) return
+
+		isSubmitting = true
+		submitLabel = "Sending…"
+		submitError = ""
+
+		try {
+			const res = await fetch("/api/contact", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ firstName, lastName, email, projectType, message, source: "homepage" }),
+			})
+
+			if (!res.ok) {
+				const data = await res.json()
+				submitError = data.error ?? "Something went wrong. Please try again."
+				submitLabel = "Send Enquiry"
+			} else {
+				submitLabel = "Enquiry Sent"
+				setTimeout(() => { submitLabel = "Send Enquiry" }, 3500)
+			}
+		} catch {
+			submitError = "Network error. Please check your connection and try again."
 			submitLabel = "Send Enquiry"
-		}, 3500)
+		} finally {
+			isSubmitting = false
+		}
 	}
 </script>
 
@@ -52,22 +84,25 @@
 				<div class="f-field">
 					<label for="h-fname">First Name</label><input
 						id="h-fname"
-						type="text" />
+						type="text"
+						bind:value={firstName} />
 				</div>
 				<div class="f-field">
 					<label for="h-lname">Last Name</label><input
 						id="h-lname"
-						type="text" />
+						type="text"
+						bind:value={lastName} />
 				</div>
 			</div>
 			<div class="f-field">
 				<label for="h-email">Email Address</label><input
 					id="h-email"
-					type="email" />
+					type="email"
+					bind:value={email} />
 			</div>
 			<div class="f-field">
 				<label for="h-project">Project Type</label>
-				<select id="h-project">
+				<select id="h-project" bind:value={projectType}>
 					<option value="" disabled selected>Select a service</option>
 					<option>Corporate / Office Design</option>
 					<option>Residential Design</option>
@@ -80,9 +115,13 @@
 				<label for="h-message">Brief Message</label><textarea
 					id="h-message"
 					rows="4"
-					placeholder="Tell us about your project..."></textarea>
+					placeholder="Tell us about your project..."
+					bind:value={message}></textarea>
 			</div>
-			<button class="f-submit" type="button" onclick={handleSubmit}>{submitLabel}</button>
+			{#if submitError}
+				<p class="f-error">{submitError}</p>
+			{/if}
+			<button class="f-submit" type="button" onclick={handleSubmit} disabled={isSubmitting}>{submitLabel}</button>
 		</div>
 	</div>
 </section>
@@ -194,6 +233,15 @@
 	.f-submit:hover {
 		background: var(--accent);
 		color: var(--black);
+	}
+	.f-submit:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+	.f-error {
+		font-size: 13px;
+		color: #c0392b;
+		margin-bottom: 10px;
 	}
 	@media (max-width: 1024px) {
 		#contact {

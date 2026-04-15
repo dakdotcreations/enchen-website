@@ -2,12 +2,47 @@
 	import FaqList from "$lib/components/FaqList.svelte"
 
 	let submitLabel = $state("Send Enquiry")
-	function handleSubmit(e: SubmitEvent) {
+	let submitError = $state("")
+	let isSubmitting = $state(false)
+
+	let firstName = $state("")
+	let lastName = $state("")
+	let email = $state("")
+	let phone = $state("")
+	let projectType = $state("")
+	let budget = $state("")
+	let startDate = $state("")
+	let message = $state("")
+
+	async function handleSubmit(e: SubmitEvent) {
 		e.preventDefault()
-		submitLabel = "✓ Enquiry Sent"
-		setTimeout(() => {
+		if (isSubmitting) return
+
+		isSubmitting = true
+		submitLabel = "Sending…"
+		submitError = ""
+
+		try {
+			const res = await fetch("/api/contact", {
+				method: "POST",
+				headers: { "Content-Type": "application/json" },
+				body: JSON.stringify({ firstName, lastName, email, phone, projectType, budget, startDate, message, source: "contact-page" }),
+			})
+
+			if (!res.ok) {
+				const data = await res.json()
+				submitError = data.error ?? "Something went wrong. Please try again."
+				submitLabel = "Send Enquiry"
+			} else {
+				submitLabel = "✓ Enquiry Sent"
+				setTimeout(() => { submitLabel = "Send Enquiry" }, 3500)
+			}
+		} catch {
+			submitError = "Network error. Please check your connection and try again."
 			submitLabel = "Send Enquiry"
-		}, 3500)
+		} finally {
+			isSubmitting = false
+		}
 	}
 
 	const faqs = [
@@ -47,7 +82,7 @@
 				<div>
 					<div class="cip-key">Email</div>
 					<div class="cip-val">
-						<a href="mailto:hello@enchencreativehub.com">hello@enchencreativehub.com</a>
+						<a href="mailto:info@enchencreativehub.com">info@enchencreativehub.com</a>
 					</div>
 				</div>
 			</div>
@@ -110,6 +145,7 @@
 						type="text"
 						class="form-input"
 						placeholder="Your first name"
+						bind:value={firstName}
 						required />
 				</div>
 				<div class="form-group">
@@ -118,6 +154,7 @@
 						type="text"
 						class="form-input"
 						placeholder="Your last name"
+						bind:value={lastName}
 						required />
 				</div>
 			</div>
@@ -128,6 +165,7 @@
 						type="email"
 						class="form-input"
 						placeholder="you@example.com"
+						bind:value={email}
 						required />
 				</div>
 				<div class="form-group">
@@ -135,12 +173,13 @@
 						id="c-phone"
 						type="tel"
 						class="form-input"
-						placeholder="+256 700 000 000" />
+						placeholder="+256 700 000 000"
+						bind:value={phone} />
 				</div>
 			</div>
 			<div class="form-group">
 				<label class="form-label" for="c-project">Project Type *</label>
-				<select id="c-project" class="form-input form-select" required>
+				<select id="c-project" class="form-input form-select" bind:value={projectType} required>
 					<option value="" disabled selected>Select a project type</option>
 					<option>Corporate &amp; Office Design</option>
 					<option>Residential Design</option>
@@ -154,7 +193,7 @@
 			<div class="form-row">
 				<div class="form-group">
 					<label class="form-label" for="c-budget">Approximate Budget</label>
-					<select id="c-budget" class="form-input form-select">
+					<select id="c-budget" class="form-input form-select" bind:value={budget}>
 						<option value="" disabled selected>Select a range</option>
 						<option>Under UGX 10,000,000</option>
 						<option>UGX 10,000,000 – 50,000,000</option>
@@ -165,7 +204,7 @@
 				</div>
 				<div class="form-group">
 					<label class="form-label" for="c-start">Preferred Start</label>
-					<select id="c-start" class="form-input form-select">
+					<select id="c-start" class="form-input form-select" bind:value={startDate}>
 						<option value="" disabled selected>When are you hoping to start?</option>
 						<option>As soon as possible</option>
 						<option>Within 1–3 months</option>
@@ -181,9 +220,13 @@
 					class="form-input form-textarea"
 					placeholder="Describe your project, the location, any key requirements, and anything else you think would help us understand what you need."
 					rows="5"
+					bind:value={message}
 					required></textarea>
 			</div>
-			<button type="submit" class="btn primary btn-full">{submitLabel}</button>
+			{#if submitError}
+				<p class="form-error">{submitError}</p>
+			{/if}
+			<button type="submit" class="btn primary btn-full" disabled={isSubmitting}>{submitLabel}</button>
 		</form>
 	</div>
 </div>
@@ -354,6 +397,15 @@
 		width: 100%;
 		display: block;
 		text-align: center;
+	}
+	.btn-full:disabled {
+		opacity: 0.6;
+		cursor: not-allowed;
+	}
+	.form-error {
+		font-size: 13px;
+		color: #c0392b;
+		margin-bottom: 12px;
 	}
 	.contact-map {
 		height: 360px;

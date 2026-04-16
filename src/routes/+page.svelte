@@ -7,6 +7,7 @@
 	import HomeClients from "$lib/components/HomeClients.svelte"
 	import HomeTestimonials from "$lib/components/HomeTestimonials.svelte"
 	import HomeContact from "$lib/components/HomeContact.svelte"
+	import HomeAboutStrip from "$lib/components/HomeAboutStrip.svelte"
 	import { projects } from "$lib/projects/index"
 
 	const featuredSlugs = [
@@ -29,3 +30,4 @@
 <HomeClients />
 <HomeTestimonials />
 <HomeContact />
+<HomeAboutStrip />

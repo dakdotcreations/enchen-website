@@ -13,23 +13,17 @@
 	>
 		<defs>
 			<linearGradient id="ll-grad" x1="969.41" y1="1068.36" x2="950.99" y2="38.4" gradientUnits="userSpaceOnUse">
-				<stop offset="0"   stop-color="#130a41"/>
-				<stop offset=".13" stop-color="#360d4d"/>
-				<stop offset=".35" stop-color="#6a1160"/>
-				<stop offset=".55" stop-color="#941570"/>
-				<stop offset=".73" stop-color="#b2177b"/>
-				<stop offset=".89" stop-color="#c41981"/>
-				<stop offset="1"   stop-color="#cb1a84"/>
+				<!-- Bottom stop: always stays deep blue -->
+				<stop offset="0" stop-color="#130a41"/>
+				<!-- Top stop: starts blue, transitions to pink -->
+				<stop offset="1" stop-color="#cb1a84">
+					<animate attributeName="stop-color" from="#130a41" to="#cb1a84" dur="1s" begin="0s" fill="freeze" calcMode="spline" keyTimes="0;1" keySplines="0.22 1 0.36 1"/>
+				</stop>
 			</linearGradient>
-
-			<!-- Clip the gradient bg so it animates in from top -->
-			<clipPath id="ll-bg-clip">
-				<rect class="ll-bg-cliprect" x="0" y="0" width="1920" height="1084.25"/>
-			</clipPath>
 		</defs>
 
-		<!-- Gradient background — wipes in from top -->
-		<rect class="ll-bg" width="1920" height="1084.25" fill="url(#ll-grad)" clip-path="url(#ll-bg-clip)"/>
+		<!-- Gradient background — starts solid blue, top fades to pink -->
+		<rect width="1920" height="1084.25" fill="url(#ll-grad)"/>
 
 		<!-- ENCHEN wordmark paths — stroke draw then fill -->
 		<g class="ll-wordmark">
@@ -98,6 +92,7 @@
 		z-index: 9999;
 		overflow: hidden;
 		transition: opacity 0.8s ease 0.1s, transform 0.8s ease 0.1s;
+        background-color: var(--white);
 	}
 
 	.loader.loaded {
@@ -111,16 +106,6 @@
 		inset: 0;
 		width: 100%;
 		height: 100%;
-	}
-
-	/* ── Background gradient wipe from bottom ── */
-	.ll-bg {
-		animation: ll-bg-wipe 0.9s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-	}
-
-	@keyframes ll-bg-wipe {
-		from { clip-path: inset(100% 0 0 0); }
-		to   { clip-path: inset(0% 0 0 0); }
 	}
 
 	/* ── Icon (calligraphy mark) — stroke draw then fill ── */

@@ -21,11 +21,11 @@
 		},
 		{
 			num: '03',
-			name: 'Commercial Spaces',
+			name: 'Diplomatic Spaces',
 			img: '/images/home/Commercial Spaces.webp',
-			alt: 'Boutique hotel commercial space',
-			desc: 'Retail, hospitality, and commercial developments designed to drive results and express brand identity.',
-			items: ['Interior fit-out', '3D visualization & virtual tours', 'Sustainable & green building', 'Construction supervision'],
+			alt: 'Diplomatic mission interior',
+			desc: 'Embassies, missions, and high commissions designed with decorum spaces that project authority and make every visitor feel the weight of place.',
+			items: ['Chanceries & public halls', 'Conference & briefing rooms', 'Official residences'],
 		},
 	];
 

@@ -1,12 +1,12 @@
 <script lang="ts">
 	const clients = [
-		{ src: '/images/clients/stanbic-bank.webp', alt: 'Stanbic Bank' },
-		{ src: '/images/clients/mtn.webp', alt: 'MTN' },
-		{ src: '/images/clients/airtel.webp', alt: 'Airtel' },
-		{ src: '/images/clients/caa.webp', alt: 'CAA' },
-		{ src: '/images/clients/united-nations.webp', alt: 'United Nations' },
+		{ src: '/images/clients/pride-bank.webp', alt: 'Pride Bank' },
+		{ src: '/images/clients/padre-pio.webp', alt: 'Padre Pio Insurance' },
 		{ src: '/images/clients/nita.webp', alt: 'NITA' },
 		{ src: '/images/clients/fao.webp', alt: 'FAO' },
+		{ src: '/images/clients/finance-trust-bank.webp', alt: 'Finance Trust Bank' },
+		{ src: '/images/clients/wilken-telecom.webp', alt: 'Wilken Telecom' },
+		{ src: '/images/clients/united-nations.webp', alt: 'United Nations' },
 	];
 </script>
 

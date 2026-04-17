@@ -59,27 +59,6 @@
 				<li><a href="/contact">Contact</a></li>
 			</ul>
 		</div>
-		<div>
-			<div class="foot-col-title">Connect</div>
-			<ul class="foot-links">
-				<li>
-					<a href="https://www.instagram.com" target="_blank" rel="noopener noreferrer"
-						>Instagram</a>
-				</li>
-				<li>
-					<a href="https://www.linkedin.com" target="_blank" rel="noopener noreferrer"
-						>LinkedIn</a>
-				</li>
-				<li>
-					<a href="https://www.facebook.com" target="_blank" rel="noopener noreferrer"
-						>Facebook</a>
-				</li>
-				<li>
-					<a href="https://www.houzz.com" target="_blank" rel="noopener noreferrer"
-						>Houzz</a>
-				</li>
-			</ul>
-		</div>
 	</div>
 	<div class="foot-bottom">
 		<div class="foot-copy">

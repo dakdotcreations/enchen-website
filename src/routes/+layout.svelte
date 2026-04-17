@@ -17,7 +17,6 @@
 
 	// loading screen
 	let loading = $state(true);
-	let progress = $state(0);
 
 	function setupReveal() {
 		const obs = new IntersectionObserver(
@@ -52,21 +51,12 @@
 	$effect(() => {
 		// ── Loading screen ──
 		const startTime = Date.now();
-		const MIN_DISPLAY = 1500;
+		const MIN_DISPLAY = 3200; // allow SVG animation to complete (~2.8s)
 
 		function finishLoading() {
 			const elapsed = Date.now() - startTime;
 			const remaining = Math.max(0, MIN_DISPLAY - elapsed);
-			setTimeout(() => {
-				const fillTick = setInterval(() => {
-					if (progress < 100) {
-						progress = Math.min(100, progress + 4);
-					} else {
-						clearInterval(fillTick);
-						setTimeout(() => { loading = false; }, 500);
-					}
-				}, 30);
-			}, remaining);
+			setTimeout(() => { loading = false; }, remaining);
 		}
 
 		if (document.readyState === 'complete') {
@@ -99,7 +89,7 @@
 
 </script>
 
-<PageLoader {progress} {loading} />
+<PageLoader {loading} />
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>

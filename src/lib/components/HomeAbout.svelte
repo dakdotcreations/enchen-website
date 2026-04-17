@@ -6,7 +6,6 @@
 	import { slideIn } from '$lib/animations/anims';
 
 	let valuesGrid: HTMLElement;
-	let st: any = null;
 	let _ScrollTrigger: any = null;
 
 	$effect(() => {
@@ -16,21 +15,6 @@
 			const lenis = getLenisInstance();
 			if (lenis) lenis.on('scroll', ScrollTrigger.update);
 
-			st = gsap.fromTo(
-				'.about-wide-img',
-				{ yPercent: -12 },
-				{
-					yPercent: 12,
-					ease: 'none',
-					scrollTrigger: {
-						trigger: '.about-wide-strip',
-						start: 'top bottom',
-						end: 'bottom top',
-						scrub: true,
-					},
-				}
-			);
-
 			slideIn(valuesGrid);
 		});
 	});
@@ -38,7 +22,6 @@
 	onDestroy(() => {
 		const lenis = getLenisInstance();
 		if (lenis && _ScrollTrigger) lenis.off('scroll', _ScrollTrigger.update);
-		st?.kill();
 	});
 </script>
 
@@ -47,16 +30,13 @@
 	<div class="about-grid">
 		<div bind:this={valuesGrid}>
 			<h2 class="s-title">
-				Spaces That <span class="h-blue">Inspire</span><br />& Endure
+				Bold <span class="h-blue">Ideas</span><br />Bold Creations
 			</h2>
 			<p class="s-body slide-in">
-				Enchen Creative Hub is an architectural and interior design firm delivering bold,
-				functional, and inspiring environments. We work with residential, corporate, and
-				commercial clients, providing tailored design solutions that convert ideas into
-				remarkable real spaces.
+				Enchen Creative Hub is a design and build architectural interior design turnkey firm delivering bold, functional, and inspiring environments. We work with corporate, and commercial clients, providing tailored design solutions that convert ideas into remarkable real spaces.
 			</p>
 			<p class="s-body slide-in" style="margin-top:18px;">
-				Our vision is to become the leading turnkey interior design company recognized
+				Our vision is to become the leading turnkey architectural interior design company recognized
 				globally for quality, innovation, and designs that elevate brands.
 			</p>
 		</div>
@@ -84,18 +64,6 @@
 		</div>
 	</div>
 </section>
-
-<!-- About – wide image strip -->
-<div class="about-wide-strip">
-	<div class="about-wide-inner">
-		<img src="/images/home/office-lobby-desk.webp" alt="Enchen interior design project" class="about-wide-img" />
-		<div class="about-wide-label">ENCHEN</div>
-        <div class="about-wide-overlay"></div>
-	</div>
-	<div class="about-wide-caption">
-		Precision Design · <em>Commercial Excellence</em> · Kampala, Uganda
-	</div>
-</div>
 
 <style>
 	#about {
@@ -141,7 +109,6 @@
 
 				.v-name {
 					font-size: var(--text-sm);
-					letter-spacing: 2px;
 					text-transform: uppercase;
 					color: var(--text);
 					margin-bottom: var(--space-2);
@@ -170,79 +137,4 @@
 		} */
 	}
 
-	/* Wide strip */
-	.about-wide-strip {
-		width: 100%;
-		height: 30rem;
-		background: var(--dark);
-		position: relative;
-		overflow: hidden;
-		display: flex;
-		align-items: center;
-		justify-content: center;
-
-		&:hover .about-wide-inner {
-			transform: scale(1.02);
-		}
-
-		.about-wide-inner {
-			position: absolute;
-			inset: 0;
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			transition: transform 0.6s ease;
-
-			.about-wide-img {
-				position: absolute;
-				left: 0;
-				width: 100%;
-				height: 130%;
-				top: -15%;
-				object-fit: cover;
-				object-position: center;
-				will-change: transform;
-			}
-
-			.about-wide-label {
-				font-family: var(--font-heading);
-				font-size: clamp(var(--space-20), 12vw, 8.5rem);
-				font-weight: 700;
-				color: var(--white);
-                z-index: 2;
-				opacity: 0.8;
-				letter-spacing: -0.06em;
-				line-height: 1;
-				user-select: none;
-			}
-    
-            .about-wide-overlay {
-                position: absolute;
-                inset: 0;
-                background: linear-gradient(
-                    to top right,
-                    rgba(34, 30, 31, 1) 0%,
-                    /* transparent 50%, */
-                    transparent 70%,
-                    rgba(34, 30, 31, 0.5) 100%
-                );
-            }
-		}
-
-		.about-wide-caption {
-			position: absolute;
-			bottom: var(--space-9);
-			left: var(--space-16);
-			z-index: 2;
-			font-size: var(--text-xs);
-			text-transform: uppercase;
-			color: var(--white);
-			opacity: 0.6;
-
-			em {
-				color: var(--accent);
-				font-style: normal;
-			}
-		}
-	}
 </style>

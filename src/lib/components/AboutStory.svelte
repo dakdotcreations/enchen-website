@@ -36,7 +36,6 @@
 </script>
 
 <div id="story" style="background: var(--off-white);">
-	<div class="s-label container">Who We Are</div>
 	<div class="about-grid">
 		<div class="about-visual">
 			<img src="/images/home/space.webp" alt="Enchen interior design project" class="about-story-img" />
@@ -47,30 +46,32 @@
 			</div>
 		</div>
 		<div class="about-content">
-			<h2 class="s-title">
-				Designing Spaces<br />That <span class="h-blue">Endure</span>
-			</h2>
-			<div class="about-body">
-				<p class="s-body">
-					Enchen Creative Hub is an architectural interior design firm dedicated to
-					crafting inspiring and functional spaces. With a passion for innovation and
-					sustainability, we deliver tailored solutions across private residences,
-					corporate environments, and commercial developments, turning visions into
-					reality.
-				</p>
-				<p class="s-body">
-					We are a multidisciplinary team of architects, interior designers, and project
-					managers united by a passion for craft. We believe the best design begins with
-					listening, understanding how you live, how you work, and what you aspire to
-					create.
-				</p>
-				<p class="s-body">
-					Our approach is grounded in precision and guided by aesthetics. We take projects
-					from initial concept through to construction completion, acting as a single
-					trusted partner for every stage of the journey.
-				</p>
-			</div>
-			<div class="about-values" style="margin-top:44px;">
+            <div class="about-text">
+                <h2 class="s-title">
+                    Designing Spaces<br />That <span class="h-blue">Endure</span>
+                </h2>
+                <div class="about-body">
+                    <p class="s-body">
+                        Enchen Creative Hub is an architectural interior design firm dedicated to
+                        crafting inspiring and functional spaces. With a passion for innovation and
+                        sustainability, we deliver tailored solutions across private residences,
+                        corporate environments, and commercial developments, turning visions into
+                        reality.
+                    </p>
+                    <p class="s-body">
+                        We are a multidisciplinary team of architects, interior designers, and project
+                        managers united by a passion for craft. We believe the best design begins with
+                        listening, understanding how you live, how you work, and what you aspire to
+                        create.
+                    </p>
+                    <p class="s-body">
+                        Our approach is grounded in precision and guided by aesthetics. We take projects
+                        from initial concept through to construction completion, acting as a single
+                        trusted partner for every stage of the journey.
+                    </p>
+                </div>
+            </div>
+			<div class="about-values">
 				<div class="v-card">
 					<div class="v-icon blue">
                         <SquareDashedMousePointer size={16} />
@@ -116,18 +117,16 @@
 
 <style>
     #story {
-        padding-top: var(--space-30);
+        padding-top: 0;
     }
 	.about-grid {
-        padding-bottom: var(--space-30);
 		display: grid;
-		grid-template-columns: 1fr 1fr;
-		gap: var(--padding-global);
+		grid-template-columns: 1fr 1.5fr;
+		gap: 0;
 		align-items: start;
-		margin-top: 80px;
 
         & .about-content {
-            padding-right: var(--padding-global);
+            padding: var(--padding-global);
         }
 
 		& .about-body {
@@ -182,6 +181,7 @@
 		grid-template-columns: 1fr 1fr;
 		gap: 1px;
 		background: var(--border);
+        margin-top: var(--space-16);
 	}
 	.v-card {
 		background: var(--off-white);
@@ -192,13 +192,13 @@
 		background: var(--white);
 	}
 	.v-icon {
-		width: 32px;
-		height: 32px;
-		margin-bottom: 12px;
+		width: var(--space-8);
+		height: var(--space-8);
+		margin-bottom: var(--space-3);
 		display: flex;
 		align-items: center;
 		justify-content: center;
-		font-size: 14px;
+		font-size: var(--space-4);
 		border: 1px solid var(--border);
 		background: var(--white);
         border-radius: var(--space-8);
@@ -208,7 +208,7 @@
 		letter-spacing: 2px;
 		text-transform: uppercase;
 		color: var(--text);
-		margin-bottom: 6px;
+		margin-bottom: var(--space-1);
 		font-weight: 500;
 	}
 	.v-desc {
@@ -219,6 +219,26 @@
 	@media (max-width: 1024px) {
 		.about-grid {
 			grid-template-columns: 1fr;
+
+            & .about-visual {
+                height: 50vh;
+            }
+
+            & .about-content {
+                display: grid;
+                padding: var(--padding-global);
+                grid-template-columns: 1fr 1fr;
+                gap: var(--space-8);
+            }
+		}
+	}
+	@media (max-width: 720px) {
+		.about-grid {
+            & .about-content {
+                display: grid;
+                grid-template-columns: 1fr;
+                gap: 0;
+            }
 		}
 	}
 </style>

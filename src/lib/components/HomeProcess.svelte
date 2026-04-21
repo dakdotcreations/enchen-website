@@ -49,8 +49,10 @@
 	<div class="process-track" bind:this={stepsContainer}>
 		{#each steps as step, idx}
 			<div class="p-step slide-in">
-				<span class="p-num">{step.num}</span>
-				<h3 class="p-title">{step.title}</h3>
+				<h3 class="p-title">
+                    <span class="p-num">{step.num}.</span>
+                    {step.title}
+                </h3>
 				<p class="p-desc">{step.desc}</p>
 			</div>
 		{/each}
@@ -60,13 +62,13 @@
 <style>
 	#process {
 		background: var(--off-white);
-		padding: 7.5rem 5rem;
+		padding: var(--padding-global);
 	}
 
 	.process-track {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		gap: var(--space-32);
+		gap: var(--space-8);
 		margin-top: 4.5rem;
 	}
 
@@ -75,46 +77,21 @@
 		overflow: hidden;
 		display: flex;
 		flex-direction: column;
-		transition:
-			border-color 0.3s ease,
-			box-shadow 0.3s ease;
+        gap: var(--space-4);
 
+		&:hover{
+            .p-num {
+                color: var(--accent);
+            }
+        }
 
-		&:hover .p-num {
-			color: var(--accent);
-		}
-
-		&:hover .p-ghost {
-			opacity: 0.08;
-		}
-	}
-
-	.p-ghost {
-		position: absolute;
-		bottom: -1rem;
-		right: -0.5rem;
-		font-family: var(--font-heading);
-		font-size: clamp(5rem, 6vw, 8rem);
-		line-height: 1;
-		font-weight: 700;
-		letter-spacing: -0.06em;
-		color: var(--text);
-		opacity: 0.04;
-		pointer-events: none;
-		user-select: none;
-		transition: opacity 0.3s ease;
 	}
 
 	.p-num {
 		position: relative;
-		z-index: 1;
-		display: block;
 		font-family: var(--font-heading);
-		font-size: var(--text-sm);
 		font-weight: 700;
-		letter-spacing: var(--tracking-xs);
 		color: var(--black-60);
-		margin-bottom: 1.5rem;
 		transition: color 0.3s ease;
 	}
 
@@ -126,7 +103,6 @@
 		font-weight: 700;
 		letter-spacing: var(--tracking-tight);
 		color: var(--text);
-		margin-bottom: 0.875rem;
 		line-height: 1.2;
 	}
 

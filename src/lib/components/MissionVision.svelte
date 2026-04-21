@@ -1,4 +1,4 @@
-<section style="background: var(--dark); padding: 120px 64px;">
+<section>
 	<div class="s-label">Our Direction</div>
 	<h2 class="s-title light">Mission &amp; <span class="h-blue">Vision</span></h2>
 	<div class="mv-grid">
@@ -18,6 +18,10 @@
 </section>
 
 <style>
+    section {
+        background-color: var(--dark);
+        padding: var(--padding-global);
+    }
 	.mv-grid {
 		display: grid;
 		grid-template-columns: 1fr 1fr;
@@ -26,7 +30,7 @@
 	}
 	.mv-card {
 		background: var(--black-80);
-		padding: 56px 52px;
+		padding: var(--space-8);
         border-radius: var(--space-8);
 	}
 	.mv-title {

@@ -50,7 +50,6 @@ section {
 	font-size: var(--text-md);
 	line-height: 1.9;
 	color: var(--black-60);
-	max-width: 32.5rem;
 
     &.light { 
         color: var(--white-60); 

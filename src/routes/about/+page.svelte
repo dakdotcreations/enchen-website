@@ -23,7 +23,7 @@
 <AboutStory />
 <MissionVision />
 <WhyEnchen />
-<OurTimeline />
+<!-- <OurTimeline /> -->
 <HomeProcess />
 <CtaStrip
 	eyebrow="Ready to Begin?"

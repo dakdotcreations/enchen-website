@@ -8,7 +8,7 @@
     })
 </script>
 
-<section style="background: var(--off-white);">
+<section>
 	<div class="s-label">Why Choose Us</div>
 	<h2 class="s-title">What Sets Us <span class="h-blue">Apart</span></h2>
 	<div class="why-grid" bind:this={grid}>
@@ -50,18 +50,23 @@
 </section>
 
 <style>
+    section{
+        background-color: var(--off-white);
+        padding: var(--padding-global);
+    }
 	.why-grid {
 		display: grid;
 		grid-template-columns: repeat(4, 1fr);
+        /* gap: var(--space-8); */
 	}
 	.why-item {
 		padding: var(--space-8);
-		margin: -0.5px;
-		transition: background 0.3s;
         border-radius: var(--space-8);
-	}
-	.why-item:hover {
-		background: var(--white);
+		transition: background 0.3s;
+
+        &:hover {
+            background: var(--white);
+        }
 	}
 	.why-num {
 		font-family: var(--font-heading);

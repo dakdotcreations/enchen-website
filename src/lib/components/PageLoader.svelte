@@ -23,7 +23,7 @@
 		</defs>
 
 		<!-- Gradient background — starts solid blue, top fades to pink -->
-		<rect width="1920" height="1084.25" fill="url(#ll-grad)"/>
+		<rect class="ll-bg" width="1920" height="1084.25" fill="url(#ll-grad)"/>
 
 		<!-- ENCHEN wordmark paths — stroke draw then fill -->
 		<g class="ll-wordmark">
@@ -108,63 +108,36 @@
 		height: 100%;
 	}
 
-	/* ── Icon (calligraphy mark) — stroke draw then fill ── */
+	/* ── Gradient background fade-in ── */
+	.ll-bg {
+		opacity: 0;
+		animation: ll-fade-in 1s ease 0.1s forwards;
+	}
+
+	@keyframes ll-fade-in {
+		from { opacity: 0; }
+		to   { opacity: 1; }
+	}
+
+	/* ── Icon (calligraphy mark) ── */
 	.ll-icon-path {
-		fill: transparent;
-		stroke: rgba(255,255,255,0.9);
-		stroke-width: 0.8;
-		stroke-dasharray: 3000;
-		stroke-dashoffset: 3000;
-		animation:
-			ll-draw 1.4s cubic-bezier(0.4, 0, 0.2, 1) 0.5s forwards,
-			ll-fill-icon 0.6s ease 1.9s forwards;
+		fill: white;
+		stroke: none;
 	}
 
-	@keyframes ll-draw {
-		to { stroke-dashoffset: 0; }
-	}
-
-	@keyframes ll-fill-icon {
-		from { fill: transparent; stroke-width: 0.8; }
-		to   { fill: white; stroke-width: 0; }
-	}
-
-	/* ── Wordmark letters — stroke draw then fill, staggered ── */
+	/* ── Wordmark letters ── */
 	.ll-path {
-		fill: transparent;
-		stroke: rgba(255,255,255,0.9);
-		stroke-width: 0.6;
-		stroke-dasharray: 2000;
-		stroke-dashoffset: 2000;
+		fill: white;
+		stroke: none;
 	}
 
-	.ll-path--delay-1 { animation: ll-draw 0.55s ease 1.6s forwards, ll-fill-word 0.35s ease 2.2s forwards; }
-	.ll-path--delay-2 { animation: ll-draw 0.55s ease 1.7s forwards, ll-fill-word 0.35s ease 2.3s forwards; }
-	.ll-path--delay-3 { animation: ll-draw 0.55s ease 1.8s forwards, ll-fill-word 0.35s ease 2.4s forwards; }
-	.ll-path--delay-4 { animation: ll-draw 0.55s ease 1.9s forwards, ll-fill-word 0.35s ease 2.5s forwards; }
-	.ll-path--delay-5 { animation: ll-draw 0.55s ease 2.0s forwards, ll-fill-word 0.35s ease 2.6s forwards; }
-	.ll-path--delay-6 { animation: ll-draw 0.55s ease 2.1s forwards, ll-fill-word 0.35s ease 2.7s forwards; }
-
-	@keyframes ll-fill-word {
-		from { fill: transparent; stroke-width: 0.6; }
-		to   { fill: white; stroke-width: 0; }
-	}
-
-	/* ── Script text — fade up ── */
+	/* ── Script text ── */
 	.ll-script {
 		fill: white;
-		opacity: 0;
-		animation: ll-fade-up 0.7s ease 2.2s forwards;
 	}
 
-	/* ── Tagline — fade up last ── */
+	/* ── Tagline ── */
 	.ll-tagline {
-		opacity: 0;
-		animation: ll-fade-up 0.6s ease 2.6s forwards;
-	}
-
-	@keyframes ll-fade-up {
-		from { opacity: 0; transform: translateY(10px); }
-		to   { opacity: 1; transform: translateY(0); }
+		fill: white;
 	}
 </style>

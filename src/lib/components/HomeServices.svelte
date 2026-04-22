@@ -22,7 +22,7 @@
 		{
 			num: '03',
 			name: 'Diplomatic Spaces',
-			img: '/images/home/Commercial Spaces.webp',
+			img: '/images/home/Diplomatic Spaces.webp',
 			alt: 'Diplomatic mission interior',
 			desc: 'Embassies, missions, and high commissions designed with decorum spaces that project authority and make every visitor feel the weight of place.',
 			items: ['Chanceries & public halls', 'Conference & briefing rooms', 'Official residences'],

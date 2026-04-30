@@ -2,6 +2,7 @@
 	import { page } from "$app/stores"
 	import { onMount } from "svelte"
 	import { loadGsap } from "$lib/utils/useGsap"
+    import { ArrowRight, Handshake } from "@lucide/svelte";
 
 	let scrolled = $state(false)
 	let navHidden = $state(false)
@@ -21,7 +22,7 @@
 		{ href: "/services", label: "Services" },
 		{ href: "/portfolio", label: "Portfolio" },
 		// { href: "/testimonials", label: "Testimonials" },
-		{ href: "/contact", label: "Contact" },
+		// { href: "/contact", label: "Contact" },
 	]
 
 	async function openMenu() {
@@ -125,7 +126,10 @@
 	</nav>
 	<div class="mob-footer" bind:this={mobFooterEl}>
 		<span class="mob-tagline">Kampala &middot; Uganda &middot; Est. 2022</span>
-		<a href="/contact" class="mob-cta" onclick={closeMenu}>Start a Project &rarr;</a>
+		<a href="/contact" class="mob-cta btn" onclick={closeMenu}>
+            <Handshake size={16} />
+            <span>Get in touch</span>
+        </a>
 	</div>
 </div>
 
@@ -144,7 +148,10 @@
 				</li>
 			{/each}
 		</ul>
-		<a href="/contact" class="nav-cta btn primary">Start a Project</a>
+		<a href="/contact" class="nav-cta btn primary">
+            <Handshake size={16} />
+            <span>Get in touch</span>
+        </a>
 		<button class="hamburger" aria-label="Open navigation menu" onclick={openMenu}>
 			<span bind:this={span1}></span>
 			<span bind:this={span2}></span>

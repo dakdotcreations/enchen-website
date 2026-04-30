@@ -5,6 +5,7 @@ import wilkenTelecom from './wilken-telecom-offices.json';
 import faoOffices from './fao-offices.json';
 import privateResidence from './private-residence.json';
 import financeTrustBank from './finance-trust-bank.json';
+import nitaReceptionLounge from './nita-reception-lounge.json';
 
 export const projects: Project[] = [
 	padrePio,
@@ -12,4 +13,5 @@ export const projects: Project[] = [
 	faoOffices,
 	privateResidence,
 	financeTrustBank,
+	nitaReceptionLounge,
 ] as Project[];

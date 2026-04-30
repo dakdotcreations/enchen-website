@@ -24,7 +24,11 @@ body {
 .curtain {
 	position: fixed;
 	inset: 0;
-	background: var(--white);
+	background: var(--dark);
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+	background-size: 88px 88px;
 	z-index: 9990;
 	pointer-events: none;
 	transform: translateY(100%);

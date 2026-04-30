@@ -1,7 +1,6 @@
 <script lang="ts">
-	let { breadcrumb, eyebrow, title, sub, hasOrb = false }: {
+	let { breadcrumb, title, sub, hasOrb = false }: {
 		breadcrumb: string;
-		eyebrow: string;
 		title: string;
 		sub: string;
 		hasOrb?: boolean;
@@ -12,7 +11,7 @@
 	<div class="page-hero-grid"></div>
 	{#if hasOrb}<div class="page-hero-orb"></div>{/if}
 	<div class="ph-content">
-		<div class="ph-eyebrow">{eyebrow}</div>
+		<!-- <div class="ph-eyebrow">{eyebrow}</div> -->
 		<h1 class="ph-title">{@html title}</h1>
 		<p class="ph-sub">{sub}</p>
 	</div>

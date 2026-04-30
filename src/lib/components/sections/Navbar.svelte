@@ -2,6 +2,7 @@
 	import { page } from "$app/stores"
 	import { onMount } from "svelte"
 	import { loadGsap } from "$lib/utils/useGsap"
+    import { ArrowRight, Handshake } from "@lucide/svelte";
 
 	let scrolled = $state(false)
 	let navHidden = $state(false)
@@ -21,7 +22,7 @@
 		{ href: "/services", label: "Services" },
 		{ href: "/portfolio", label: "Portfolio" },
 		// { href: "/testimonials", label: "Testimonials" },
-		{ href: "/contact", label: "Contact" },
+		// { href: "/contact", label: "Contact" },
 	]
 
 	async function openMenu() {
@@ -125,7 +126,10 @@
 	</nav>
 	<div class="mob-footer" bind:this={mobFooterEl}>
 		<span class="mob-tagline">Kampala &middot; Uganda &middot; Est. 2022</span>
-		<a href="/contact" class="mob-cta" onclick={closeMenu}>Start a Project &rarr;</a>
+		<a href="/contact" class="mob-cta btn" onclick={closeMenu}>
+            <Handshake size={16} />
+            <span>Get in touch</span>
+        </a>
 	</div>
 </div>
 
@@ -144,7 +148,10 @@
 				</li>
 			{/each}
 		</ul>
-		<a href="/contact" class="nav-cta">Start a Project</a>
+		<a href="/contact" class="nav-cta btn primary">
+            <Handshake size={16} />
+            <span>Get in touch</span>
+        </a>
 		<button class="hamburger" aria-label="Open navigation menu" onclick={openMenu}>
 			<span bind:this={span1}></span>
 			<span bind:this={span2}></span>
@@ -152,3 +159,264 @@
 		</button>
 	</div>
 </nav>
+
+<style>
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1000;
+        padding: var(--space-7) 0;
+        transition: all 0.4s ease;
+
+        &.scrolled {
+            background: var(--black-60);
+            backdrop-filter: blur(1rem);
+            padding: var(--space-2) var(--space-16);
+            /* border-bottom: 1px solid var(--black-80); */
+        }
+
+        &.nav-hidden {
+            transform: translateY(-100%);
+        }
+
+        & .nav-container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            & .nav-logo {
+                display: flex;
+                align-items: center;
+                gap: var(--space-3);
+                text-decoration: none;
+
+                & .nav-logo-img {
+                    height: 2.25rem;
+                    width: auto;
+                    object-fit: contain;
+                    display: block;
+                }
+            }
+
+            & .nav-links {
+                display: none;
+                gap: var(--space-8);
+                list-style: none;
+
+                & a {
+                    font-size: var(--text-base);
+                    letter-spacing: var(--tracking-xs);
+                    text-transform: uppercase;
+                    color: var(--white-80);
+                    text-decoration: none;
+                    transition: color 0.3s;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        bottom: -0.1875rem;
+                        left: 0;
+                        width: 0;
+                        height: 1px;
+                        background: var(--accent);
+                        transition: width 0.35s ease;
+                    }
+
+                    &:hover,
+                    &.active {
+                        color: var(--white);
+                    }
+
+                    &:hover::after,
+                    &.active::after {
+                        width: 100%;
+                    }
+                }
+            }
+
+            & .nav-cta {
+                display: none;
+            }
+
+            & .hamburger {
+                display: flex;
+                flex-direction: column;
+                gap: 0.3125rem;
+                background: none;
+                border: none;
+                padding: var(--space-1);
+
+                & span {
+                    width: 1.375rem;
+                    height: 1px;
+                    background: var(--white-60);
+                    transition: all 0.3s;
+                }
+            }
+        }
+    }
+
+    @media (min-width: 1024px) {
+        #navbar {
+            &.scrolled {
+                padding: var(--space-4) var(--space-8);
+            }
+
+            & .nav-container {
+                & .nav-links,
+                & .nav-cta {
+                    display: flex;
+                }
+                & .hamburger {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .nav-logo-text {
+        font-family: var(--font-heading);
+        font-size: 0.9375rem;
+        font-weight: 700;
+        letter-spacing: var(--tracking-wider);
+        color: var(--white);
+        text-transform: uppercase;
+
+        & span {
+            color: var(--accent);
+        }
+    }
+
+    /* ── Mobile menu ── */
+    .mobile-menu {
+        position: fixed;
+        inset: 0;
+        background: var(--dark);
+        z-index: 1001;
+        display: none;
+        flex-direction: column;
+        padding: var(--space-7) var(--space-8) var(--space-9);
+        overflow: hidden;
+
+        & .mob-topbar {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-shrink: 0;
+        }
+
+        & .mob-close-btn {
+            width: 2.75rem;
+            height: 2.75rem;
+            border-radius: 50%;
+            border: 1px solid var(--white-20);
+            background: transparent;
+            cursor: pointer;
+            position: relative;
+            flex-shrink: 0;
+            transition: border-color 0.3s;
+
+            & span {
+                position: absolute;
+                width: 1rem;
+                height: 1px;
+                background: var(--white-60);
+                top: 50%;
+                left: 50%;
+                transform-origin: center;
+                transition: background 0.3s;
+
+                &:first-child {
+                    transform: translate(-50%, -50%) rotate(45deg);
+                }
+
+                &:last-child {
+                    transform: translate(-50%, -50%) rotate(-45deg);
+                }
+            }
+
+            &:hover {
+                border-color: var(--accent);
+
+                & span {
+                    background: var(--accent);
+                }
+            }
+        }
+
+        & .mob-links {
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            & .mob-link {
+                display: flex;
+                align-items: baseline;
+                gap: var(--space-4);
+                text-decoration: none;
+                padding: var(--space-4) 0;
+                border-bottom: 1px solid var(--white-20);
+
+                &:first-child {
+                    border-top: 1px solid var(--white-20);
+                }
+
+                & .mob-link-num {
+                    font-size: var(--text-xs);
+                    color: var(--accent);
+                    font-family: var(--font-heading);
+                    letter-spacing: var(--tracking-wider);
+                    min-width: 1.5rem;
+                }
+
+                & .mob-link-label {
+                    font-family: var(--font-heading);
+                    font-size: clamp(1.75rem, 7vw, 3rem);
+                    font-weight: 700;
+                    color: var(--white-80);
+                    letter-spacing: var(--tracking-snug);
+                    text-transform: uppercase;
+                    transition: color 0.3s;
+                }
+
+                &:hover .mob-link-label,
+                &.active .mob-link-label {
+                    color: var(--accent);
+                }
+            }
+        }
+
+        & .mob-footer {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding-top: var(--space-6);
+            flex-shrink: 0;
+
+            & .mob-tagline {
+                font-size: var(--text-xs);
+                color: var(--white-40);
+                letter-spacing: var(--tracking-xs);
+                text-transform: uppercase;
+            }
+
+            & .mob-cta {
+                font-size: var(--text-sm);
+                letter-spacing: var(--tracking-wider);
+                text-transform: uppercase;
+                color: var(--accent);
+                text-decoration: none;
+                font-family: var(--font-heading);
+                transition: opacity 0.3s;
+
+                &:hover {
+                    opacity: 0.7;
+                }
+            }
+        }
+    }
+</style>

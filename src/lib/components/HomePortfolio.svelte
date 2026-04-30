@@ -5,9 +5,9 @@
 	const featuredSlugs = [
 		'wilken-telecom-offices',
 		'padre-pio-insurance',
-		'private-residence',
 		'fao-offices',
 		'finance-trust-bank',
+		'nita-reception-lounge',
 	];
 	const featured = featuredSlugs.map((slug) => projects.find((p) => p.slug === slug)!);
 

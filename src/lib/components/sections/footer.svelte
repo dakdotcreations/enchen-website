@@ -4,7 +4,7 @@
 <!-- Footer -->
 <footer>
 	<div class="foot-top">
-		<div>
+		<div class="foot-logo">
 			<a href="/" class="foot-logo-wrap">
 				<img
 					src="/images/white-nav-logo.svg"
@@ -40,7 +40,7 @@
 					title="Houzz">HZ</a>
 			</div> -->
 		</div>
-		<div>
+		<div class="foot-services">
 			<div class="foot-col-title">Services</div>
 			<ul class="foot-links">
 				<li><a href="/services">Corporate Design</a></li>
@@ -50,7 +50,7 @@
 				<li><a href="/services">Project Management</a></li>
 			</ul>
 		</div>
-		<div>
+		<div class="foot-company">
 			<div class="foot-col-title">Company</div>
 			<ul class="foot-links">
 				<li><a href="/about">About Us</a></li>
@@ -65,12 +65,12 @@
             <div>
                 © 2026 <span class="accent">Enchen Creative Hub</span>. All rights reserved. 
             </div>
+		</div>
+		<div class="foot-location">
             <div>
                 Powered by <a class="accent" href="https://dakdot.com" target="_blank" rel="noopener noreferrer">DakDot Creations</a>
             </div>
-			.
-		</div>
-		<div class="foot-location">Nakasero, Uganda</div>
+        </div>
 	</div>
 </footer>
 
@@ -82,18 +82,18 @@
 	}
 	.foot-top {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(8rem, 1fr));
-		gap: var(--space-14);
+		gap: var(--space-8);
 		margin-bottom: var(--space-12);
 	}
-    @media (max-width: 640px) {
+    @media (min-width: 640px) {
         .foot-top {
-            
-            & > div:first-child {
-                grid-column: span 2;
-                display: grid;
-                justify-content: center;
-            }
+            grid-template-columns: 1fr 1fr;
+        }
+    }
+    @media (min-width: 1024px) {
+        .foot-top {
+            grid-template-columns: 1fr 1fr 1fr;
+            column-gap: var(--space-12);
         }
     }
 	.foot-logo-wrap {
@@ -124,7 +124,8 @@
 	}
 	.foot-links {
 		list-style: none;
-		display: flex;
+		display: grid;
+        grid-template-columns: 1fr 1fr;
 		flex-direction: column;
 		gap: var(--space-3);
 	}
@@ -132,10 +133,16 @@
 		font-size: var(--text-base);
 		color: var(--white-40);
 		text-decoration: none;
-		transition: color 0.3s;
-	}
-	.foot-links a:hover {
-		color: var(--white-80);
+		transition: all 0.3s;
+
+        &::before {
+            content: "> ";
+        }
+
+        &:hover {
+            color: var(--white-80);
+            text-decoration: wavy underline var(--accent);
+        }
 	}
 	.foot-bottom {
 		display: flex;
@@ -147,10 +154,6 @@
 	.foot-copy {
 		font-size: var(--text-sm);
 		color: var(--white-20);
-
-        .accent {
-            opacity: 0.8;
-        }
 	}
     @media (min-width: 640px) {
         .foot-copy {

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import type { Project } from '$lib/types/project';
     import { slideIn } from "$lib/animations/anims";
+    import { loadGsap } from '$lib/utils/useGsap'
 
 	let { items }: { items: Project[] } = $props();
 	const filters = ['All', 'Corporate', 'Residential', 'Commercial'];
@@ -11,14 +12,68 @@
 	}
 
     let portfolioGrid: HTMLElement;
+    let heroEl: HTMLElement
+	let contentEl: HTMLElement
 
-    $effect(() => {
-        slideIn(portfolioGrid);
-    });
+	$effect(() => {
+		let tl: { kill(): void } | undefined
+        let sliders = portfolioGrid.querySelectorAll('.port-full-item');
+
+		loadGsap().then(({ gsap, SplitText }) => {
+			const eyebrow = contentEl.querySelector('.pf-intro-eyebrow') as HTMLElement
+			const title = contentEl.querySelector('.pf-intro-title') as HTMLElement
+
+			const splitEyebrow = new SplitText(eyebrow, { type: 'chars' })
+			const splitTitle = new SplitText(title, { type: 'chars' })
+
+			const heroChars = [...splitEyebrow.chars, ...splitTitle.chars]
+            const heroOutChars = [...splitEyebrow.chars, ...splitTitle.chars].reverse()
+
+			const timeline = gsap.timeline({ delay: 0.15 })
+			timeline
+				.from(heroChars, {
+					y: 60,
+					opacity: 0,
+					duration: 0.5,
+					stagger: 0.02,
+					ease: 'power3.out'
+				})
+				.to(heroOutChars, {
+                    scaleY: 0,
+                    y: -60,
+                    opacity: 0,
+					duration: 0.5,
+					stagger: 0.02,
+					ease: 'power2.in'
+				})
+				.to(heroEl, {
+					height: '0vh',
+					duration: 1.2,
+					ease: 'expo.out'
+				}, '+=0.2')
+                .from(sliders, {
+                    y: 100,
+                    opacity: 0,
+                    duration: 0.8,
+                    stagger: 0.1,
+                    ease: 'power3.out'
+                }, '-=0.6')
+			tl = timeline
+		})
+
+		return () => tl?.kill()
+	})
 </script>
 
+<div class="pf-intro" bind:this={heroEl}>
+	<div class="pf-intro-grid"></div>
+	<div class="pf-intro-content" bind:this={contentEl}>
+		<span class="pf-intro-eyebrow">Our Work</span>
+		<h1 class="pf-intro-title">Every Brief.<br><em>Fully Realised.</em></h1>
+	</div>
+</div>
+
 <div class="port-full-section">
-	<div class="s-label">Selected Projects</div>
 	<div class="port-filter">
 		{#each filters as f}
 			<button class="f-btn" class:active={activeFilter === f} onclick={() => (activeFilter = f)}>{f}</button>
@@ -27,7 +82,7 @@
 	<div class="port-full-grid" bind:this={portfolioGrid}>
 		{#each items as p, i}
 			{#if activeFilter === 'All' || activeFilter.toLowerCase() === p.tag}
-				<a href="/portfolio/{p.slug}" class="port-full-item slide-in">
+				<a href="/portfolio/{p.slug}" class="port-full-item">
 					<div class="port-full-img">
 						<div class="port-full-badge">{cap(p.tag)}</div>
 						{#if p.thumbnail}

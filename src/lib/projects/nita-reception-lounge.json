@@ -1,0 +1,82 @@
+{
+	"slug": "nita-reception-lounge",
+	"title": "NITA Reception & Lounge",
+	"location": "Kampala, Uganda",
+	"tag": "corporate",
+	"thumbnail": "/images/projects/nita-reception-lounge/13.webp",
+	"content": [
+		{
+			"type": "image",
+			"src": "/images/projects/nita-reception-lounge/1.webp",
+			"alt": "NITA reception and lounge interior",
+			"caption": "The completed reception and lounge, a composed, professional environment designed to make an immediate and lasting impression."
+		},
+		{
+			"type": "text",
+			"heading": "The Brief",
+			"body": "<p>The National Information Technology Authority required a full redesign of their reception and lounge spaces, the first areas visitors encounter and a key part of how the institution presents itself to government stakeholders, partners, and the public. The brief was clear: a space that reads as contemporary, authoritative, and distinctly Ugandan, moving away from the generic corporate interiors common across public sector offices and creating something that communicates NITA's role at the forefront of the country's digital agenda.</p>"
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/nita-reception-lounge/3.webp",
+			"alt": "Reception desk and entrance area",
+			"caption": "The reception desk, a bespoke joinery piece anchoring the arrival sequence with clean geometry and considered material detailing."
+		},
+		{
+			"type": "text",
+			"heading": "Approach",
+			"body": "<p>We structured the project around two distinct but visually connected zones: the reception desk and formal arrival area, and the adjoining lounge, designed for waiting, informal meetings, and visitor hosting. A unified material palette of textured wall panelling, engineered timber flooring, and upholstered seating in deep, grounded tones runs across both spaces, creating coherence without monotony.</p><p>The reception counter was designed as a bespoke joinery piece, low-profile and welcoming rather than imposing, with backlit branding integrated into a feature wall panel behind. The lounge was arranged to give visitors a sense of order and ease: grouped seating clusters with side tables, curated planting, and an ambient lighting scheme that transitions from the brighter task lighting at reception to a warmer, more relaxed atmosphere in the seating area.</p>"
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/nita-reception-lounge/5.webp",
+					"alt": "Lounge seating area",
+					"caption": "The visitor lounge, grouped upholstered seating, side tables, and a feature wall treatment that references the institution's digital identity."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/nita-reception-lounge/6.webp",
+					"alt": "Lounge detail and material palette",
+					"caption": "Material and furniture detail in the lounge zone, tactile surfaces and considered proportions throughout."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/nita-reception-lounge/9.webp",
+			"alt": "Feature wall and branded panel",
+			"caption": "The branded feature wall behind the reception desk, backlit panelling and institutional identity integrated into the architecture of the space."
+		},
+		{
+			"type": "columns",
+			"items": [
+				{
+					"type": "image",
+					"src": "/images/projects/nita-reception-lounge/11.webp",
+					"alt": "Reception counter detail",
+					"caption": "Counter detail, bespoke joinery with a refined edge profile and flush-set fixtures throughout."
+				},
+				{
+					"type": "image",
+					"src": "/images/projects/nita-reception-lounge/12.webp",
+					"alt": "Ceiling and lighting treatment",
+					"caption": "The ceiling plane, recessed linear lighting and a coffered detail that defines the spatial zones without partitioning the floor plan."
+				}
+			]
+		},
+		{
+			"type": "image",
+			"src": "/images/projects/nita-reception-lounge/15.webp",
+			"alt": "Full reception and lounge overview",
+			"caption": "An overview of the completed space, arrival, reception, and lounge reading as a single, coherent interior."
+		},
+		{
+			"type": "text",
+			"heading": "Outcome",
+			"body": "<p>The completed reception and lounge give NITA a front-of-house environment that matches the ambition and scale of the institution's work. Visitors arrive into a space that communicates competence and care in equal measure, and staff operate within an environment that reflects the quality the authority brings to Uganda's technology infrastructure. The project demonstrates that public sector interiors need not default to the functional and forgettable, and that considered design at the threshold of an institution shapes perception long before any conversation begins.</p>"
+		}
+	]
+}

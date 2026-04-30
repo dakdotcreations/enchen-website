@@ -1,13 +1,19 @@
 .btn {
     font-size: var(--text-sm);
-	letter-spacing: var(--tracking-xs);
+	/* letter-spacing: var(--tracking-xs); */
 	text-transform: uppercase;
 	padding: var(--space-4) var(--space-8);
 	text-decoration: none;
 	transition:
 		opacity 0.3s,
-		transform 0.2s;
-	display: inline-block;
+		transform 0.2s
+        background 0.3s,
+        border-color 0.3s,
+        background-color 0.3s,
+        color 0.3s;
+	display: inline-flex;
+    gap: var(--space-2);
+	align-items: center;
 	font-weight: 500;
 
     border-radius: var(--space-2);
@@ -23,7 +29,7 @@
     }
     &.outline {
         /* btn outline */
-        color: var(--white-60);
+        color: var(--white-80);
         border: 1px solid var(--white-20);
         &:hover {
             border-color: var(--accent);

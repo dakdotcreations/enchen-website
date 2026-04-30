@@ -1,6 +1,6 @@
 <script lang="ts">
 	import '../app.css';
-	import { afterNavigate, beforeNavigate } from '$app/navigation';
+	import { afterNavigate, onNavigate } from '$app/navigation';
 
 	import Footer from '$lib/components/sections/footer.svelte';
 	import Navbar from '$lib/components/sections/Navbar.svelte';
@@ -72,15 +72,16 @@
 		fadeIn();
 	});
 
-	beforeNavigate(() => {
+	onNavigate(() => {
 		curtain = 'cover';
+		// hold navigation until the cover animation completes (450ms)
+		return new Promise<void>(resolve => setTimeout(resolve, 450));
 	});
 
 	afterNavigate(() => {
 		window.scrollTo({ top: 0, behavior: 'instant' });
-		// wait for cover animation (450ms) to finish before lifting
-		setTimeout(() => { curtain = 'lift'; }, 500);
-		setTimeout(() => { curtain = 'idle'; }, 1050);
+		curtain = 'lift';
+		setTimeout(() => { curtain = 'idle'; }, 500);
 
 		document.querySelectorAll('.reveal').forEach((el) => el.classList.remove('visible'));
 		setupReveal();

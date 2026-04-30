@@ -31,7 +31,14 @@
 
 	let grid: HTMLElement;
 
-	$effect(() => { slideIn(grid); });
+	$effect(() => { 
+        slideIn(grid, {
+            top: 100, 
+            start: 'top 80%', 
+            end: 'top 20%', 
+            markers: false
+        }); 
+    });
 </script>
 
 <section id="services">

@@ -1,6 +1,7 @@
 <script lang="ts">
 	import { onMount } from "svelte"
 	import type { Project } from "$lib/types/project"
+    import { ArrowRight } from "@lucide/svelte";
 
 	let { slides }: { slides: Project[] } = $props()
 
@@ -36,15 +37,18 @@
 			</div>
 			<div class="hero-slide-overlay"></div>
 			<div class="hero-slide-info container">
-				<div class="hero-slide-location">{slide.location}</div>
+				<!-- <div class="hero-slide-location">{slide.location}</div> -->
 				<div class="hero-slide-name">
 					<a href="/portfolio/{slide.slug}">
 						{slide.title}
 					</a>
 				</div>
-				<div class="hero-slide-cat">{cap(slide.tag)}</div>
+				<!-- <div class="hero-slide-cat">{cap(slide.tag)}</div> -->
+                <a href="/portfolio/{slide.slug}" class="hero-slide-cta btn outline">
+                    <span>View Project</span>
+                    <ArrowRight size={16} />
+                </a>
 			</div>
-			<a href="/portfolio/{slide.slug}" class="hero-slide-cta">View Project →</a>
 		</div>
 	{/each}
 	<div class="hero-dots">
@@ -104,9 +108,9 @@
                 inset: 0;
                 background: linear-gradient(
                     to top,
-                    rgba(34, 30, 31, 0.92) 0%,
-                    rgba(34, 30, 31, 0.35) 55%,
-                    rgba(34, 30, 31, 0.15) 100%
+                    rgba(34, 30, 31, 0.8) 0%,
+                    rgba(34, 30, 31, 0.3) 25%,
+                    rgba(34, 30, 31, 0) 40%
                 );
             }
 
@@ -120,6 +124,10 @@
                     opacity 0.5s ease 0.3s,
                     transform 0.5s ease 0.3s;
                 transform: translateY(12px);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
         
                 .hero-slide-location {
                     font-size: 0.75rem;
@@ -149,34 +157,15 @@
             }
 
             .hero-slide-cta {
-                position: absolute;
-                bottom: 68px;
-                right: 64px;
                 z-index: 3;
-                font-size: 0.75rem;
-                letter-spacing: 2.5px;
-                text-transform: uppercase;
-                color: var(--white);
-                background: transparent;
-                border: 1px solid rgba(255, 255, 255, 0.3);
-                padding: 10px 26px;
-                text-decoration: none;
-                display: inline-block;
-                border-radius: 24px;
                 opacity: 0;
-                transition:
-                    opacity 0.5s ease 0.5s,
-                    background 0.3s,
-                    border-color 0.3s;
         
-                display: none;
-                @media screen and (min-width: 640px) {
-                    display: inline-block;
+                @media screen and (max-width: 640px) {
+                    display: none;
                 }
 
-                &:hover {
-                    background: var(--accent);
-                    border-color: var(--accent);
+                &:hover{
+                    background-color: var(--white);
                 }
             }
         }

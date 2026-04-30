@@ -1,6 +1,5 @@
 @import "./css/_vars.css";
 @import "./css/_global.css";
-@import "./css/_nav.css";
 @import "./css/_buttons.css";
 @import "./css/_sections.css";
 @import "./css/_animations.css";
@@ -128,27 +127,57 @@
 }
 
 
+/* ── Portfolio intro hero ── */
+.pf-intro {
+	background: var(--black);
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: relative;
+	overflow: hidden;
+}
+.pf-intro-grid {
+	position: absolute;
+	inset: 0;
+	pointer-events: none;
+	background-image:
+		linear-gradient(rgba(255, 255, 255, 0.016) 1px, transparent 1px),
+		linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
+	background-size: 88px 88px;
+}
+.pf-intro-content {
+	position: relative;
+	z-index: 2;
+	text-align: center;
+	padding: 0 var(--space-16);
+}
+.pf-intro-eyebrow {
+	display: block;
+	font-size: var(--text-sm);
+	text-transform: uppercase;
+	letter-spacing: var(--tracking-wider);
+	color: var(--accent);
+	margin-bottom: var(--space-6);
+}
+.pf-intro-title {
+	font-family: var(--font-heading);
+	font-size: clamp(3rem, 8vw, 7rem);
+	font-weight: 700;
+	letter-spacing: var(--tracking-tight);
+	line-height: 1.1;
+	color: var(--white);
+	margin: 0;
+}
+.pf-intro-title em {
+	color: var(--accent);
+	font-style: italic;
+}
+
 /* ── Responsive ── */
 @media (max-width: 64rem) {
 	section {
 		padding: var(--space-20) var(--padding-global);
-	}
-	.foot-top {
-		grid-template-columns: 1fr 1fr;
-		gap: var(--space-9);
-	}
-	footer {
-		padding: var(--space-12) var(--space-8) var(--space-9);
-	}
-}
-@media (max-width: 40rem) {
-	.foot-top {
-		grid-template-columns: 1fr;
-	}
-	.foot-bottom {
-		flex-direction: column;
-		gap: var(--space-2);
-		text-align: center;
 	}
 }
 

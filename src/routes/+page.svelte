@@ -12,8 +12,10 @@
 
 	const featuredSlugs: { slug: string; image?: string }[] = [
 		{ slug: 'wilken-telecom-offices', image: '/images/projects/wilkentel/1.webp' },
+		{ slug: 'nita-executive-directors-office', image: "/images/projects/nita-executive-directors-office/5.webp" },
 		{ slug: 'padre-pio-insurance', image: "/images/projects/padrepio/2.webp" },
 		{ slug: 'finance-trust-bank', image: "/images/projects/finance-trust-bank/10.webp" },
+		{ slug: 'nita-reception-lounge', image: "/images/projects/nita-reception-lounge/1.webp" },
 	];
 	const featuredSlides = featuredSlugs.flatMap(({ slug, image }) => {
 		const project = projects.find((p) => p.slug === slug);

@@ -132,23 +132,6 @@
 	section {
 		padding: var(--space-20) var(--padding-global);
 	}
-	.foot-top {
-		grid-template-columns: 1fr 1fr;
-		gap: var(--space-9);
-	}
-	footer {
-		padding: var(--space-12) var(--space-8) var(--space-9);
-	}
-}
-@media (max-width: 40rem) {
-	.foot-top {
-		grid-template-columns: 1fr;
-	}
-	.foot-bottom {
-		flex-direction: column;
-		gap: var(--space-2);
-		text-align: center;
-	}
 }
 
 

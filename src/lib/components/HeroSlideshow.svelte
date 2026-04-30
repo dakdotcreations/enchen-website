@@ -44,11 +44,11 @@
 					</a>
 				</div>
 				<!-- <div class="hero-slide-cat">{cap(slide.tag)}</div> -->
+                <a href="/portfolio/{slide.slug}" class="hero-slide-cta btn outline">
+                    <span>View Project</span>
+                    <ArrowRight size={16} />
+                </a>
 			</div>
-			<a href="/portfolio/{slide.slug}" class="hero-slide-cta btn outline">
-                <span>View Project</span>
-                <ArrowRight size={16} />
-            </a>
 		</div>
 	{/each}
 	<div class="hero-dots">
@@ -124,6 +124,10 @@
                     opacity 0.5s ease 0.3s,
                     transform 0.5s ease 0.3s;
                 transform: translateY(12px);
+
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
         
                 .hero-slide-location {
                     font-size: 0.75rem;
@@ -153,9 +157,6 @@
             }
 
             .hero-slide-cta {
-                position: absolute;
-                bottom: 68px;
-                right: 64px;
                 z-index: 3;
                 opacity: 0;
         

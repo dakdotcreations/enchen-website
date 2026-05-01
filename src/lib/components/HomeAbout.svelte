@@ -33,33 +33,32 @@
 				Bold <span class="h-blue">Ideas</span><br />Bold Creations
 			</h2>
 			<p class="s-body slide-in">
-				Enchen Creative Hub is a design and build architectural interior design turnkey firm delivering bold, functional, and inspiring environments. We work with corporate, and commercial clients, providing tailored design solutions that convert ideas into remarkable real spaces.
+				Enchen Creative Hub is a turnkey architectural interior design company that transforms work spaces and commercial spaces into high-impact environments. From concept to completion, we deliver bold, purposeful design that elevates brands and shapes how people experience space.
 			</p>
 			<p class="s-body slide-in" style="margin-top:18px;">
-				Our vision is to become the leading turnkey architectural interior design company recognized
-				globally for quality, innovation, and designs that elevate brands.
+				We envision to set the global standard for turnkey interior design, creating spaces that elevate brands, inspire people, and stand the test of time.
 			</p>
 		</div>
 		<div class="about-values">
 			<div class="v-card">
-				<div class="v-icon"><Lightbulb size={16} /></div>
-				<div class="v-name">Innovation</div>
-				<div class="v-desc">Advanced technology and bold thinking in every brief.</div>
+				<div class="v-icon"><HandHeart size={16} /></div>
+				<div class="v-name">Client First</div>
+				<div class="v-desc">We listen first, design second because your vision is the only brief that matters.</div>
 			</div>
 			<div class="v-card">
 				<div class="v-icon"><Leaf size={16} /></div>
 				<div class="v-name">Sustainability</div>
-				<div class="v-desc">Green, responsible design built for the future.</div>
+				<div class="v-desc">Designing with conscience, spaces that are as responsible as they are beautiful.</div>
 			</div>
 			<div class="v-card">
 				<div class="v-icon"><Crosshair size={16} /></div>
 				<div class="v-name">Precision</div>
-				<div class="v-desc">Every detail considered, nothing left to chance.</div>
+				<div class="v-desc">Every detail considered. Every decision intentional. Nothing left to chance.</div>
 			</div>
 			<div class="v-card">
-				<div class="v-icon"><HandHeart size={16} /></div>
-				<div class="v-name">Client First</div>
-				<div class="v-desc">Your vision is the blueprint for everything we do.</div>
+				<div class="v-icon"><Lightbulb size={16} /></div>
+				<div class="v-name">Innovation</div>
+				<div class="v-desc">Pushing boundaries of form, function, and possibility, one brief at a time.</div>
 			</div>
 		</div>
 	</div>

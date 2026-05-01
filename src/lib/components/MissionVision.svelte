@@ -1,17 +1,16 @@
 <section>
-	<div class="s-label">Our Direction</div>
-	<h2 class="s-title light">Mission &amp; <span class="h-blue">Vision</span></h2>
+	<h2 class="s-title light">Our <span class="h-blue">Direction</span></h2>
 	<div class="mv-grid">
 		<div class="mv-card">
-			<div class="mv-title">Our Mission</div>
+			<div class="mv-title">Mission</div>
 			<p class="mv-body">
                 To harness creativity and advanced technology to deliver standout design solutions that exceed expectations and keep our clients ahead of the curve.
             </p>
 		</div>
 		<div class="mv-card">
-			<div class="mv-title">Our Vision</div>
+			<div class="mv-title">Vision</div>
 			<p class="mv-body">
-                To become the top choice turnkey Interior design company recognized for quality, bold, innovative design solutions that elevates brands to new heights.
+                To become the top choice turnkey Interior design company recognized for quality, bold, innovative design solutions that elevate brands to new heights.
             </p>
 		</div>
 	</div>

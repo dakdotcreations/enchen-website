@@ -17,7 +17,7 @@
 <PageHero
 	breadcrumb="About"
 	title="The Studio Behind<br><em>the Ideas</em>"
-	sub="Founded in the heart of Kampala, Enchen Creative Hub is an architectural and interior design firm built on the belief that great spaces do more than look beautiful, they elevate how people live, work, and connect."
+	sub="Founded in the heart of Kampala, Enchen Creative Hub is a turnkey architectural and interior design company built on the belief that great spaces do more than look beautiful, they elevate how people live, work, and connect."
 	hasOrb={true} />
 <AboutStory />
 <MissionVision />

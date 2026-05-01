@@ -22,15 +22,6 @@
 			</div>
 		</div>
 		<div class="why-item slide-in">
-			<div class="why-num">02</div>
-			<div class="why-title">Local Expertise</div>
-			<div class="why-body">
-				Rooted in Kampala, we understand the East African context, climate, culture,
-				materials, and the regulatory environment, giving our projects depth that
-				international firms cannot replicate.
-			</div>
-		</div>
-		<div class="why-item slide-in">
 			<div class="why-num">03</div>
 			<div class="why-title">Tailored Approach</div>
 			<div class="why-body">
@@ -56,7 +47,7 @@
     }
 	.why-grid {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
         /* gap: var(--space-8); */
 	}
 	.why-item {

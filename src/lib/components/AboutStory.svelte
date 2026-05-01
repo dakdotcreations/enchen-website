@@ -1,5 +1,5 @@
 <script lang="ts">
-	import { SquareDashedMousePointer, MessageCircleMore, Rocket, Leaf } from '@lucide/svelte';
+	import { Lightbulb, Leaf, Crosshair, HandHeart } from '@lucide/svelte';
 	import { onMount, onDestroy } from 'svelte';
 	import { loadGsap } from '$lib/utils/useGsap';
 	import { getLenisInstance } from '$lib/lenis';
@@ -51,65 +51,38 @@
                     Designing Spaces<br />That <span class="h-blue">Endure</span>
                 </h2>
                 <div class="about-body">
-                    <p class="s-body">
-                        Enchen Creative Hub is an architectural interior design firm dedicated to
-                        crafting inspiring and functional spaces. With a passion for innovation and
-                        sustainability, we deliver tailored solutions across private residences,
-                        corporate environments, and commercial developments, turning visions into
-                        reality.
+                    <p>
+                        Enchen Creative Hub is a full-service architectural interior design firm that takes projects from blank page to finished space for clients who refuse to settle for ordinary. We work across corporate and commercial environments, delivering bold, purposeful design that doesn't just meet a brief, it exceeds it.
                     </p>
-                    <p class="s-body">
-                        We are a multidisciplinary team of architects, interior designers, and project
-                        managers united by a passion for craft. We believe the best design begins with
-                        listening, understanding how you live, how you work, and what you aspire to
-                        create.
+                    <p>
+                        We are a multidisciplinary team of architects, interior designers, and project managers united by a passion for craft. We believe the best design begins with listening and understanding how you work, how you want to be perceived, and what you aspire to create. Your vision is the only brief that matters.
                     </p>
-                    <p class="s-body">
-                        Our approach is grounded in precision and guided by aesthetics. We take projects
-                        from initial concept through to construction completion, acting as a single
-                        trusted partner for every stage of the journey.
+                    <p>
+                        From first concept to final handover, we own every stage. One team, one vision, zero compromise. Our approach is grounded in precision and guided by aesthetics, every material chosen deliberately, every detail considered, nothing left to chance. We don't hand you a design and walk away. We stay until the key turns.
                     </p>
                 </div>
             </div>
 			<div class="about-values">
 				<div class="v-card">
-					<div class="v-icon blue">
-                        <SquareDashedMousePointer size={16} />
-                    </div>
-					<div class="v-name">Precision</div>
-					<div class="v-desc">
-						Every measurement, every material, every decision considered with
-						meticulous care.
-					</div>
-				</div>
-				<div class="v-card">
-					<div class="v-icon mag">
-                        <MessageCircleMore size={16} />
-                    </div>
-					<div class="v-name">Collaboration</div>
-					<div class="v-desc">
-						We work alongside our clients, not for them. Your input shapes every stage.
-					</div>
-				</div>
-				<div class="v-card">
-					<div class="v-icon pur">
-                        <Rocket size={16} />
-                    </div>
-					<div class="v-name">Innovation</div>
-					<div class="v-desc">
-						We embrace advanced technology and fresh thinking to solve complex design
-						challenges.
-					</div>
-				</div>
-				<div class="v-card">
-					<div class="v-icon teal">
-                        <Leaf size={16} />
-                    </div>
-					<div class="v-name">Sustainability</div>
-					<div class="v-desc">
-						Responsible design that balances beauty with environmental accountability.
-					</div>
-				</div>
+                    <div class="v-icon"><HandHeart size={16} /></div>
+                    <div class="v-name">Client First</div>
+                    <div class="v-desc">We listen first, design second, because your vision is the only brief that matters.</div>
+                </div>
+                <div class="v-card">
+                    <div class="v-icon"><Leaf size={16} /></div>
+                    <div class="v-name">Sustainability</div>
+                    <div class="v-desc">Designing with conscience, spaces that are as responsible as they are beautiful.</div>
+                </div>
+                <div class="v-card">
+                    <div class="v-icon"><Crosshair size={16} /></div>
+                    <div class="v-name">Precision</div>
+                    <div class="v-desc">Every detail considered. Every decision intentional. Nothing left to chance.</div>
+                </div>
+                <div class="v-card">
+                    <div class="v-icon"><Lightbulb size={16} /></div>
+                    <div class="v-name">Innovation</div>
+                    <div class="v-desc">Pushing boundaries of form, function, and possibility, one brief at a time.</div>
+                </div>
 			</div>
 		</div>
 	</div>
@@ -132,6 +105,12 @@
 		& .about-body {
 			display: grid;
 			gap: var(--space-6);
+
+            & p {
+                font-size: var(--text-body);
+                color: var(--black-60);
+                text-align: justify;
+            }
 		}
 	}
 	.about-visual {
@@ -194,7 +173,7 @@
 	.v-icon {
 		width: var(--space-8);
 		height: var(--space-8);
-		margin-bottom: var(--space-3);
+		margin-bottom: var(--space-2);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -204,15 +183,14 @@
         border-radius: var(--space-8);
 	}
 	.v-name {
-		font-size: var(--text-sm);
-		letter-spacing: 2px;
+		font-size: var(--text-md);
 		text-transform: uppercase;
 		color: var(--text);
-		margin-bottom: var(--space-1);
+		margin-bottom: var(--space-4);
 		font-weight: 500;
 	}
 	.v-desc {
-		font-size: var(--text-md);
+		font-size: var(--text-body);
 		line-height: 1.7;
 		color: var(--black-60);
 	}

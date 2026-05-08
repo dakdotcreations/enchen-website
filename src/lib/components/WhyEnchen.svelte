@@ -22,7 +22,7 @@
 			</div>
 		</div>
 		<div class="why-item slide-in">
-			<div class="why-num">03</div>
+			<div class="why-num">02</div>
 			<div class="why-title">Tailored Approach</div>
 			<div class="why-body">
 				Every brief is addressed with fresh eyes
@@ -30,7 +30,7 @@
 			</div>
 		</div>
 		<div class="why-item slide-in">
-			<div class="why-num">04</div>
+			<div class="why-num">03</div>
 			<div class="why-title">Transparent Process</div>
 			<div class="why-body">
 				We believe in clear communication and honest timelines. You will always know where
@@ -48,15 +48,34 @@
 	.why-grid {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-        /* gap: var(--space-8); */
+        gap: var(--space-1);
+        border-radius: var(--space-8);
+        overflow: hidden;
 	}
 	.why-item {
-		padding: var(--space-8);
-        border-radius: var(--space-8);
+        padding: var(--space-8);
 		transition: background 0.3s;
+        position: relative;
+        background-color: var(--white);
 
-        &:hover {
-            background: var(--white);
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 2px;
+            background: var(--accent);
+            opacity: 0;
+            transition: opacity 0.3s;
+        }
+
+        &:hover{
+            /* background: linear-gradient(180deg, var(--off-white), var(--white)); */
+
+            &::before {
+                opacity: 1;
+            }
         }
 	}
 	.why-num {
@@ -69,14 +88,14 @@
 		line-height: 1;
 	}
 	.why-title {
-		font-size: var(--text-base);
-		text-transform: uppercase;
+		font-size: var(--text-lg);
+		text-transform: capitalize;
 		color: var(--text);
 		margin-bottom: var(--space-3);
 		font-weight: 700;
 	}
 	.why-body {
-		font-size: var(--text-md);
+		font-size: var(--text-body);
 		line-height: 1.85;
 		color: var(--black-60);
 	}

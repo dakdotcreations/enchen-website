@@ -109,7 +109,7 @@
 	.p-desc {
 		position: relative;
 		z-index: 1;
-		font-size: var(--text-md);
+		font-size: var(--text-body);
 		line-height: 1.8;
 		color: var(--black-60);
 	}

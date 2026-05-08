@@ -27,7 +27,7 @@
 <CtaStrip
 	eyebrow="Ready to Begin?"
 	title="Let's Create Something<br><em>Remarkable Together</em>"
-	body="Tell us about your project we'll respond within one business day."
+	body="Tell us about your project we're excited to hear about it."
 	primaryHref="/contact"
 	primaryLabel="Start a Project"
 	secondaryHref="/portfolio"

@@ -34,7 +34,7 @@
 	.mv-grid {
         display: grid;
         grid-template-columns: 1fr 1fr;
-        gap: 1px;
+        gap: var(--space-1);
         border-radius: 16px;
         overflow: hidden;
     }

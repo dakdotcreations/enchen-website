@@ -1,28 +1,31 @@
 <script lang="ts">
-	let { breadcrumb, title, sub, hasOrb = false }: {
-		breadcrumb: string;
+	let { title, sub }: {
 		title: string;
 		sub: string;
-		hasOrb?: boolean;
 	} = $props();
 </script>
 
 <div class="page-hero">
 	<div class="page-hero-grid"></div>
-	{#if hasOrb}<div class="page-hero-orb"></div>{/if}
 	<div class="ph-content">
 		<!-- <div class="ph-eyebrow">{eyebrow}</div> -->
 		<h1 class="ph-title">{@html title}</h1>
 		<p class="ph-sub">{sub}</p>
 	</div>
+	<div class="page-hero-illust">
+	</div>
 </div>
 
 <style>
 	.page-hero {
+		display: grid;
+		grid-template-columns: minmax(0, 1fr) minmax(320px, 460px);
+		gap: var(--space-24);
+		align-items: center;
 		background: var(--black);
 		padding: var(--space-44) var(--space-16) var(--space-24);
 		position: relative;
-		overflow: hidden;
+		overflow: visible;
 	}
 	.page-hero-grid {
 		position: absolute;
@@ -33,15 +36,20 @@
 			linear-gradient(90deg, rgba(255, 255, 255, 0.016) 1px, transparent 1px);
 		background-size: 88px 88px;
 	}
-	.page-hero-orb {
-		position: absolute;
-		width: 600px;
-		height: 600px;
-		border-radius: 50%;
-		right: -120px;
-		top: -120px;
-		background: radial-gradient(circle, rgba(196, 34, 128, 0.04) 0%, transparent 60%);
+	.page-hero-illust {
+		position: relative;
+		width: 100%;
+		max-width: 460px;
+		height: auto;
 		pointer-events: none;
+		opacity: 0.24;
+		margin-left: auto;
+		transform: translateX(32px);
+	}
+	.illust-svg {
+		width: 100%;
+		height: 100%;
+		color: var(--white);
 	}
 	.ph-content {
 		position: relative;
@@ -86,6 +94,19 @@
 		max-width: 560px;
 	}
 	@media (max-width: 1024px) {
-		.page-hero { padding: var(--space-36) var(--space-8) var(--space-18); }
+		.page-hero {
+			grid-template-columns: 1fr;
+			padding: var(--space-36) var(--space-8) var(--space-18);
+		}
+		.page-hero-illust {
+			max-width: 320px;
+			margin: 0 auto var(--space-16);
+		}
+	}
+
+	@media (max-width: 640px) {
+		.page-hero-illust {
+			display: none;
+		}
 	}
 </style>

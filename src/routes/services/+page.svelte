@@ -34,7 +34,6 @@
 </svelte:head>
 
 <PageHero
-	breadcrumb="Services"
 	title="End-to-End<br><em>Design Excellence</em>"
 	sub="From the first concept sketch to the final walk-through, we provide a complete range of architectural and interior design services each one delivered with the same standard of precision and care." />
 

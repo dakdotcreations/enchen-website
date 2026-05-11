@@ -20,7 +20,7 @@
             </div>
 			<div class="mv-title">Vision</div>
 			<p class="mv-body">
-                To set the global standard for turnkey interior design, creating spaces that elevate brands, inspire people, and stand the test of time.
+                To become Africa's leading turnkey interior design company, recognized for our quality, boldness, and innovative design solutions that elevate brands to new heights.
             </p>
 		</div>
 	</div>

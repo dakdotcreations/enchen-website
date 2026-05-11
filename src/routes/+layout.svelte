@@ -17,6 +17,7 @@
 
 	// loading screen
 	let loading = $state(true);
+	let isFirstLoad = $state(true);
 
 	function setupReveal() {
 		const obs = new IntersectionObserver(
@@ -80,8 +81,11 @@
 
 	afterNavigate(() => {
 		window.scrollTo({ top: 0, behavior: 'instant' });
-		curtain = 'lift';
-		setTimeout(() => { curtain = 'idle'; }, 500);
+		if (!isFirstLoad) {
+			curtain = 'lift';
+			setTimeout(() => { curtain = 'idle'; }, 500);
+		}
+		isFirstLoad = false;
 
 		document.querySelectorAll('.reveal').forEach((el) => el.classList.remove('visible'));
 		setupReveal();
@@ -90,7 +94,7 @@
 
 </script>
 
-<PageLoader {loading} />
+<!-- <PageLoader {loading} /> -->
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>

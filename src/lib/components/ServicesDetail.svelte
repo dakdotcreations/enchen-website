@@ -6,19 +6,19 @@
 	const services = [
 		{
 			num: '01',
-			name: 'Interior Design and Execution',
+			name: 'Office Design and Branding',
 			tag: 'Concept · Planning · Delivery',
 			image: '/images/home/service-interior.webp',
 			descs: [
-				'We take interior design from the initial concept through to final delivery, marrying aesthetic intent with functional detail. Every scheme is developed with careful spatial planning, material selection, and construction-ready documentation to ensure the design is realised exactly as envisioned.',
+				'We design and execute high-performing work environments for corporate organizations, government institutions, and international bodies. From headquarters and executive offices to boardrooms and collaborative workspaces, each space is carefully crafted to reflect identity, support productivity, and communicate credibility at every level. Our process is rooted in understanding how your organization operates its people, culture, and workflow. This allows us to create refined spatial solutions that balance visual impact with everyday functionality.',
 			],
 			features: [
-				'Space planning & layout development',
-				'Design concept and mood curation',
-				'Material and finish specification',
-				'Furniture and lighting selection',
-				'Construction-level documentation',
-				'On-site execution support',
+				'Brand-aligned spatial design',
+				'Corporate identity integration',
+				'Ergonomic workspace planning',
+				'Visual storytelling through interiors',
+				'Custom material and finish selection',
+				'Lighting and acoustic optimization',
 			],
 		},
 		{

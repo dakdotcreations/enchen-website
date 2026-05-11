@@ -1,14 +1,18 @@
 <script lang="ts">
-	let { title, sub }: {
+	let { title, sub, eyebrow, breadcrumb }: {
 		title: string;
 		sub: string;
+		eyebrow?: string;
+		breadcrumb?: string;
 	} = $props();
 </script>
 
 <div class="page-hero">
 	<div class="page-hero-grid"></div>
 	<div class="ph-content">
-		<!-- <div class="ph-eyebrow">{eyebrow}</div> -->
+		{#if eyebrow}
+			<div class="ph-eyebrow">{eyebrow}</div>
+		{/if}
 		<h1 class="ph-title">{@html title}</h1>
 		<p class="ph-sub">{sub}</p>
 	</div>

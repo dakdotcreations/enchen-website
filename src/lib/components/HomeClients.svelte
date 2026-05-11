@@ -1,12 +1,13 @@
 <script lang="ts">
 	const clients = [
-		{ src: '/images/clients/pride-bank.webp', alt: 'Pride Bank' },
+		{ src: '/images/clients/wilken-telecom.webp', alt: 'Wilken Telecom' },
 		{ src: '/images/clients/padre-pio.webp', alt: 'Padre Pio Insurance' },
 		{ src: '/images/clients/nita.webp', alt: 'NITA' },
-		{ src: '/images/clients/fao.webp', alt: 'FAO' },
 		{ src: '/images/clients/finance-trust-bank.webp', alt: 'Finance Trust Bank' },
-		{ src: '/images/clients/wilken-telecom.webp', alt: 'Wilken Telecom' },
-		{ src: '/images/clients/united-nations.webp', alt: 'United Nations' },
+		{ src: '/images/clients/fao.webp', alt: 'FAO' },
+		{ src: '/images/clients/pride-bank.webp', alt: 'Pride Bank' },
+		{ src: '/images/clients/apa-insurance.webp', alt: 'APA Insurance' },
+		{ src: '/images/clients/morocan-consulate.webp', alt: 'Moroccan Consulate' },
 	];
 </script>
 
@@ -54,10 +55,7 @@
 
 	.clients-grid {
 		display: grid;
-		grid-template-columns: repeat(7, 1fr);
-
-		@media (max-width: 1024px) { grid-template-columns: repeat(4, 1fr); }
-		@media (max-width: 640px) { grid-template-columns: repeat(2, 1fr); }
+		grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
 	}
 
 	.cl-item {

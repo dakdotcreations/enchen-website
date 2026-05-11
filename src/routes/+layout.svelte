@@ -51,7 +51,7 @@
 	$effect(() => {
 		// ── Loading screen ──
 		const startTime = Date.now();
-		const MIN_DISPLAY = 3200; // allow SVG animation to complete (~2.8s)
+		const MIN_DISPLAY = 800;
 
 		function finishLoading() {
 			const elapsed = Date.now() - startTime;

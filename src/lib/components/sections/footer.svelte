@@ -63,7 +63,7 @@
 	<div class="foot-bottom">
 		<div class="foot-copy">
             <div>
-                © 2026 <span class="accent">Enchen Creative Hub</span>. All rights reserved. 
+                &copy; 2026 <span class="accent">Enchen Creative Hub</span>. All rights reserved.
             </div>
 		</div>
 		<div class="foot-location">
@@ -155,16 +155,6 @@
 		font-size: var(--text-sm);
 		color: var(--white-20);
 	}
-    @media (min-width: 640px) {
-        .foot-copy {
-            display: flex;
-
-            & > div:first-child::after {
-                content: "|";
-                margin: 0 var(--space-2);
-            }
-        }
-    }
 	.foot-location {
 		display: flex;
 		align-items: center;

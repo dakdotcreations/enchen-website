@@ -27,7 +27,7 @@
 			tag: 'Coordination · Strategy · Delivery',
 			image: '/images/home/service-project-management.webp',
 			descs: [
-				'Our project management and consultancy service provides structured oversight across every phase of the build. We coordinate consultants, contractors, budgets and schedules so the design intent stays intact and project delivery is efficient, transparent and dependable.',
+				'Our expert project management team ensures seamless execution from concept development to final installation. We work closely with clients to understand their business needs, develop detailed plans, visuals, and oversee every stage—including procurement, project execution, and quality control. Dedicated to enhancing functionality, branding, and aesthetics, we transform commercial environments into inspiring, efficient spaces that support business success',
 			],
 			features: [
 				'Contractor and consultant coordination',
@@ -40,11 +40,11 @@
 		},
 		{
 			num: '03',
-			name: '3D Rendering and Animation',
+			name: '3D Visualization and Rendering',
 			tag: 'Visualisation · Motion · Experience',
 			image: '/images/home/service-3d.webp',
 			descs: [
-				'We create high-fidelity 3D visuals and animated walkthroughs that bring design concepts to life. This service helps clients understand space, lighting and materiality before work begins, while producing powerful presentation assets for stakeholders and contractors.',
+				"See your space before a single wall goes up. Our 3D visualization and rendering service gives you a photorealistic preview of your interior design, allowing you to explore finishes, layouts, lighting, and furnishings with complete clarity before construction begins. This means fewer surprises, smarter decisions, and full confidence in your design investment. Whether you're presenting to stakeholders, seeking approval, or simply refining your vision, our renders bring your ideas to life with stunning accuracy — bridging the gap between imagination and reality.",
 			],
 			features: [
 				'Photorealistic 3D rendering',

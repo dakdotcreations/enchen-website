@@ -41,7 +41,7 @@
 			<img src="/images/home/space.webp" alt="Enchen interior design project" class="about-story-img" />
 			<div class="about-badge">
 				<div class="badge-top">Est.</div>
-				<div class="badge-main">2025</div>
+				<div class="badge-main">2024</div>
 				<div class="badge-sub">Kampala, Uganda</div>
 			</div>
 		</div>
@@ -52,13 +52,13 @@
                 </h2>
                 <div class="about-body">
                     <p>
-                        Enchen Creative Hub is a full-service architectural interior design firm that takes projects from blank page to finished space for clients who refuse to settle for ordinary. We work across corporate and commercial environments, delivering bold, purposeful design that doesn't just meet a brief, it exceeds it.
+                        Enchen Creative Hub is a full-service architectural interior design firm that takes projects from blank page to finished space for clients who refuse to settle for ordinary. We work commercial spaces, delivering bold, purposeful design that doesn't just meet a brief, it exceeds it.
                     </p>
                     <p>
-                        We are a multidisciplinary team of architects, interior designers, and project managers united by a passion for craft. We believe the best design begins with listening and understanding how you work, how you want to be perceived, and what you aspire to create. Your vision is the only brief that matters.
+                        We are a multidisciplinary team of architects, interior designers, and project managers united by a passion for craft. <br>We believe the best design begins with listening and understanding how you work, how you want to be perceived, and what you aspire to create. Your vision is the only brief that matters.
                     </p>
                     <p>
-                        From first concept to final handover, we own every stage. One team, one vision, zero compromise. Our approach is grounded in precision and guided by aesthetics, every material chosen deliberately, every detail considered, nothing left to chance. We don't hand you a design and walk away. We stay until the key turns.
+                        From first concept to final handover, we own every stage. One team, one vision, zero compromise. <br>Our approach is grounded in precision and guided by aesthetics, every material chosen deliberately, every detail considered, nothing left to chance. We don't hand you a design and walk away. We stay until the key turns.
                     </p>
                 </div>
             </div>
@@ -109,7 +109,6 @@
             & p {
                 font-size: var(--text-body);
                 color: var(--black-60);
-                text-align: justify;
             }
 		}
 	}

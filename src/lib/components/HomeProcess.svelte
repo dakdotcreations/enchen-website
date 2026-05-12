@@ -5,7 +5,7 @@
 		{
 			num: '01',
 			title: 'Discovery Phase',
-			desc: "Define the client's requirements, budget, and project scope, including site measurements and assessment."
+			desc: "Define the client's budget and project scope, including site assessment."
 		},
 		{
 			num: '02',

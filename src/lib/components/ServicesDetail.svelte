@@ -57,6 +57,24 @@
 		},
 		{
 			num: '04',
+			name: 'Commercial Spaces',
+			tag: 'Design · Build · Deliver',
+			image: '/images/home/service-commercial.webp',
+			descs: [
+				"We design commercial spaces that perform. From retail to hospitality, every environment is crafted to attract customers, enhance experience, and reinforce your brand.",
+                "Whether you're fitting out a hotel lobby, restaurant, retail store, or reception area, we blend aesthetics with functionality to create spaces that leave a lasting impression on every guest and client who walks through your doors."
+			],
+			features: [
+				'Office Environments',
+				'Conference and meeting Rooms',
+				'Lounge and common areas',
+				'Workplace experience & wellness zones',
+				'Branding and Interior Customization',
+				'Board Room Design',
+			],
+		},
+		{
+			num: '05',
 			name: 'Company Branding',
 			tag: 'Identity · Strategy · Visuals',
 			image: '/images/home/service-branding.webp',
@@ -169,7 +187,7 @@
 
 	<div class="svc-scroll-col">
 		{#each services as svc, i}
-			<div class="svc-panel" data-index={i}>
+			<div class="svc-panel" data-index={i} id={`svc-${svc.num}`}>
 				<div class="svc-panel-inner">
 					<div class="svc-panel-num">{svc.num}</div>
 					<div class="svc-panel-tag">{svc.tag}</div>
@@ -313,7 +331,6 @@
 	.svc-panel-tag {
 		font-size: var(--text-sm);
 		font-weight: 700;
-		letter-spacing: 3px;
 		text-transform: uppercase;
 		color: var(--accent);
 		opacity: 0.7;
@@ -353,7 +370,7 @@
 
 	.svc-panel-feat {
 		font-size: var(--text-md);
-		color: rgba(255, 255, 255, 0.35);
+		color: var(--white-40);
 		display: flex;
 		align-items: center;
 		gap: var(--space-3);

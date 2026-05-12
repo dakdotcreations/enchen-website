@@ -43,11 +43,10 @@
 		<div class="foot-services">
 			<div class="foot-col-title">Services</div>
 			<ul class="foot-links">
-				<li><a href="/services">Corporate Design</a></li>
-				<li><a href="/services">Residential Design</a></li>
-				<li><a href="/services">Commercial Spaces</a></li>
-				<li><a href="/services">3D Visualization</a></li>
-				<li><a href="/services">Project Management</a></li>
+				<li><a href="/services/#svc-01">Office Design and Branding</a></li>
+				<li><a href="/services/#svc-02">Project Management</a></li>
+				<li><a href="/services/#svc-03">3D Visualization</a></li>
+				<li><a href="/services/#svc-04">Company Branding</a></li>
 			</ul>
 		</div>
 		<div class="foot-company">
@@ -55,8 +54,8 @@
 			<ul class="foot-links">
 				<li><a href="/about">About Us</a></li>
 				<li><a href="/portfolio">Portfolio</a></li>
-				<li><a href="/testimonials">Testimonials</a></li>
-				<li><a href="/contact">Contact</a></li>
+				<li><a href="/">Homepage</a></li>
+				<li><a href="/contact">Get in touch</a></li>
 			</ul>
 		</div>
 	</div>

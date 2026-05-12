@@ -156,7 +156,7 @@
 	<div class="svc-sticky-col">
 		<div class="svc-img-stack">
 			{#each services as svc, i}
-				<div class="svc-img-slide" bind:this={imageSlides[i]}>
+				<div class="svc-img-slide" bind:this={imageSlides[i]} id={`svc-${svc.num}`}>
 					<img src={svc.image} alt={svc.name} />
 					<div class="svc-img-badge">
 						<span class="svc-img-num">{svc.num}</span>

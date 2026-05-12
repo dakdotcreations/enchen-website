@@ -46,7 +46,7 @@
 				<li><a href="/services/#svc-01">Office Design and Branding</a></li>
 				<li><a href="/services/#svc-02">Project Management</a></li>
 				<li><a href="/services/#svc-03">3D Visualization</a></li>
-				<li><a href="/services/#svc-04">Company Branding</a></li>
+				<li><a href="/services/#svc-04">Commercial Spaces</a></li>
 			</ul>
 		</div>
 		<div class="foot-company">

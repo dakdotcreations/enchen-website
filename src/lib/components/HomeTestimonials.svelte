@@ -1,40 +1,38 @@
+<script lang="ts">
+	const testimonials = [
+		{
+			text: `Enchen transformed our offices into a space that truly embodies our brand.
+			The attention to detail and commitment to schedule made the whole process smooth.`,
+			author: 'James Ssemwogerere',
+			role: '',
+		},
+		{
+			text: `Working with Enchen Creative Hub was a amazing. They understood our vision immediately and executed it beautifully.`,
+			author: 'Amara Akello',
+			role: '',
+		},
+		{
+			text: `From first meeting to final handover, Enchen brought creativity and genuine passion.
+			Our office now reflects who we are: modern, dynamic, and deeply rooted in Uganda.`,
+			author: 'Sarah Nakigozi',
+			role: '',
+		},
+	]
+</script>
+
 <section id="testimonials">
 	<div class="s-label">Client Voices</div>
 	<h2 class="s-title light">What Our Clients <span class="h-mag">Say</span></h2>
 	<div class="test-grid">
-		<div class="test-card">
-			<div class="q-mark">"</div>
-			<p class="test-text">
-				Enchen transformed our headquarters into a space that perfectly embodies our brand.
-				The attention to detail was extraordinary, and the team was professional from
-				concept to completion.
-			</p>
-			<div class="test-div"></div>
-			<div class="test-author">James Mwangi</div>
-			<div class="test-role">CEO, Telecom East Africa</div>
-		</div>
-		<div class="test-card">
-			<div class="q-mark">"</div>
-			<p class="test-text">
-				Working with Enchen Creative Hub was a revelation. They understood our vision
-				immediately and delivered a home that exceeds every expectation. Truly bold,
-				beautiful design.
-			</p>
-			<div class="test-div"></div>
-			<div class="test-author">Amara Osei</div>
-			<div class="test-role">Homeowner, Luxury Residence</div>
-		</div>
-		<div class="test-card">
-			<div class="q-mark">"</div>
-			<p class="test-text">
-				From first meeting to final handover, Enchen brought creativity, discipline, and
-				genuine passion. Our office now reflects who we are, modern, dynamic, and
-				client-focused.
-			</p>
-			<div class="test-div"></div>
-			<div class="test-author">Sarah Nakigozi</div>
-			<div class="test-role">Managing Partner, Professional Services</div>
-		</div>
+		{#each testimonials as testimonial}
+			<div class="test-card">
+				<div class="q-mark">"</div>
+				<p class="test-text">{testimonial.text}</p>
+				<div class="test-div"></div>
+				<div class="test-author">{testimonial.author}</div>
+				<div class="test-role">{testimonial.role}</div>
+			</div>
+		{/each}
 	</div>
 </section>
 
@@ -54,13 +52,15 @@
 		padding: var(--space-10);
 		transition: background 0.3s;
         border-radius: var(--space-8);
+        display: flex;
+        flex-direction: column;
 	}
 	.test-card:hover {
 		background: var(--black-80);
 	}
 	.q-mark {
 		font-family: var(--font-heading);
-		font-size: 56px;
+		font-size: var(--text-6xl);
 		line-height: 0.7;
 		font-weight: 700;
 		color: var(--accent);
@@ -69,29 +69,29 @@
 	}
 	.test-text {
 		font-family: var(--font-heading);
-		font-size: 15px;
+		font-size: var(--text-body);
 		font-style: normal;
 		line-height: 1.85;
-		color: rgba(255, 255, 255, 0.7);
+		color: var(--white-80);
 		margin-bottom: 28px;
 	}
 	.test-div {
-		width: 20px;
+		width: var(--space-6);
 		height: 1px;
 		background: var(--accent);
-		margin-bottom: 20px;
+		margin-bottom: var(--space-6);
+        margin-top: auto;
 		opacity: 0.5;
 	}
 	.test-author {
-		font-size: 10px;
-		letter-spacing: 2.5px;
+		font-size: var(--text-base);
 		text-transform: uppercase;
-		color: rgba(255, 255, 255, 0.7);
+		color: var(--white-60);
 		margin-bottom: 5px;
 	}
 	.test-role {
 		font-size: 11px;
-		color: rgba(255, 255, 255, 0.28);
+		color: var(--white-40);
 	}
 	@media (max-width: 1024px) {
 		#testimonials {

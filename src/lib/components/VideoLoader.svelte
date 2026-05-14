@@ -1,14 +1,29 @@
 <script lang="ts">
-	let video: HTMLVideoElement;
-	let visible = $state(true);
+	import gsap from 'gsap';
+	import { useGsap } from '$lib/utils/useGsap';
 
-	function onEnded() {
-		visible = false;
-	}
+	let video: HTMLVideoElement;
+	let videoLoader: HTMLDivElement;
+
+	useGsap(() => {
+		let tween: any;
+
+		tween = gsap.to(videoLoader, {
+			opacity: 0,
+            pointerEvents: 'none',
+			duration: 0.8,
+			delay: 2,
+			ease: 'power2.out'
+		});
+
+		return () => {
+			tween?.kill?.();
+		};
+	});
 </script>
 
-<div class="video-loader" class:visible>
-	<video bind:this={video} autoplay muted onended={onEnded} class="background-video">
+<div class="video-loader" bind:this={videoLoader}>
+	<video bind:this={video} autoplay muted class="background-video">
 		<source src="/videos/video-1.mp4" type="video/mp4">
 		Your browser does not support the video tag.
 	</video>
@@ -22,14 +37,7 @@
 		width: 100vw;
 		height: 100vh;
 		z-index: 9999;
-		opacity: 1;
-		transition: opacity 1s ease;
 		background: black; /* optional, in case video doesn't cover */
-	}
-
-	.video-loader:not(.visible) {
-		opacity: 0;
-		pointer-events: none;
 	}
 
 	.background-video {

@@ -99,8 +99,8 @@
 <div class="mobile-menu" bind:this={menuEl}>
 	<div class="mob-topbar">
 		<a href="/" class="nav-logo" onclick={closeMenu}>
-			<img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
-			<span class="nav-logo-text">ENCHEN<span>.</span></span>
+			<img src="/images/white-nav-logo.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
+			<!-- <span class="nav-logo-text">ENCHEN<span>.</span></span> -->
 		</a>
 		<button
 			class="mob-close-btn"
@@ -137,8 +137,8 @@
 <nav id="navbar" class:scrolled class:nav-hidden={navHidden}>
 	<div class="nav-container container">
 		<a href="/" class="nav-logo">
-			<img src="/images/icon-logo-white.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
-			<span class="nav-logo-text">ENCHEN<span>.</span></span>
+			<img src="/images/white-nav-logo.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
+			<!-- <span class="nav-logo-text">ENCHEN<span>.</span></span> -->
 		</a>
 		<ul class="nav-links">
 			{#each navLinks as link}
@@ -193,7 +193,7 @@
                 text-decoration: none;
 
                 & .nav-logo-img {
-                    height: 2.25rem;
+                    height: 3.5rem;
                     width: auto;
                     object-fit: contain;
                     display: block;

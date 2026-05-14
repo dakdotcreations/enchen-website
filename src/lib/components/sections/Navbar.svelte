@@ -125,7 +125,7 @@
 		{/each}
 	</nav>
 	<div class="mob-footer" bind:this={mobFooterEl}>
-		<span class="mob-tagline">Kampala &middot; Uganda &middot; Est. 2022</span>
+		<span class="mob-tagline">Kampala &middot; Uganda &middot; Est. 2024</span>
 		<a href="/contact" class="mob-cta btn" onclick={closeMenu}>
             <Handshake size={16} />
             <span>Get in touch</span>

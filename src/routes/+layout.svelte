@@ -5,6 +5,7 @@
 	import Footer from '$lib/components/sections/footer.svelte';
 	import Navbar from '$lib/components/sections/Navbar.svelte';
 	import PageLoader from '$lib/components/PageLoader.svelte';
+	import VideoLoader from '$lib/components/VideoLoader.svelte';
 	import Lenis from 'lenis';
 	import { loadGsap } from '$lib/utils/useGsap';
 	import { setLenisInstance } from '$lib/lenis';
@@ -94,7 +95,9 @@
 
 </script>
 
-<PageLoader {loading} />
+<!-- <PageLoader {loading} /> -->
+
+<VideoLoader />
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>

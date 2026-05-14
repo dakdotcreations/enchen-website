@@ -94,7 +94,7 @@
 
 </script>
 
-<!-- <PageLoader {loading} /> -->
+<PageLoader {loading} />
 
 <!-- Page transition curtain -->
 <div class="curtain" class:cover={curtain === 'cover'} class:lift={curtain === 'lift'}></div>

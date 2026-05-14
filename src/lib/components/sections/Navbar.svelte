@@ -137,7 +137,7 @@
 <nav id="navbar" class:scrolled class:nav-hidden={navHidden}>
 	<div class="nav-container container">
 		<a href="/" class="nav-logo">
-			<img src="/images/white-nav-logo.svg" class="nav-logo-img" alt="Enchen Creative Hub" />
+			<img src="/images/white-nav-logo.svg" class="nav-logo-img" alt="Enchen Creative Hub" id="nav-logo-img" />
 			<!-- <span class="nav-logo-text">ENCHEN<span>.</span></span> -->
 		</a>
 		<ul class="nav-links">

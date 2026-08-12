@@ -13,7 +13,7 @@ export const projects: Project[] = [
 	wilkenTelecom,
 	faoOffices,
 	financeTrustBank,
-	nitaReceptionLounge,
+	// nitaReceptionLounge,
 	nitaExecutiveDirectorsOffice,
 	privateResidence,
 ] as Project[];

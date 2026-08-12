@@ -7,7 +7,7 @@
 		'padre-pio-insurance',
 		'fao-offices',
 		'finance-trust-bank',
-		'nita-reception-lounge',
+		'nita-offices',
 	];
 	const featured = featuredSlugs.map((slug) => projects.find((p) => p.slug === slug)!);
 

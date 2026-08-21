@@ -146,7 +146,7 @@
 	.foot-bottom {
 		display: flex;
 		align-items: center;
-		justify-content: space-between;
+		justify-content: space-around;
 		padding-top: var(--space-9);
 		border-top: 1px solid var(--white-20);
 	}
@@ -155,7 +155,7 @@
 		color: var(--white-20);
 	}
 	.foot-location {
-		display: flex;
+		display: none;
 		align-items: center;
 		gap: var(--space-2);
 		font-size: var(--text-sm);
